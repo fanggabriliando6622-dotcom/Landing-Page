@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Manajemen Klinik | Portofolio IDS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+body{
+  font-family:'Poppins',sans-serif;
+  background:#f8f9fb;
+}
+
+.navbar {
+      background: white;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+    }
+
+    .navbar .nav-link {
+      color: #333;
+      transition: color 0.3s, transform 0.3s;
+    }
+    .navbar .nav-link:hover {
+      color: #0d6efd;
+      transform: translateY(-2px);
+    }
+    .navbar .nav-link.active {
+      color: #0d6efd;
+      font-weight: 600;
+    }
+
+    .navbar-brand {
+      font-size: 1.25rem;
+      color: #0d6efd;
+      text-decoration: none;
+    }
+    .navbar-brand:hover {
+      color: #084298;
+      text-decoration: none;
+    }
+
+    .navbar-toggler {
+      outline: none;
+    }
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30'")
+      xmlns='ass' '%3E%3Cpath' stroke='rgba%280,0,0,0.7%29' 
+      stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22' '/%3E%3C/svg%3E'");
+    }
+/* HERO */
+.project-hero{
+  background:linear-gradient(135deg,#0dcaf0,#0a58ca);
+  color:#fff;
+  padding:100px 0;
+}
+
+.project-hero .badge{
+  background:rgba(255,255,255,.25);
+}
+
+/* CARD */
+.project-card{
+  border:none;
+  border-radius:18px;
+  box-shadow:0 12px 35px rgba(0,0,0,.08);
+}
+
+.project-preview{
+  background:none;
+  height:auto;
+  box-shadow:none;
+}
+
+/* FEATURE */
+.feature-box{
+  background:#fff;
+  border-radius:16px;
+  padding:25px;
+  height:100%;
+  box-shadow:0 10px 30px rgba(0,0,0,.08);
+  transition:.3s;
+}
+
+.feature-box:hover{
+  transform:translateY(-6px);
+}
+
+/* TECH */
+.tech-badge{
+  background:#e9f6ff;
+  color:#0d6efd;
+  padding:8px 18px;
+  border-radius:50px;
+  font-weight:600;
+  font-size:14px;
+  margin:6px;
+  display:inline-block;
+}
+
+/* CTA */
+.project-cta{
+  background:linear-gradient(135deg,#0dcaf0,#0a58ca);
+  color:#fff;
+  padding:70px 40px;
+  border-radius:24px;
+  text-align:center;
+}
+</style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top shadow-sm" style="background-color: rgba(255,255,255,0.95);">
+  <div class="container">
+
+    <a class="navbar-brand d-flex align-items-center fw-bold" href="#">
+      <img src="assets/img/pp.png" width="40" height="40" class="me-2 rounded-circle">
+      IDS
+    </a>
+
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+  <ul class="navbar-nav ms-auto mb-2 mb-lg-0" style="font-family: 'popins', sans-serif;">
+
+    <li class="nav-item">
+      <a href="index.html" class="nav-link fw-medium">Home</a>
+    </li>
+
+    <li class="nav-item">
+      <a href="about.html" class="nav-link fw-medium">Tentang</a>
+    </li>
+
+        <!-- DROPDOWN LAYANAN -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle fw-medium"
+        href="#"
+        id="layananDropdown"
+        role="button"
+        data-bs-toggle="dropdown"
+        aria-expanded="false">
+        Layanan
+      </a>
+
+      <ul class="dropdown-menu shadow border-0" aria-labelledby="layananDropdown">
+        <li>
+        <a class="dropdown-item" href="kt1.html">
+            <i class="fa-solid fa-laptop-code me-2"></i>
+            Web & Mobile Development
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-item" href="kt2.html">
+            <i class="fa-solid fa-cloud me-2"></i>
+            Cloud Computing
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-item" href="kt3.html">
+            <i class="fa-solid fa-shield-halved me-2"></i>
+            Keamanan Siber
+          </a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="nav-item">
+      <a href="teknologi.html" class="nav-link fw-medium">Teknologi</a>
+    </li>
+
+    <li class="nav-item">
+      <a href="portofolio.html" class="nav-link fw-medium">Portofolio</a>
+    </li>
+
+    <li class="nav-item">
+      <a href="karir.html" class="nav-link fw-medium">Karir</a>
+    </li>
+
+    <li class="nav-item">
+      <a href="#contact" class="nav-link fw-medium">Kontak</a>
+    </li>
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="project-hero">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-7">
+        <span class="badge mb-3">Healthcare System</span>
+        <h1 class="fw-bold mb-3">Manajemen Klinik</h1>
+        <p class="lead">
+          Sistem informasi klinik untuk pengelolaan rekam medis pasien,
+          jadwal dokter, dan pelayanan kesehatan secara digital dan terintegrasi.
+        </p>
+      </div>
+      <div class="col-md-5">
+  <div class="project-preview text-center p-3">
+    <img src="assets/img/03.png" class="img-fluid rounded-4 shadow" alt="Audit Keamanan Sistem">
+  </div>
+</div>
+    </div>
+  </div>
+</section>
+
+<!-- DESKRIPSI -->
+<section class="py-5">
+  <div class="container">
+    <div class="row g-4">
+
+      <div class="col-md-8">
+        <div class="project-card p-4 h-100">
+          <h4 class="fw-bold mb-3">Tentang Aplikasi</h4>
+          <p>
+            Sistem Manajemen Klinik dikembangkan oleh
+            <strong>Integrated Digital Solution (IDS)</strong>
+            untuk membantu fasilitas kesehatan dalam mengelola
+            layanan medis secara efektif dan aman.
+          </p>
+          <p>
+            Aplikasi ini mendukung pengelolaan data pasien, rekam medis digital,
+            jadwal praktik dokter, hingga laporan layanan kesehatan
+            yang dapat diakses dengan cepat dan terstruktur.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="project-card p-4 h-100">
+          <h5 class="fw-bold mb-3">Informasi Proyek</h5>
+          <ul class="list-unstyled small">
+            <li class="mb-2"><strong>Klien:</strong> Klinik & Puskesmas</li>
+            <li class="mb-2"><strong>Kategori:</strong> Healthcare System</li>
+            <li class="mb-2"><strong>Platform:</strong> Web Application</li>
+            <li class="mb-2"><strong>Status:</strong> Digunakan Aktif</li>
+            <li class="mb-2"><strong>Tahun:</strong> 2025</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FITUR -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h3 class="fw-bold">Fitur Utama</h3>
+      <p class="text-muted">Mendukung operasional klinik secara menyeluruh</p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="feature-box">
+          <i class="fa-solid fa-file-medical fa-2x text-info mb-3"></i>
+          <h6 class="fw-bold">Rekam Medis Digital</h6>
+          <p class="small text-muted">
+            Penyimpanan dan pengelolaan riwayat kesehatan pasien.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="feature-box">
+          <i class="fa-solid fa-user-doctor fa-2x text-info mb-3"></i>
+          <h6 class="fw-bold">Jadwal Dokter</h6>
+          <p class="small text-muted">
+            Pengaturan jadwal praktik dokter dan reservasi pasien.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="feature-box">
+          <i class="fa-solid fa-hospital-user fa-2x text-info mb-3"></i>
+          <h6 class="fw-bold">Manajemen Pasien</h6>
+          <p class="small text-muted">
+            Pendaftaran pasien dan histori kunjungan.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEKNOLOGI -->
+<section class="py-5">
+  <div class="container text-center">
+    <h3 class="fw-bold mb-4">Teknologi yang Digunakan</h3>
+    <span class="tech-badge"><i class="fa-brands fa-laravel"></i> Laravel</span>
+    <span class="tech-badge"><i class="fa-solid fa-database"></i> MySQL</span>
+    <span class="tech-badge"><i class="fa-brands fa-html5"></i> HTML5</span>
+    <span class="tech-badge"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+    <span class="tech-badge"><i class="fa-brands fa-js"></i> JavaScript</span>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-5">
+  <div class="container">
+    <div class="project-cta">
+      <h3 class="fw-bold mb-3">Solusi Digital untuk Layanan Kesehatan</h3>
+      <p class="mb-4">
+        IDS membantu klinik meningkatkan kualitas pelayanan medis.
+      </p>
+      <a href="contact.html" class="btn btn-light btn-lg px-5 fw-bold">
+        Hubungi IDS
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-dark text-light text-center py-4">
+© 2025 Integrated Digital Solution (IDS)
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Karier | IDS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --ids-primary:#0d6efd;
+      --ids-dark:#0a2f5a;
+      --ids-soft:#eef4ff;
+    }
+
+    body{font-family: 'popins', sans-serif;
+    background:#f8f9fa}
+
+ .navbar {
+      background: white;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+    }
+
+    .navbar .nav-link {
+      color: #333;
+      transition: color 0.3s, transform 0.3s;
+    }
+    .navbar .nav-link:hover {
+      color: #0d6efd;
+      transform: translateY(-2px);
+    }
+    .navbar .nav-link.active {
+      color: #0d6efd;
+      font-weight: 600;
+    }
+
+    .navbar-brand {
+      font-size: 1.25rem;
+      color: #0d6efd;
+      text-decoration: none;
+    }
+    .navbar-brand:hover {
+      color: #084298;
+      text-decoration: none;
+    }
+
+    .navbar-toggler {
+      outline: none;
+    }
+    
+
+    /* HERO */
+    .career-hero{
+      margin-top:80px;
+    }
+
+    /* CARD LOWONGAN */
+    .career-card{
+      background:#fff;
+      border:none;
+      border-radius:18px;
+      overflow:hidden;
+      height:100%;
+      display:flex;
+      flex-direction:column;
+      transition:.35s;
+    }
+    .career-card:hover{
+      transform:translateY(-6px);
+      box-shadow:0 20px 45px rgba(0,0,0,.12);
+    }
+
+    .career-thumb{
+      height:220px;
+      background-size:contain;
+      background-repeat:no-repeat;
+      background-position:center;
+      background-color:#f8f9fb;
+    }
+
+    .career-card .card-body{
+      padding:24px;
+      display:flex;
+      flex-direction:column;
+    }
+
+    .career-info{
+      font-size:14px;
+      color:#6c757d;
+    }
+
+    .career-meta{
+      font-size:14px;
+      margin-bottom:6px;
+    }
+
+    .badge-ids{
+      background:var(--ids-soft);
+      color:var(--ids-primary);
+      font-weight:600;
+      border-radius:50px;
+      padding:6px 14px;
+      font-size:12px;
+      width:fit-content;
+    }
+
+    .btn-detail{
+      margin-top:auto;
+      background:var(--ids-primary);
+      color:#fff;
+      border-radius:50px;
+      padding:10px 22px;
+      font-size:14px;
+    }
+    .btn-detail:hover{
+      background:#0b5ed7;
+      color:#fff;
+    }
+
+    /* CTA */
+    .career-cta{
+      background:var(--ids-soft);
+      border-radius:24px;
+      padding:60px 30px;
+      text-align:center;
+    }
+
+    .accordion-button{
+  background:#fff;
+  border-radius:0;
+}
+
+.accordion-button:not(.collapsed){
+  background:#eef4ff;
+  color:#0d6efd;
+}
+
+.accordion-item + .accordion-item{
+  border-top:1px solid #eee;
+}
+
+.career-cta{
+  background:linear-gradient(135deg,#eef4ff,#ffffff);
+  border-radius:24px;
+  padding:50px 40px;
+}
+
+    /* FOOTER */
+    footer{
+      background:#0a2f5a;
+      color:#fff;
+      padding:60px 0 30px;
+      font-size:14px;
+    }
+    footer a{
+      color:#fff;
+      text-decoration:none;
+    }
+    footer a:hover{
+      color:var(--ids-primary);
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg fixed-top shadow-sm" style="background-color: rgba(255,255,255,0.95);">
+  <div class="container">
+
+    <a class="navbar-brand d-flex align-items-center fw-bold" href="#">
+      <img src="assets/img/pp.png" width="40" height="40" class="me-2 rounded-circle">
+      IDS
+    </a>
+
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+  <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+    <li class="nav-item">
+      <a href="index.html" class="nav-link fw-medium">Home</a>
+    </li>
+
+    <li class="nav-item">
+      <a href="about.html" class="nav-link fw-medium">Tentang</a>
+    </li>
+
+        <!-- DROPDOWN LAYANAN -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle fw-medium"
+        href="#"
+        id="layananDropdown"
+        role="button"
+        data-bs-toggle="dropdown"
+        aria-expanded="false">
+        Layanan
+      </a>
+
+      <ul class="dropdown-menu shadow border-0" aria-labelledby="layananDropdown">
+        <li>
+        <a class="dropdown-item" href="kt1.html">
+            <i class="fa-solid fa-laptop-code me-2"></i>
+            Web & Mobile Development
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-item" href="kt2.html">
+            <i class="fa-solid fa-cloud me-2"></i>
+            Cloud Computing
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-item" href="kt3.html">
+            <i class="fa-solid fa-shield-halved me-2"></i>
+            Keamanan Siber
+          </a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="nav-item">
+      <a href="teknologi.html" class="nav-link fw-medium">Teknologi</a>
+    </li>
+
+    <li class="nav-item">
+      <a href="portofolio.html" class="nav-link fw-medium">Portofolio</a>
+    </li>
+
+    <li class="nav-item">
+      <a href="karir.html" class="nav-link fw-medium">Karir</a>
+    </li>
+
+    <li class="nav-item">
+      <a href="index.html#contact" class="nav-link fw-medium">Kontak</a>
+    </li>
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="career-hero text-white text-center">
+  <div class="position-relative" style="height:400px;background:url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80') center/cover;">
+    <div class="position-absolute w-100 h-100" style="background:rgba(0,0,0,.65)"></div>
+    <div class="container position-relative h-100 d-flex align-items-center justify-content-center">
+      <div>
+        <h1 class="fw-bold" data-aos="fade-up">Lowongan Kerja IDS</h1>
+        <p class="lead" data-aos="fade-up" data-aos-delay="100">
+          Bergabung dan tumbuh bersama perusahaan teknologi terpercaya.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOWONGAN -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-5">Lowongan Tersedia</h2>
+    <div class="row g-4">
+
+      <!-- ANDROID -->
+      <div class="col-md-4">
+        <div class="career-card">
+          <div class="career-thumb" style="background-image:url('assets/img/ad.png')"></div>
+          <div class="card-body">
+            <span class="badge-ids mb-2">Mobile Development</span>
+            <h5>Android Developer</h5>
+            <p class="career-info">Pengembangan aplikasi Android untuk layanan publik.</p>
+            <div class="career-meta"><strong>📍 Lokasi:</strong> Jakarta</div>
+            <div class="career-meta"><strong>🕒 Tipe:</strong> Full Time</div>
+            <div class="career-meta"><strong>🎯 Skill:</strong> Kotlin / Java</div>
+            <a href="lamaran.html" class="btn btn-detail mt-4">Lamar Sekarang</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- FULLSTACK -->
+      <div class="col-md-4">
+        <div class="career-card">
+          <div class="career-thumb" style="background-image:url('assets/img/pg.png')"></div>
+          <div class="card-body">
+            <span class="badge-ids mb-2">Web Development</span>
+            <h5>Junior Fullstack</h5>
+            <p class="career-info">Mengembangkan sistem web pemerintahan & swasta.</p>
+            <div class="career-meta"><strong>📍 Lokasi:</strong> Bandung</div>
+            <div class="career-meta"><strong>🕒 Tipe:</strong> Full Time</div>
+            <div class="career-meta"><strong>🎯 Skill:</strong> PHP / Laravel</div>
+            <a href="lamaran.html" class="btn btn-detail mt-4">Lamar Sekarang</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- IMPLEMENTATOR -->
+      <div class="col-md-4">
+        <div class="career-card">
+          <div class="career-thumb" style="background-image:url('assets/img/si.png')"></div>
+          <div class="card-body">
+            <span class="badge-ids mb-2">Implementation</span>
+            <h5>System Implementator</h5>
+            <p class="career-info">Implementasi dan pendampingan sistem klien.</p>
+            <div class="career-meta"><strong>📍 Lokasi:</strong> Surabaya</div>
+            <div class="career-meta"><strong>🕒 Tipe:</strong> Full Time</div>
+            <div class="career-meta"><strong>🎯 Skill:</strong> IT Support</div>
+            <a href="lamaran.html" class="btn btn-detail mt-4">Lamar Sekarang</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SYARAT -->
+<section class="py-5 bg-white">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-5">Syarat & Proses Melamar</h2>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="p-4 border rounded-4 h-100">
+          <h5>📄 Persyaratan</h5>
+          <ul>
+            <li>CV terbaru</li>
+            <li>Portofolio</li>
+            <li>Surat lamaran</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-4 border rounded-4 h-100">
+          <h5>🧠 Kualifikasi</h5>
+          <ul>
+            <li>Sesuai bidang</li>
+            <li>Mampu bekerja tim</li>
+            <li>Komunikatif</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-4 border rounded-4 h-100">
+          <h5>🚀 Seleksi</h5>
+          <ul>
+            <li>Seleksi CV</li>
+            <li>Tes teknis</li>
+            <li>Interview</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">FAQ Karier</h2>
+      <p class="text-muted">Pertanyaan yang sering diajukan seputar rekrutmen di IDS</p>
+    </div>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+
+        <div class="accordion shadow-sm rounded-4 overflow-hidden" id="faqCareer">
+
+          <!-- FAQ 1 -->
+          <div class="accordion-item border-0">
+            <h2 class="accordion-header">
+              <button class="accordion-button fw-semibold" type="button"
+                data-bs-toggle="collapse" data-bs-target="#faq1">
+                <i class="bi bi-mortarboard-fill text-primary me-2"></i>
+                Apakah fresh graduate bisa melamar?
+              </button>
+            </h2>
+            <div id="faq1" class="accordion-collapse collapse show">
+              <div class="accordion-body text-muted">
+                Ya, IDS terbuka untuk fresh graduate yang memiliki dasar teknis yang baik,
+                kemauan belajar tinggi, dan semangat berkembang bersama tim.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="accordion-item border-0">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed fw-semibold" type="button"
+                data-bs-toggle="collapse" data-bs-target="#faq2">
+                <i class="bi bi-briefcase-fill text-primary me-2"></i>
+                Apakah bisa melamar lebih dari satu posisi?
+              </button>
+            </h2>
+            <div id="faq2" class="accordion-collapse collapse">
+              <div class="accordion-body text-muted">
+                Bisa. Silakan kirim lamaran untuk maksimal dua posisi yang paling sesuai
+                dengan keahlian dan pengalaman Anda.
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="accordion-item border-0">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed fw-semibold" type="button"
+                data-bs-toggle="collapse" data-bs-target="#faq3">
+                <i class="bi bi-clock-history text-primary me-2"></i>
+                Berapa lama proses seleksi?
+              </button>
+            </h2>
+            <div id="faq3" class="accordion-collapse collapse">
+              <div class="accordion-body text-muted">
+                Proses seleksi biasanya memakan waktu sekitar 1–3 minggu,
+                tergantung posisi dan jumlah pelamar.
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5">
+  <div class="container">
+    <div class="career-cta shadow-lg">
+      <div class="row align-items-center">
+        <div class="col-md-8 text-md-start text-center mb-4 mb-md-0">
+          <h3 class="fw-bold mb-2">Siap Bergabung Bersama IDS?</h3>
+          <p class="mb-0 text-muted">
+            Kirim CV dan portofolio Anda ke
+            <strong class="text-primary">career@ids.com</strong>
+          </p>
+        </div>
+        <div class="col-md-4 text-md-end text-center">
+          <a href="mailto:career@ids.com" class="btn btn-detail px-4 py-3">
+            <i class="bi bi-send-fill me-2"></i> Kirim Lamaran
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-dark text-light pt-5 pb-3">
+  <div class="container">
+
+    <div class="row g-4">
+
+      <!-- ABOUT -->
+      <div class="col-md-4">
+        <h5 class="fw-bold mb-3">Tentang IDS</h5>
+        <p>
+          IDS adalah perusahaan teknologi yang menyediakan solusi IT profesional, mulai dari web & mobile development, sistem kustom, cloud computing, hingga keamanan siber. 
+          Kami membantu bisnis Anda berkembang dengan teknologi modern dan tim ahli berpengalaman.
+        </p>
+        <a href="about.html" class="text-decoration-none text-primary">Pelajari Lebih Lanjut &rarr;</a>
+      </div>
+
+      <!-- LAYANAN -->
+      <div class="col-md-2">
+        <h5 class="fw-bold mb-3">Layanan</h5>
+        <ul class="list-unstyled">
+          <li><a href="kt1.html" class="text-light text-decoration-none">Web & Mobile Development</a></li>
+          <li><a href="kt2.html" class="text-light text-decoration-none">Cloud Computing</a></li>
+          <li><a href="kt3.html" class="text-light text-decoration-none">Keamanan Siber</a></li>
+          <li><a href="kt4.html" class="text-light text-decoration-none">Sistem Kustom</a></li>
+        </ul>
+      </div>
+
+      <!-- LINK CEPAT -->
+      <div class="col-md-2">
+        <h5 class="fw-bold mb-3">Link Cepat</h5>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="text-light text-decoration-none">Home</a></li>
+          <li><a href="portofolio.html" class="text-light text-decoration-none">Portofolio</a></li>
+          <li><a href="karir.html" class="text-light text-decoration-none">Karir</a></li>
+          <li><a href="index.html#contact" class="text-light text-decoration-none">Kontak</a></li>
+        </ul>
+      </div>
+
+      <!-- CONTACT -->
+      <div class="col-md-4">
+        <h5 class="fw-bold mb-3">Kontak Kami</h5>
+        <p><i class="fas fa-map-marker-alt me-2"></i> Jl. Teknologi No. 12, Jakarta, Indonesia</p>
+        <p><i class="fas fa-phone me-2"></i> +62 812 3456 7890</p>
+        <p><i class="fas fa-envelope me-2"></i> info@ids.co.id</p>
+
+        <div class="d-flex gap-3 mt-3">
+          <a href="#" class="text-light fs-5"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="text-light fs-5"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-light fs-5"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="text-light fs-5"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="bg-secondary my-4">
+
+    <!-- COPYRIGHT -->
+    <div class="text-center">
+      <p class="mb-0">&copy; 2025 IDS — All Rights Reserved</p>
+      <small class="text-secondary">Dibangun dengan teknologi modern & tim profesional.</small>
+    </div>
+
+  </div>
+</footer>
+
+<style>
+  /* FOOTER */
+footer {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+}
+
+/* Footer Heading */
+footer h5 {
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* Footer Links */
+footer a {
+  color: #cccccc;
+  transition: 0.3s;
+  text-decoration: none;
+}
+footer a:hover {
+  color: #0d6efd;
+  text-decoration: underline;
+}
+
+/* Footer Contact Info */
+footer p {
+  color: #cccccc;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+/* Social Media Icons */
+footer .fab {
+  transition: 0.3s;
+}
+footer .fab:hover {
+  color: #0d6efd;
+  transform: scale(1.2);
+}
+
+/* Horizontal Line */
+footer hr {
+  border-top: 1px solid #444;
+}
+
+/* Copyright */
+footer small {
+  display: block;
+  margin-top: 5px;
+  color: #888;
+  font-size: 12px;
+}
+
+/* Responsive Adjustments */
+@media(max-width:768px){
+  footer .row > div {
+    text-align: center;
+  }
+  footer .d-flex {
+    justify-content: center !important;
+  }
+  footer .d-flex a {
+    margin: 0 5px;
+  }
+}
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>AOS.init();</script>
+
+</body>
+</html>

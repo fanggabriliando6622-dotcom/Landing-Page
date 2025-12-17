@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Teknologi | IDS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+<!-- Bootstrap Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+<!-- AOS -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --ids-primary:#0d6efd;
+  --ids-dark:#062f6b;
+  --ids-soft:#e9f1ff;
+}
+body{
+      font-family: 'Popins', sans-serif;
+      background:#f8f9fb;
+    }
+
+ .navbar {
+      background: white;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+    }
+
+    .navbar .nav-link {
+      color: #333;
+      transition: color 0.3s, transform 0.3s;
+    }
+    .navbar .nav-link:hover {
+      color: #0d6efd;
+      transform: translateY(-2px);
+    }
+    .navbar .nav-link.active {
+      color: #0d6efd;
+      font-weight: 600;
+    }
+
+    .navbar-brand {
+      font-size: 1.25rem;
+      color: #0d6efd;
+      text-decoration: none;
+    }
+    .navbar-brand:hover {
+      color: #084298;
+      text-decoration: none;
+    }
+
+    .navbar-toggler {
+      outline: none;
+    }
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30'")
+      xmlns='ass' '%3E%3Cpath' stroke='rgba%280,0,0,0.7%29' 
+      stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22' '/%3E%3C/svg%3E'");
+    }
+
+/* HERO */
+.hero-tech{
+  height:420px;
+  background:url("https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1600&q=80") center/cover;
+  position:relative;
+}
+.hero-tech::before{
+  content:"";position:absolute;inset:0;background:rgba(0,0,0,.65);
+}
+.hero-tech .content{
+  position:relative;height:100%;
+  display:flex;align-items:center;justify-content:center;
+  text-align:center;color:#fff;
+}
+
+/* CARD */
+.tech-card{
+  border:none;border-radius:18px;
+  transition:.35s;height:100%;
+}
+.tech-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 18px 45px rgba(0,0,0,.18);
+}
+
+.tech-icon{
+  width:72px;height:72px;
+  background:var(--ids-soft);
+  color:var(--ids-primary);
+  display:flex;align-items:center;justify-content:center;
+  border-radius:50%;font-size:28px;
+  margin-bottom:20px;
+}
+
+.stack-item{
+  background:#f1f3f5;
+  padding:8px 16px;
+  border-radius:30px;
+  margin:4px;
+  display:inline-block;
+  font-size:13px;font-weight:500;
+}
+
+/* LOGO */
+.tech-icon-lg{
+  width:80px;height:80px;
+  background:var(--ids-soft);
+  color:var(--ids-primary);
+  border-radius:18px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:34px;
+  margin:auto;
+  transition:.3s;
+}
+.tech-icon-lg:hover{
+  background:var(--ids-primary);
+  color:#fff;
+  transform:translateY(-6px);
+}
+
+/* CTA */
+.cta-tech{
+  background:linear-gradient(135deg,#0d6efd,#062f6b);
+  color:#fff;padding:90px 0;
+}
+.btn-tech{
+  background:#fff;color:var(--ids-primary);
+  padding:14px 40px;border-radius:50px;
+  font-weight:600;
+}
+</style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top shadow-sm" style="background-color: rgba(255,255,255,0.95);">
+  <div class="container">
+
+    <a class="navbar-brand d-flex align-items-center fw-bold" href="#">
+      <img src="assets/img/pp.png" width="40" height="40" class="me-2 rounded-circle">
+      IDS
+    </a>
+
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+  <ul class="navbar-nav ms-auto mb-2 mb-lg-0" style="font-family: sans-serif;">
+
+    <li class="nav-item">
+      <a href="index.html" class="nav-link fw-medium">Home</a>
+    </li>
+
+    <li class="nav-item">
+      <a href="about.html" class="nav-link fw-medium">Tentang</a>
+    </li>
+
+        <!-- DROPDOWN LAYANAN -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle fw-medium"
+        href="#"
+        id="layananDropdown"
+        role="button"
+        data-bs-toggle="dropdown"
+        aria-expanded="false">
+        Layanan
+      </a>
+
+      <ul class="dropdown-menu shadow border-0" aria-labelledby="layananDropdown">
+        <li>
+        <a class="dropdown-item" href="kt1.html">
+            <i class="fa-solid fa-laptop-code me-2"></i>
+            Web & Mobile Development
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-item" href="kt2.html">
+            <i class="fa-solid fa-cloud me-2"></i>
+            Cloud Computing
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-item" href="kt3.html">
+            <i class="fa-solid fa-shield-halved me-2"></i>
+            Keamanan Siber
+          </a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="nav-item">
+      <a href="teknologi.html" class="nav-link fw-medium">Teknologi</a>
+    </li>
+
+    <li class="nav-item">
+      <a href="portofolio.html" class="nav-link fw-medium">Portofolio</a>
+    </li>
+
+    <li class="nav-item">
+      <a href="karir.html" class="nav-link fw-medium">Karir</a>
+    </li>
+
+    <li class="nav-item">
+      <a href="#contact" class="nav-link fw-medium">Kontak</a>
+    </li>
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero-tech">
+  <div class="content">
+    <div>
+      <span class="badge bg-primary mb-3">TEKNOLOGI IDS</span>
+      <h1 class="fw-bold mb-3">Teknologi yang Kami Gunakan</h1>
+      <p class="lead mx-auto" style="max-width:720px;">
+        IDS menerapkan teknologi modern, aman, dan scalable
+        sebagai fondasi solusi digital lintas sektor.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- PENJELASAN -->
+<section class="py-5">
+<div class="container">
+<div class="row justify-content-center">
+<div class="col-md-10 text-center">
+<h2 class="fw-bold mb-3" data-aos="fade-up">
+Teknologi sebagai Fondasi Solusi IDS
+</h2>
+<p class="text-muted lead" data-aos="fade-up" data-aos-delay="100">
+Setiap solusi yang dikembangkan IDS dirancang dengan pendekatan
+arsitektur sistem yang terstruktur, terintegrasi, dan berorientasi
+keberlanjutan untuk mendukung transformasi digital jangka panjang.
+</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- PRINSIP -->
+<section class="py-5 bg-light">
+<div class="container">
+<div class="text-center mb-5">
+<h2 class="fw-bold" data-aos="fade-up">Prinsip Teknologi IDS</h2>
+<p class="text-muted">Standar utama pengembangan sistem</p>
+</div>
+
+<div class="row g-4">
+<div class="col-md-4" data-aos="zoom-in">
+<div class="card tech-card p-4 text-center">
+<div class="tech-icon mx-auto"><i class="fa-solid fa-shield-halved"></i></div>
+<h5 class="fw-bold">Keamanan</h5>
+<p>Sistem dibangun dengan pendekatan security-by-design.</p>
+</div>
+</div>
+
+<div class="col-md-4" data-aos="zoom-in" data-aos-delay="150">
+<div class="card tech-card p-4 text-center">
+<div class="tech-icon mx-auto"><i class="fa-solid fa-arrows-rotate"></i></div>
+<h5 class="fw-bold">Skalabilitas</h5>
+<p>Siap berkembang mengikuti kebutuhan organisasi.</p>
+</div>
+</div>
+
+<div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
+<div class="card tech-card p-4 text-center">
+<div class="tech-icon mx-auto"><i class="fa-solid fa-diagram-project"></i></div>
+<h5 class="fw-bold">Integrasi</h5>
+<p>Interoperabilitas antar sistem & API.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- AREA TEKNOLOGI -->
+<section class="py-5">
+<div class="container">
+<div class="text-center mb-5">
+<h2 class="fw-bold">Area Teknologi</h2>
+<p class="text-muted">Kompetensi inti IDS</p>
+</div>
+
+<div class="row g-4">
+<div class="col-md-4">
+<div class="card tech-card p-4">
+<div class="tech-icon"><i class="fa-solid fa-laptop-code"></i></div>
+<h5 class="fw-bold">Web & Mobile</h5>
+<p>Aplikasi modern & responsif.</p>
+<div>
+<span class="stack-item">Laravel</span>
+<span class="stack-item">Flutter</span>
+<span class="stack-item">REST API</span>
+</div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card tech-card p-4">
+<div class="tech-icon"><i class="fa-solid fa-cloud"></i></div>
+<h5 class="fw-bold">Cloud Computing</h5>
+<p>Infrastruktur andal & efisien.</p>
+<div>
+<span class="stack-item">Docker</span>
+<span class="stack-item">CI/CD</span>
+<span class="stack-item">Backup</span>
+</div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card tech-card p-4">
+<div class="tech-icon"><i class="fa-solid fa-user-shield"></i></div>
+<h5 class="fw-bold">Keamanan Siber</h5>
+<p>Proteksi sistem & data.</p>
+<div>
+<span class="stack-item">Firewall</span>
+<span class="stack-item">Encryption</span>
+<span class="stack-item">Audit</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- LOGO -->
+<section class="py-5 bg-light">
+<div class="container">
+<div class="text-center mb-5">
+<h2 class="fw-bold">Teknologi & Platform</h2>
+</div>
+
+<div class="row g-4 justify-content-center text-center">
+<div class="col-6 col-md-2"><div class="tech-icon-lg"><i class="bi bi-filetype-html"></i></div><p>HTML5</p></div>
+<div class="col-6 col-md-2"><div class="tech-icon-lg"><i class="bi bi-filetype-css"></i></div><p>CSS3</p></div>
+<div class="col-6 col-md-2"><div class="tech-icon-lg"><i class="bi bi-filetype-js"></i></div><p>JavaScript</p></div>
+<div class="col-6 col-md-2"><div class="tech-icon-lg"><i class="bi bi-cloud-check"></i></div><p>Cloud</p></div>
+<div class="col-6 col-md-2"><div class="tech-icon-lg"><i class="bi bi-shield-lock"></i></div><p>Security</p></div>
+</div>
+</div>
+</section>
+
+<!-- CTA -->
+<section class="cta-tech text-center">
+<div class="container">
+<h3 class="fw-bold mb-3">Teknologi Andal untuk Solusi Digital Anda</h3>
+<p class="mb-4">IDS siap menjadi mitra transformasi digital terpercaya.</p>
+<a href="index.html#contact" class="btn btn-tech btn-lg">
+<i class="fa-solid fa-paper-plane"></i> Hubungi Kami
+</a>
+</div>
+</section>
+
+<footer class="bg-dark text-light pt-5 pb-3">
+  <div class="container">
+
+    <div class="row g-4">
+
+      <!-- ABOUT -->
+      <div class="col-md-4">
+        <h5 class="fw-bold mb-3">Tentang IDS</h5>
+        <p>
+          IDS adalah perusahaan teknologi yang menyediakan solusi IT profesional, mulai dari web & mobile development, sistem kustom, cloud computing, hingga keamanan siber. 
+          Kami membantu bisnis Anda berkembang dengan teknologi modern dan tim ahli berpengalaman.
+        </p>
+        <a href="about.html" class="text-decoration-none text-primary">Pelajari Lebih Lanjut &rarr;</a>
+      </div>
+
+      <!-- LAYANAN -->
+      <div class="col-md-2">
+        <h5 class="fw-bold mb-3">Layanan</h5>
+        <ul class="list-unstyled">
+          <li><a href="kt1.html" class="text-light text-decoration-none">Web & Mobile Development</a></li>
+          <li><a href="kt2.html" class="text-light text-decoration-none">Cloud Computing</a></li>
+          <li><a href="kt3.html" class="text-light text-decoration-none">Keamanan Siber</a></li>
+          <li><a href="kt4.html" class="text-light text-decoration-none">Sistem Kustom</a></li>
+        </ul>
+      </div>
+
+      <!-- LINK CEPAT -->
+      <div class="col-md-2">
+        <h5 class="fw-bold mb-3">Link Cepat</h5>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="text-light text-decoration-none">Home</a></li>
+          <li><a href="portofolio.html" class="text-light text-decoration-none">Portofolio</a></li>
+          <li><a href="karir.html" class="text-light text-decoration-none">Karir</a></li>
+          <li><a href="index.html#contact" class="text-light text-decoration-none">Kontak</a></li>
+        </ul>
+      </div>
+
+      <!-- CONTACT -->
+      <div class="col-md-4">
+        <h5 class="fw-bold mb-3">Kontak Kami</h5>
+        <p><i class="fas fa-map-marker-alt me-2"></i> Jl. Teknologi No. 12, Jakarta, Indonesia</p>
+        <p><i class="fas fa-phone me-2"></i> +62 812 3456 7890</p>
+        <p><i class="fas fa-envelope me-2"></i> info@ids.co.id</p>
+
+        <div class="d-flex gap-3 mt-3">
+          <a href="#" class="text-light fs-5"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="text-light fs-5"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-light fs-5"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="text-light fs-5"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="bg-secondary my-4">
+
+    <!-- COPYRIGHT -->
+    <div class="text-center">
+      <p class="mb-0">&copy; 2025 IDS — All Rights Reserved</p>
+      <small class="text-secondary">Dibangun dengan teknologi modern & tim profesional.</small>
+    </div>
+
+  </div>
+</footer>
+
+<style>
+  /* FOOTER */
+footer {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+}
+
+/* Footer Heading */
+footer h5 {
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* Footer Links */
+footer a {
+  color: #cccccc;
+  transition: 0.3s;
+  text-decoration: none;
+}
+footer a:hover {
+  color: #0d6efd;
+  text-decoration: underline;
+}
+
+/* Footer Contact Info */
+footer p {
+  color: #cccccc;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+/* Social Media Icons */
+footer .fab {
+  transition: 0.3s;
+}
+footer .fab:hover {
+  color: #0d6efd;
+  transform: scale(1.2);
+}
+
+/* Horizontal Line */
+footer hr {
+  border-top: 1px solid #444;
+}
+
+/* Copyright */
+footer small {
+  display: block;
+  margin-top: 5px;
+  color: #888;
+  font-size: 12px;
+}
+
+/* Responsive Adjustments */
+@media(max-width:768px){
+  footer .row > div {
+    text-align: center;
+  }
+  footer .d-flex {
+    justify-content: center !important;
+  }
+  footer .d-flex a {
+    margin: 0 5px;
+  }
+}
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>AOS.init({duration:900,once:true});</script>
+
+</body>
+</html>

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Web & Mobile Development - IDS</title>
+
+  <!-- BOOTSTRAP -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- ICONS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+
+    .navbar {
+      background: white;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+    }
+
+    .navbar .nav-link {
+      color: #333;
+      transition: color 0.3s, transform 0.3s;
+    }
+    .navbar .nav-link:hover {
+      color: #0d6efd;
+      transform: translateY(-2px);
+    }
+    .navbar .nav-link.active {
+      color: #0d6efd;
+      font-weight: 600;
+    }
+
+    .navbar-brand {
+      font-size: 1.25rem;
+      color: #0d6efd;
+      text-decoration: none;
+    }
+    .navbar-brand:hover {
+      color: #084298;
+      text-decoration: none;
+    }
+
+    .navbar-toggler {
+      outline: none;
+    }
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30'")
+      xmlns='ass' '%3E%3Cpath' stroke='rgba%280,0,0,0.7%29' 
+      stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22' '/%3E%3C/svg%3E'");
+    }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1527689368864-3a821dbccc34?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      height: 70vh;
+      position: relative;
+      color: white;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .feature-icon {
+      font-size: 40px;
+      color: #0d6efd;
+    }
+
+    footer {
+      background: #000;
+      color: white;
+      padding: 20px 0;
+    }
+
+    .tech-logo {
+      width: 65px;
+      filter: grayscale(100%);
+      transition: 0.3s;
+    }
+    .tech-logo:hover {
+      filter: grayscale(0%);
+      transform: scale(1.1);
+    }
+
+    .testimonial-box {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+  </style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg fixed-top shadow-sm" style="background-color: rgba(255,255,255,0.95);">
+  <div class="container">
+
+    <a class="navbar-brand d-flex align-items-center fw-bold" href="#">
+      <img src="assets/img/pp.png" width="40" height="40" class="me-2 rounded-circle">
+      IDS
+    </a>
+
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+  <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+    <li class="nav-item">
+      <a href="index.html" class="nav-link fw-medium">Home</a>
+    </li>
+
+    <li class="nav-item">
+      <a href="about.html" class="nav-link fw-medium">Tentang</a>
+    </li>
+
+        <!-- DROPDOWN LAYANAN -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle fw-medium"
+        href="#"
+        id="layananDropdown"
+        role="button"
+        data-bs-toggle="dropdown"
+        aria-expanded="false">
+        Layanan
+      </a>
+
+      <ul class="dropdown-menu shadow border-0" aria-labelledby="layananDropdown">
+        <li>
+        <a class="dropdown-item" href="kt1.html">
+            <i class="fa-solid fa-laptop-code me-2"></i>
+            Web & Mobile Development
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-item" href="kt2.html">
+            <i class="fa-solid fa-cloud me-2"></i>
+            Cloud Computing
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-item" href="kt3.html">
+            <i class="fa-solid fa-shield-halved me-2"></i>
+            Keamanan Siber
+          </a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="nav-item">
+      <a href="teknologi.html" class="nav-link fw-medium">Teknologi</a>
+    </li>
+
+    <li class="nav-item">
+      <a href="portofolio.html" class="nav-link fw-medium">Portofolio</a>
+    </li>
+
+    <li class="nav-item">
+      <a href="karir.html" class="nav-link fw-medium">Karir</a>
+    </li>
+
+    <li class="nav-item">
+      <a href="#contact" class="nav-link fw-medium">Kontak</a>
+    </li>
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-content text-center">
+    <h1 data-aos="fade-up">Web & Mobile Development</h1>
+    <p class="lead mt-3" data-aos="fade-up" data-aos-delay="200">
+      Solusi aplikasi modern untuk bisnis Anda — cepat, elegan, dan scalable.
+    </p>
+  </div>
+</section>
+
+<!-- SECTION: INTRO -->
+<section class="py-5">
+  <div class="container text-center">
+    <h2 data-aos="fade-up"><i class="fa-solid fa-laptop-code"></i> Layanan Pengembangan</h2>
+    <p class="text-muted mt-3" data-aos="fade-up">
+      Kami membangun aplikasi web dan mobile dengan teknologi terbaru dan desain modern,
+      memastikan performa tinggi dan pengalaman pengguna terbaik.
+    </p>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="container py-4">
+  <div class="row g-4">
+
+    <div class="col-md-4" data-aos="fade-up">
+      <div class="card shadow p-4 h-100 text-center">
+        <i class="fa-solid fa-code feature-icon"></i>
+        <h5 class="mt-3">Website Modern Profesional</h5>
+        <p>Kami membuat website yang menarik, cepat, responsif, serta SEO friendly.</p>
+        <a href="selengkapnya1.html" class="btn btn-outline-primary mt-auto">Pelajari Selengkapnya</a>
+      </div>
+    </div>
+
+    <div class="col-md-4" data-aos="fade-up" data-aos-delay="150">
+      <div class="card shadow p-4 h-100 text-center">
+        <i class="fa-solid fa-mobile-screen-button feature-icon"></i>
+        <h5 class="mt-3">Aplikasi Mobile</h5>
+        <p>Android & iOS berbasis Flutter—satu kode, dua platform, performa tinggi.</p>
+        <a href="selengkapnya2.html" class="btn btn-outline-primary mt-auto">Pelajari Selengkapnya</a>
+      </div>
+    </div>
+
+    <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+      <div class="card shadow p-4 h-100 text-center">
+        <i class="fa-solid fa-database feature-icon"></i>
+        <h5 class="mt-3">Sistem Kustom</h5>
+        <p>Sistem ERP, CRM, POS, HRIS dan aplikasi khusus sesuai kebutuhan bisnis.</p>
+        <a href="selengkapnya3.html" class="btn btn-outline-primary mt-auto">Pelajari Selengkapnya</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center" data-aos="fade-up">Mengapa Memilih IDS?</h2>
+
+    <div class="row mt-4 g-4">
+
+      <div class="col-md-3 text-center" data-aos="fade-up">
+        <i class="fa-solid fa-award fa-3x text-primary mb-3"></i>
+        <h6>Profesional & Berpengalaman</h6>
+        <p>Tim ahli dengan pengalaman di berbagai industri.</p>
+      </div>
+
+      <div class="col-md-3 text-center" data-aos="fade-up" data-aos-delay="150">
+        <i class="fa-solid fa-bolt fa-3x text-primary mb-3"></i>
+        <h6>Pengembangan Cepat</h6>
+        <p>Metode Agile memastikan pengiriman yang efisien.</p>
+      </div>
+
+      <div class="col-md-3 text-center" data-aos="fade-up" data-aos-delay="300">
+        <i class="fa-solid fa-lock fa-3x text-primary mb-3"></i>
+        <h6>Keamanan Prioritas</h6>
+        <p>Sistem dibangun dengan standar keamanan terkini.</p>
+      </div>
+
+      <div class="col-md-3 text-center" data-aos="fade-up" data-aos-delay="450">
+        <i class="fa-solid fa-headset fa-3x text-primary mb-3"></i>
+        <h6>Support Penuh</h6>
+        <p>Bantuan 24/7 untuk memastikan kelancaran bisnis Anda.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TECHNOLOGY STACK -->
+<section class="py-5 text-center">
+  <h2 data-aos="fade-up">Teknologi yang Kami Gunakan</h2>
+  <p class="text-muted">Teknologi modern untuk performa maksimal</p>
+
+  <div class="container mt-4">
+    <div class="row justify-content-center g-4">
+      <div class="col-auto"><img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"></div>
+      <div class="col-auto"><img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"></div>
+      <div class="col-auto"><img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"></div>
+      <div class="col-auto"><img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg"></div>
+      <div class="col-auto"><img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"></div>
+      <div class="col-auto"><img class="tech-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center" data-aos="fade-up">Apa Kata Klien Kami?</h2>
+
+    <div class="row g-4 mt-4">
+
+      <div class="col-md-4" data-aos="flip-left">
+        <div class="testimonial-box">
+          <p>"IDS membantu kami membangun sistem ERP dengan cepat dan hasilnya sangat memuaskan!"</p>
+          <strong>- PT Solutions</strong>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="flip-left" data-aos-delay="200">
+        <div class="testimonial-box">
+          <p>"Aplikasi mobile yang dibuat IDS sangat stabil dan meningkatkan interaksi pelanggan."</p>
+          <strong>- Global Mart</strong>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="flip-left" data-aos-delay="400">
+        <div class="testimonial-box">
+          <p>"Tim profesional, respons cepat, dan hasilnya luar biasa. Kami sangat puas."</p>
+          <strong>- Nusa Finance</strong>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="container py-5">
+  <h2 class="text-center" data-aos="fade-up">FAQ</h2>
+
+  <div class="accordion mt-4" id="faq">
+
+    <div class="accordion-item">
+      <h2 class="accordion-header">
+        <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#f1">
+          Berapa lama pengerjaan aplikasi?
+        </button>
+      </h2>
+      <div id="f1" class="accordion-collapse collapse show">
+        <div class="accordion-body">
+          Lama pengerjaan tergantung kompleksitas. Biasanya 2–12 minggu.
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item mt-2">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#f2">
+          Apakah IDS menyediakan maintenance?
+        </button>
+      </h2>
+      <div id="f2" class="accordion-collapse collapse">
+        <div class="accordion-body">
+          Ya. Kami menyediakan support bulanan, tahunan, bahkan 24/7.
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-5 text-center">
+  <h2 data-aos="fade-up">Butuh Aplikasi Profesional?</h2>
+  <p data-aos="fade-up" class="text-muted">Kami siap membantu bisnis Anda berkembang.</p>
+  <a href="index.html#contact" class="btn btn-primary px-4 mt-3">
+    <i class="fa-solid fa-paper-plane"></i> Konsultasi Gratis
+  </a>
+</section>
+
+<footer class="text-center">
+  COPYRIGHT © 2025 IDS - All Rights Reserved
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+
+</body>
+</html>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Keamanan Siber - IDS</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- FontAwesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+  <style>
+    body { font-family: 'Poppins', sans-serif; color:#222; background:#fff; }
+    .navbar {
+      background: white;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+    }
+
+    .navbar .nav-link {
+      color: #333;
+      transition: color 0.3s, transform 0.3s;
+    }
+    .navbar .nav-link:hover {
+      color: #0d6efd;
+      transform: translateY(-2px);
+    }
+    .navbar .nav-link.active {
+      color: #0d6efd;
+      font-weight: 600;
+    }
+
+    .navbar-brand {
+      font-size: 1.25rem;
+      color: #0d6efd;
+      text-decoration: none;
+    }
+    .navbar-brand:hover {
+      color: #084298;
+      text-decoration: none;
+    }
+
+    .navbar-toggler {
+      outline: none;
+    }
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30'")
+      xmlns='ass' '%3E%3Cpath' stroke='rgba%280,0,0,0.7%29' 
+      stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22' '/%3E%3C/svg%3E'");
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      height: 72vh; position:relative; display:flex; align-items:center; color:#fff;
+    }
+    .hero::after { content:""; position:absolute; inset:0; background:rgba(0,0,0,0.55); }
+    .hero-content { position:relative; z-index:2; }
+    .feature-icon { font-size:36px; color:#d63384; }
+    .card-feature { border-radius:12px; transition:transform .25s ease, box-shadow .25s ease; }
+    .card-feature:hover { transform:translateY(-8px); box-shadow:0 18px 40px rgba(214,51,132,0.12); }
+    footer { background:#0b1220; color:#dfe7ff; padding:26px 0; }
+    .tool-badge { display:inline-block; margin:6px 8px; padding:6px 10px; background:#fff0f6; color:#b02a4b; border-radius:999px; font-weight:600; }
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg fixed-top shadow-sm" style="background-color: rgba(255,255,255,0.95);">
+  <div class="container">
+
+    <a class="navbar-brand d-flex align-items-center fw-bold" href="#">
+      <img src="assets/img/pp.png" width="40" height="40" class="me-2 rounded-circle">
+      IDS
+    </a>
+
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+  <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+    <li class="nav-item">
+      <a href="index.html" class="nav-link fw-medium">Home</a>
+    </li>
+
+    <li class="nav-item">
+      <a href="about.html" class="nav-link fw-medium">Tentang</a>
+    </li>
+
+        <!-- DROPDOWN LAYANAN -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle fw-medium"
+        href="#"
+        id="layananDropdown"
+        role="button"
+        data-bs-toggle="dropdown"
+        aria-expanded="false">
+        Layanan
+      </a>
+
+      <ul class="dropdown-menu shadow border-0" aria-labelledby="layananDropdown">
+        <li>
+        <a class="dropdown-item" href="kt1.html">
+            <i class="fa-solid fa-laptop-code me-2"></i>
+            Web & Mobile Development
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-item" href="kt2.html">
+            <i class="fa-solid fa-cloud me-2"></i>
+            Cloud Computing
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-item" href="kt3.html">
+            <i class="fa-solid fa-shield-halved me-2"></i>
+            Keamanan Siber
+          </a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="nav-item">
+      <a href="teknologi.html" class="nav-link fw-medium">Teknologi</a>
+    </li>
+
+    <li class="nav-item">
+      <a href="portofolio.html" class="nav-link fw-medium">Portofolio</a>
+    </li>
+
+    <li class="nav-item">
+      <a href="karir.html" class="nav-link fw-medium">Karir</a>
+    </li>
+
+    <li class="nav-item">
+      <a href="#contact" class="nav-link fw-medium">Kontak</a>
+    </li>
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="container hero-content text-center" data-aos="fade-up">
+    <h1 class="display-5 fw-bold">Keamanan Siber</h1>
+    <p class="lead mt-3">Lindungi aset digital Anda dengan layanan keamanan menyeluruh dan monitoring real-time.</p>
+    <a href="index.html#contact" class="btn btn-light btn-lg mt-3">Minta Audit Keamanan</a>
+  </div>
+</header>
+
+<!-- OVERVIEW -->
+<section class="py-5">
+  <div class="container">
+    <div class="row g-4 align-items-center">
+      <div class="col-lg-7" data-aos="fade-right">
+        <h2 class="fw-bold">Melindungi Data & Sistem Anda</h2>
+        <p class="text-muted">Kami menyediakan audit, pengujian penetrasi, enkripsi data, serta layanan SOC untuk menjaga bisnis Anda dari ancaman modern.</p>
+
+        <ul class="list-unstyled mt-3">
+          <li class="mb-2"><i class="fa-solid fa-check text-danger me-2"></i> Penetration testing & vulnerability assessment</li>
+          <li class="mb-2"><i class="fa-solid fa-check text-danger me-2"></i> Monitoring 24/7 & incident response</li>
+          <li class="mb-2"><i class="fa-solid fa-check text-danger me-2"></i> Compliance & security hardening</li>
+        </ul>
+      </div>
+
+      <div class="col-lg-5" data-aos="fade-left">
+        <div class="card p-4 shadow-sm">
+          <h5 class="fw-bold mb-2">Layanan Keamanan Kami</h5>
+          <p class="small text-muted mb-2">Pendekatan menyeluruh untuk menilai risiko & memberikan mitigasi.</p>
+          <ul class="small text-muted mb-0">
+            <li>Penetration Testing (Web & Mobile)</li>
+            <li>Vulnerability Assessment</li>
+            <li>Security Operation Center (SOC)</li>
+            <li>Incident Response</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h3 class="text-center fw-bold mb-4" data-aos="fade-up">Fokus Layanan Keamanan</h3>
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="zoom-in">
+        <div class="card card-feature p-4 h-100">
+          <div class="mb-3"><i class="fa-solid fa-user-shield feature-icon"></i></div>
+          <h5>Penetration Testing</h5>
+          <p class="text-muted small">Simulasi serangan untuk menemukan celah sistem sehingga dapat segera ditutup.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="card card-feature p-4 h-100">
+          <div class="mb-3"><i class="fa-solid fa-lock feature-icon"></i></div>
+          <h5>Data Encryption & Hardening</h5>
+          <p class="text-muted small">Enkripsi data baik at rest maupun in transit, plus hardening server & aplikasi.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="card card-feature p-4 h-100">
+          <div class="mb-3"><i class="fa-solid fa-shield-check feature-icon"></i></div>
+          <h5>SOC & Monitoring</h5>
+          <p class="text-muted small">Pemantauan real-time, alerting, dan response untuk menahan ancaman secepat mungkin.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOOLS -->
+<section class="py-5">
+  <div class="container text-center">
+    <h4 class="fw-bold" data-aos="fade-up">Tools & Metodologi</h4>
+    <p class="text-muted">Peralatan dan framework yang kami gunakan untuk analisa dan proteksi</p>
+    <div class="mt-3" data-aos="fade-up" data-aos-delay="100">
+      <span class="tool-badge">Burp Suite</span>
+      <span class="tool-badge">Nmap</span>
+      <span class="tool-badge">Wireshark</span>
+      <span class="tool-badge">Metasploit</span>
+      <span class="tool-badge">Splunk / ELK</span>
+    </div>
+  </div>
+</section>
+
+<!-- CASES -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h3 class="fw-bold text-center mb-4" data-aos="fade-up">Contoh Kasus Keamanan</h3>
+    <div class="row g-4">
+
+      <!-- Card 1 -->
+      <div class="col-md-6" data-aos="fade-right">
+        <div class="card shadow-sm border-0 h-100">
+          <!-- Ratio untuk gambar agar ukuran sama -->
+          <div class="ratio ratio-16x9">
+            <img src="assets/img/mm.png" 
+                 class="card-img-top object-fit-cover" 
+                 alt="Penetration Test - Financial App">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Penetration Test - Financial App</h5>
+            <p class="card-text small text-muted">Mengidentifikasi dan mengatasi 10 vulnerability kritikal serta rekomendasi mitigasi.</p>
+            <a href="index.html#contact" class="btn btn-outline-danger btn-sm">Minta Audit</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-6" data-aos="fade-left">
+        <div class="card shadow-sm border-0 h-100">
+          <div class="ratio ratio-16x9">
+            <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=1400&q=80" 
+                 class="card-img-top object-fit-cover" 
+                 alt="SOC Implementation">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">SOC Implementation</h5>
+            <p class="card-text small text-muted">Implementasi monitoring & playbook response untuk penanganan insiden.</p>
+            <a href="index.html#contact" class="btn btn-outline-danger btn-sm">Hubungi Security</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="py-5">
+  <div class="container">
+    <h3 class="text-center fw-bold mb-4" data-aos="fade-up">Testimonial</h3>
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="flip-left">
+        <div class="p-4 bg-white rounded shadow-sm">
+          <p class="mb-2">"Audit keamanan IDS menemukan isu yang signifikan dan rekomendasi mereka sangat membantu."</p>
+          <strong>- CIO FinanceCorp</strong>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="flip-left" data-aos-delay="200">
+        <div class="p-4 bg-white rounded shadow-sm">
+          <p class="mb-2">"SOC mereka meningkatkan time-to-detect hingga signifikan."</p>
+          <strong>- Head IT</strong>
+        </div>
+      </div>
+      <div class="col-md-4" data-aos="flip-left" data-aos-delay="400">
+        <div class="p-4 bg-white rounded shadow-sm">
+          <p class="mb-2">"Timnya sangat profesional dan komunikasinya jelas."</p>
+          <strong>- CTO Enterprise</strong>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="py-5">
+  <div class="container">
+    <h3 class="fw-bold text-center mb-4" data-aos="fade-up">FAQ — Keamanan Siber</h3>
+    <div class="accordion" id="faqSec" data-aos="fade-up">
+      <div class="accordion-item">
+        <h2 class="accordion-header"><button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#sf1">Apakah penetration test akan merusak aplikasi?</button></h2>
+        <div id="sf1" class="accordion-collapse collapse show"><div class="accordion-body small text-muted">Pengujian dilakukan dengan scope disepakati & backup; kegiatan yang berisiko tinggi dilakukan di window maintenance atau environment staging.</div></div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#sf2">Berapa sering perlu audit keamanan?</button></h2>
+        <div id="sf2" class="accordion-collapse collapse"><div class="accordion-body small text-muted">Sumber daya kritikal: minimal 2x/tahun; aplikasi umum: 1x/tahun; sistem yang sering berubah lebih sering.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-5 text-center">
+  <div class="container" data-aos="zoom-in">
+    <h4 class="fw-bold">Butuh audit keamanan atau SOC?</h4>
+    <p class="text-muted">Hubungi tim keamanan kami untuk assessment cepat & rekomendasi mitigasi.</p>
+    <a href="index.html#contact" class="btn btn-danger btn-lg">Minta Audit Sekarang</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container text-center">
+    <p class="mb-1">© 2025 Inovasi Digital Solusi (IDS)</p>
+    <small class="text-muted">Email: info@ids.example • Jakarta, Indonesia</small>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({ duration:800, once:true });
+</script>
+</body>
+</html>

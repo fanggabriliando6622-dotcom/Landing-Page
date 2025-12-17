@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sistem Kustom ERP, CRM, POS & HRIS - IDS</title>
+
+  <!-- BOOTSTRAP -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- ICON -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+
+    .hero-detail {
+      background: url('https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      height: 75vh;
+      position: relative;
+      color: #fff;
+      display: flex;
+      align-items: center;
+    }
+    .hero-detail::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.65);
+    }
+    .hero-detail .content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .icon-box i {
+      font-size: 42px;
+      color: #0d6efd;
+      margin-bottom: 15px;
+    }
+
+    .system-card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 30px;
+      height: 100%;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+    .system-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .mockup-img {
+      border-radius: 25px;
+      box-shadow: 0 20px 45px rgba(0,0,0,0.2);
+    }
+
+    footer {
+      background: #000;
+      color: #fff;
+      padding: 20px 0;
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg fixed-top shadow-sm bg-white">
+  <div class="container">
+    <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+      <img src="assets/img/pp.png" width="40" height="40" class="rounded-circle me-2">
+      IDS
+    </a>
+
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">Tentang</a></li>
+        <li class="nav-item"><a href="teknologi.html" class="nav-link">Teknologi</a></li>
+        <li class="nav-item"><a href="portofolio.html" class="nav-link">Portofolio</a></li>
+        <li class="nav-item"><a href="karir.html" class="nav-link">Karir</a></li>
+        <li class="nav-item"><a href="index.html#contact" class="nav-link">Kontak</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero-detail">
+  <div class="container content text-center">
+    <h1 data-aos="fade-up">Sistem Kustom untuk Bisnis Anda</h1>
+    <p class="lead mt-3" data-aos="fade-up" data-aos-delay="200">
+      ERP, CRM, POS, HRIS & sistem khusus sesuai alur bisnis Anda
+    </p>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="py-5">
+  <div class="container">
+    <div class="row align-items-center g-5">
+      <div class="col-md-6" data-aos="fade-right">
+        <h2>Sistem yang Dibangun Khusus, Bukan Template</h2>
+        <p class="text-muted mt-3">
+          IDS mengembangkan <strong>sistem kustom</strong> yang dirancang
+          sesuai kebutuhan operasional, struktur organisasi, dan
+          proses bisnis perusahaan Anda.
+        </p>
+        <p class="text-muted">
+          Kami tidak menjual sistem generik. Setiap fitur dibuat
+          untuk meningkatkan efisiensi, akurasi, dan kontrol bisnis.
+        </p>
+      </div>
+
+      <div class="col-md-6 text-center" data-aos="fade-left">
+  <img 
+    src="https://images.unsplash.com/photo-1556155092-490a1ba16284?auto=format&fit=crop&w=1400&q=80"
+    alt="Custom System Development"
+    class="img-fluid mockup-img w-100"
+    loading="lazy"
+  >
+</div>
+    </div>
+  </div>
+</section>
+
+<!-- JENIS SISTEM -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5" data-aos="fade-up">Jenis Sistem yang Kami Kembangkan</h2>
+
+    <div class="row g-4">
+      <div class="col-md-3" data-aos="zoom-in">
+        <div class="system-card text-center">
+          <i class="fa-solid fa-building-columns fa-2x text-primary mb-3"></i>
+          <h6>ERP</h6>
+          <p class="text-muted">
+            Manajemen keuangan, inventori, produksi, dan operasional terintegrasi.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-3" data-aos="zoom-in" data-aos-delay="150">
+        <div class="system-card text-center">
+          <i class="fa-solid fa-users fa-2x text-primary mb-3"></i>
+          <h6>CRM</h6>
+          <p class="text-muted">
+            Kelola pelanggan, penjualan, prospek, dan layanan purna jual.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-3" data-aos="zoom-in" data-aos-delay="300">
+        <div class="system-card text-center">
+          <i class="fa-solid fa-cash-register fa-2x text-primary mb-3"></i>
+          <h6>POS</h6>
+          <p class="text-muted">
+            Sistem kasir, stok, laporan penjualan real-time.
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-3" data-aos="zoom-in" data-aos-delay="450">
+        <div class="system-card text-center">
+          <i class="fa-solid fa-id-card-clip fa-2x text-primary mb-3"></i>
+          <h6>HRIS</h6>
+          <p class="text-muted">
+            Data karyawan, absensi, payroll, dan penilaian kinerja.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KEUNGGULAN -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-5" data-aos="fade-up">Keunggulan Sistem Kustom IDS</h2>
+
+    <div class="row g-4 text-center">
+      <div class="col-md-3" data-aos="fade-up">
+        <i class="fa-solid fa-gears fa-3x text-primary mb-3"></i>
+        <h6>Sesuai Proses Bisnis</h6>
+        <p class="text-muted">Fitur mengikuti alur kerja perusahaan Anda.</p>
+      </div>
+
+      <div class="col-md-3" data-aos="fade-up" data-aos-delay="150">
+        <i class="fa-solid fa-chart-line fa-3x text-primary mb-3"></i>
+        <h6>Efisiensi Tinggi</h6>
+        <p class="text-muted">Otomatisasi proses manual & minim human error.</p>
+      </div>
+
+      <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
+        <i class="fa-solid fa-shield-halved fa-3x text-primary mb-3"></i>
+        <h6>Aman & Terproteksi</h6>
+        <p class="text-muted">Hak akses, enkripsi, dan audit log.</p>
+      </div>
+
+      <div class="col-md-3" data-aos="fade-up" data-aos-delay="450">
+        <i class="fa-solid fa-expand fa-3x text-primary mb-3"></i>
+        <h6>Mudah Dikembangkan</h6>
+        <p class="text-muted">Siap scale seiring pertumbuhan bisnis.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROSES -->
+<section class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5" data-aos="fade-up">Proses Pengembangan Sistem</h2>
+
+    <div class="row g-4">
+      <div class="col-md-3" data-aos="fade-up">
+        <div class="system-card text-center">
+          <h4>1</h4>
+          <p class="text-muted">Analisis kebutuhan & workflow</p>
+        </div>
+      </div>
+
+      <div class="col-md-3" data-aos="fade-up" data-aos-delay="150">
+        <div class="system-card text-center">
+          <h4>2</h4>
+          <p class="text-muted">Desain sistem & database</p>
+        </div>
+      </div>
+
+      <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
+        <div class="system-card text-center">
+          <h4>3</h4>
+          <p class="text-muted">Development & testing</p>
+        </div>
+      </div>
+
+      <div class="col-md-3" data-aos="fade-up" data-aos-delay="450">
+        <div class="system-card text-center">
+          <h4>4</h4>
+          <p class="text-muted">Implementasi & training</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-5 bg-primary text-white text-center">
+  <div class="container">
+    <h2 data-aos="fade-up">Butuh Sistem yang Benar-benar Sesuai?</h2>
+    <p data-aos="fade-up" data-aos-delay="150">
+      IDS siap membangun sistem kustom untuk bisnis Anda.
+    </p>
+    <a href="index.html#contact" class="btn btn-light px-4 mt-3">
+      <i class="fa-solid fa-paper-plane"></i> Konsultasi Gratis
+    </a>
+    <br>
+    <a href="kt1.html" class="btn btn-outline-light mt-3">
+      <i class="fa-solid fa-arrow-left"></i> Kembali
+    </a>
+  </div>
+</section>
+
+<footer class="text-center">
+  COPYRIGHT © 2025 IDS - All Rights Reserved
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>AOS.init();</script>
+
+</body>
+</html>

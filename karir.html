@@ -5,16 +5,9 @@
   <title>Karier | IDS</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Bootstrap Icons -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-
-  <!-- AOS -->
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
-  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -27,7 +20,7 @@
     body{font-family: 'popins', sans-serif;
     background:#f8f9fa}
 
- .navbar {
+    .navbar {
       background: white;
       box-shadow: 0 2px 12px rgba(0,0,0,0.1);
     }
@@ -58,14 +51,33 @@
     .navbar-toggler {
       outline: none;
     }
-    
 
-    /* HERO */
+    /* WARNA LINK NAVBAR */
+.navbar .nav-link {
+  color: #333; /* default color */
+  transition: color 0.3s, background-color 0.3s;
+  padding: 8px 12px;
+  border-radius: 6px; /* agar ada efek kotak halus */
+}
+
+/* HOVER LINK */
+.navbar .nav-link:hover {
+  color: #0d6efd; /* biru saat hover */
+  background-color: rgba(13,110,253,0.1); /* background ringan */
+  transform: translateY(-2px);
+}
+
+/* LINK AKTIF */
+.navbar .nav-link.active {
+  color: #fff; /* teks putih */
+  background-color: #0d6efd; /* background biru */
+  font-weight: 600;
+}
+    
     .career-hero{
       margin-top:80px;
     }
 
-    /* CARD LOWONGAN */
     .career-card{
       background:#fff;
       border:none;
@@ -128,7 +140,6 @@
       color:#fff;
     }
 
-    /* CTA */
     .career-cta{
       background:var(--ids-soft);
       border-radius:24px;
@@ -137,26 +148,25 @@
     }
 
     .accordion-button{
-  background:#fff;
-  border-radius:0;
-}
+      background:#fff;
+      border-radius:0;
+    }
 
-.accordion-button:not(.collapsed){
-  background:#eef4ff;
-  color:#0d6efd;
-}
+    .accordion-button:not(.collapsed){
+      background:#eef4ff;
+      color:#0d6efd;
+    }
 
-.accordion-item + .accordion-item{
-  border-top:1px solid #eee;
-}
+    .accordion-item + .accordion-item{
+      border-top:1px solid #eee;
+    }
 
-.career-cta{
-  background:linear-gradient(135deg,#eef4ff,#ffffff);
-  border-radius:24px;
-  padding:50px 40px;
-}
+    .career-cta{
+      background:linear-gradient(135deg,#eef4ff,#ffffff);
+      border-radius:24px;
+      padding:50px 40px;
+    }
 
-    /* FOOTER */
     footer{
       background:#0a2f5a;
       color:#fff;
@@ -170,6 +180,64 @@
     footer a:hover{
       color:var(--ids-primary);
     }
+
+    footer {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+    }
+
+    footer h5 {
+      color: #ffffff;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    footer a {
+      color: #cccccc;
+      transition: 0.3s;
+      text-decoration: none;
+    }
+    footer a:hover {
+      color: #0d6efd;
+      text-decoration: underline;
+    }
+
+    footer p {
+      color: #cccccc;
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+
+    footer .fab {
+      transition: 0.3s;
+    }
+    footer .fab:hover {
+      color: #0d6efd;
+      transform: scale(1.2);
+    }
+
+    footer hr {
+      border-top: 1px solid #444;
+    }
+
+    footer small {
+      display: block;
+      margin-top: 5px;
+      color: #888;
+      font-size: 12px;
+    }
+
+    @media(max-width:768px){
+      footer .row > div {
+        text-align: center;
+      }
+      footer .d-flex {
+        justify-content: center !important;
+      }
+      footer .d-flex a {
+        margin: 0 5px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -177,10 +245,9 @@
 <nav class="navbar navbar-expand-lg fixed-top shadow-sm" style="background-color: rgba(255,255,255,0.95);">
   <div class="container">
 
-    <a class="navbar-brand d-flex align-items-center fw-bold" href="#">
-      <img src="assets/img/pp.png" width="40" height="40" class="me-2 rounded-circle">
-      IDS
-    </a>
+    <a class="navbar-brand d-flex align-items-center" href="#">
+  <img src="assets/img/46.png" class="me-2">
+</a>
 
     <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
       <span class="navbar-toggler-icon"></span>
@@ -197,7 +264,6 @@
       <a href="about.html" class="nav-link fw-medium">Tentang</a>
     </li>
 
-        <!-- DROPDOWN LAYANAN -->
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle fw-medium"
         href="#"
@@ -211,20 +277,17 @@
       <ul class="dropdown-menu shadow border-0" aria-labelledby="layananDropdown">
         <li>
         <a class="dropdown-item" href="kt1.html">
-            <i class="fa-solid fa-laptop-code me-2"></i>
-            Web & Mobile Development
+            Pengembangan App Web
           </a>
         </li>
         <li>
           <a class="dropdown-item" href="kt2.html">
-            <i class="fa-solid fa-cloud me-2"></i>
-            Cloud Computing
+            Pengembangan App Mobile
           </a>
         </li>
         <li>
           <a class="dropdown-item" href="kt3.html">
-            <i class="fa-solid fa-shield-halved me-2"></i>
-            Keamanan Siber
+            Tim perangkat lunak khusus
           </a>
         </li>
       </ul>
@@ -243,7 +306,7 @@
     </li>
 
     <li class="nav-item">
-      <a href="index.html#contact" class="nav-link fw-medium">Kontak</a>
+      <a href="kontak.html" class="nav-link fw-medium">Kontak</a>
     </li>
   </ul>
 </div>
@@ -251,13 +314,12 @@
   </div>
 </nav>
 
-<!-- HERO -->
 <section class="career-hero text-white text-center">
   <div class="position-relative" style="height:400px;background:url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80') center/cover;">
     <div class="position-absolute w-100 h-100" style="background:rgba(0,0,0,.65)"></div>
     <div class="container position-relative h-100 d-flex align-items-center justify-content-center">
       <div>
-        <h1 class="fw-bold" data-aos="fade-up">Lowongan Kerja IDS</h1>
+        <h1 class="fw-bold" data-aos="fade-up">Lowongan Kerja OMS</h1>
         <p class="lead" data-aos="fade-up" data-aos-delay="100">
           Bergabung dan tumbuh bersama perusahaan teknologi terpercaya.
         </p>
@@ -266,55 +328,54 @@
   </div>
 </section>
 
-<!-- LOWONGAN -->
 <section class="py-5">
   <div class="container">
     <h2 class="text-center fw-bold mb-5">Lowongan Tersedia</h2>
     <div class="row g-4">
 
-      <!-- ANDROID -->
       <div class="col-md-4">
         <div class="career-card">
-          <div class="career-thumb" style="background-image:url('assets/img/ad.png')"></div>
+          <div class="career-thumb" style="background-image:url('assets/img/andro.png')"></div>
           <div class="card-body">
             <span class="badge-ids mb-2">Mobile Development</span>
             <h5>Android Developer</h5>
             <p class="career-info">Pengembangan aplikasi Android untuk layanan publik.</p>
-            <div class="career-meta"><strong>📍 Lokasi:</strong> Jakarta</div>
-            <div class="career-meta"><strong>🕒 Tipe:</strong> Full Time</div>
-            <div class="career-meta"><strong>🎯 Skill:</strong> Kotlin / Java</div>
             <a href="lamaran.html" class="btn btn-detail mt-4">Lamar Sekarang</a>
           </div>
         </div>
       </div>
 
-      <!-- FULLSTACK -->
       <div class="col-md-4">
         <div class="career-card">
-          <div class="career-thumb" style="background-image:url('assets/img/pg.png')"></div>
+          <div class="career-thumb" style="background-image:url('assets/img/junior.jpg')"></div>
           <div class="card-body">
             <span class="badge-ids mb-2">Web Development</span>
-            <h5>Junior Fullstack</h5>
+            <h5>Junior Fullstack Programmer</h5>
             <p class="career-info">Mengembangkan sistem web pemerintahan & swasta.</p>
-            <div class="career-meta"><strong>📍 Lokasi:</strong> Bandung</div>
-            <div class="career-meta"><strong>🕒 Tipe:</strong> Full Time</div>
-            <div class="career-meta"><strong>🎯 Skill:</strong> PHP / Laravel</div>
             <a href="lamaran.html" class="btn btn-detail mt-4">Lamar Sekarang</a>
           </div>
         </div>
       </div>
 
-      <!-- IMPLEMENTATOR -->
       <div class="col-md-4">
         <div class="career-card">
-          <div class="career-thumb" style="background-image:url('assets/img/si.png')"></div>
+          <div class="career-thumb" style="background-image:url('assets/img/system.jpg')"></div>
           <div class="card-body">
             <span class="badge-ids mb-2">Implementation</span>
-            <h5>System Implementator</h5>
+            <h5>System Implementator-Jawa Timur</h5>
             <p class="career-info">Implementasi dan pendampingan sistem klien.</p>
-            <div class="career-meta"><strong>📍 Lokasi:</strong> Surabaya</div>
-            <div class="career-meta"><strong>🕒 Tipe:</strong> Full Time</div>
-            <div class="career-meta"><strong>🎯 Skill:</strong> IT Support</div>
+            <a href="lamaran.html" class="btn btn-detail mt-4">Lamar Sekarang</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="career-card">
+          <div class="career-thumb" style="background-image:url('assets/img/slp.jpg')"></div>
+          <div class="card-body">
+            <span class="badge-ids mb-2">Implementation</span>
+            <h5>System Implementator-Papua</h5>
+            <p class="career-info">Implementasi dan pendampingan sistem klien.</p>
             <a href="lamaran.html" class="btn btn-detail mt-4">Lamar Sekarang</a>
           </div>
         </div>
@@ -324,7 +385,6 @@
   </div>
 </section>
 
-<!-- SYARAT -->
 <section class="py-5 bg-white">
   <div class="container">
     <h2 class="text-center fw-bold mb-5">Syarat & Proses Melamar</h2>
@@ -363,7 +423,6 @@
   </div>
 </section>
 
-<!-- FAQ -->
 <section class="py-5 bg-light">
   <div class="container">
     <div class="text-center mb-5">
@@ -376,7 +435,6 @@
 
         <div class="accordion shadow-sm rounded-4 overflow-hidden" id="faqCareer">
 
-          <!-- FAQ 1 -->
           <div class="accordion-item border-0">
             <h2 class="accordion-header">
               <button class="accordion-button fw-semibold" type="button"
@@ -387,13 +445,12 @@
             </h2>
             <div id="faq1" class="accordion-collapse collapse show">
               <div class="accordion-body text-muted">
-                Ya, IDS terbuka untuk fresh graduate yang memiliki dasar teknis yang baik,
+                Ya, OMS terbuka untuk fresh graduate yang memiliki dasar teknis yang baik,
                 kemauan belajar tinggi, dan semangat berkembang bersama tim.
               </div>
             </div>
           </div>
 
-          <!-- FAQ 2 -->
           <div class="accordion-item border-0">
             <h2 class="accordion-header">
               <button class="accordion-button collapsed fw-semibold" type="button"
@@ -410,7 +467,6 @@
             </div>
           </div>
 
-          <!-- FAQ 3 -->
           <div class="accordion-item border-0">
             <h2 class="accordion-header">
               <button class="accordion-button collapsed fw-semibold" type="button"
@@ -439,14 +495,14 @@
     <div class="career-cta shadow-lg">
       <div class="row align-items-center">
         <div class="col-md-8 text-md-start text-center mb-4 mb-md-0">
-          <h3 class="fw-bold mb-2">Siap Bergabung Bersama IDS?</h3>
+          <h3 class="fw-bold mb-2">Siap Bergabung Bersama OMS?</h3>
           <p class="mb-0 text-muted">
             Kirim CV dan portofolio Anda ke
-            <strong class="text-primary">career@ids.com</strong>
+            <strong class="text-primary">marketing@optimasolution.co.id</strong>
           </p>
         </div>
         <div class="col-md-4 text-md-end text-center">
-          <a href="mailto:career@ids.com" class="btn btn-detail px-4 py-3">
+          <a href="marketing@optimasolution.co.id" class="btn btn-detail px-4 py-3">
             <i class="bi bi-send-fill me-2"></i> Kirim Lamaran
           </a>
         </div>
@@ -459,18 +515,15 @@
   <div class="container">
 
     <div class="row g-4">
-
-      <!-- ABOUT -->
       <div class="col-md-4">
-        <h5 class="fw-bold mb-3">Tentang IDS</h5>
+        <h5 class="fw-bold mb-3">Tentang OMS</h5>
         <p>
-          IDS adalah perusahaan teknologi yang menyediakan solusi IT profesional, mulai dari web & mobile development, sistem kustom, cloud computing, hingga keamanan siber. 
+          OMS adalah perusahaan teknologi yang menyediakan solusi IT profesional, mulai dari web & mobile development, sistem kustom, cloud computing, hingga keamanan siber. 
           Kami membantu bisnis Anda berkembang dengan teknologi modern dan tim ahli berpengalaman.
         </p>
         <a href="about.html" class="text-decoration-none text-primary">Pelajari Lebih Lanjut &rarr;</a>
       </div>
 
-      <!-- LAYANAN -->
       <div class="col-md-2">
         <h5 class="fw-bold mb-3">Layanan</h5>
         <ul class="list-unstyled">
@@ -481,7 +534,6 @@
         </ul>
       </div>
 
-      <!-- LINK CEPAT -->
       <div class="col-md-2">
         <h5 class="fw-bold mb-3">Link Cepat</h5>
         <ul class="list-unstyled">
@@ -492,18 +544,17 @@
         </ul>
       </div>
 
-      <!-- CONTACT -->
       <div class="col-md-4">
         <h5 class="fw-bold mb-3">Kontak Kami</h5>
-        <p><i class="fas fa-map-marker-alt me-2"></i> Jl. Teknologi No. 12, Jakarta, Indonesia</p>
-        <p><i class="fas fa-phone me-2"></i> +62 812 3456 7890</p>
-        <p><i class="fas fa-envelope me-2"></i> info@ids.co.id</p>
+        <p><i class="fas fa-map-marker-alt me-2"></i> Ruko Mega Peterongan, Jl. Kanal No. 5a, Lamper Lor, Semarang Selatan Kota Semarang, Jawa Tengah 50242</p>
+        <p><i class="fas fa-phone me-2"></i> 0813-8313-9864</p>
+        <p><i class="fas fa-envelope me-2"></i> marketing@optimasolution.co.id</p>
 
         <div class="d-flex gap-3 mt-3">
           <a href="#" class="text-light fs-5"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="text-light fs-5"><i class="fab fa-twitter"></i></a>
-          <a href="#" class="text-light fs-5"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#" class="text-light fs-5"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/62813-8313-9864" class="text-light fs-5"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://marketing@optimasolution.co.id" class="text-light fs-5"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://instagram.com/optimamultisinergi" class="text-light fs-5"><i class="fab fa-instagram"></i></a>
         </div>
       </div>
 
@@ -511,82 +562,13 @@
 
     <hr class="bg-secondary my-4">
 
-    <!-- COPYRIGHT -->
     <div class="text-center">
-      <p class="mb-0">&copy; 2025 IDS — All Rights Reserved</p>
+      <p class="mb-0">&copy; 2025 OMS — All Rights Reserved</p>
       <small class="text-secondary">Dibangun dengan teknologi modern & tim profesional.</small>
     </div>
 
   </div>
 </footer>
-
-<style>
-  /* FOOTER */
-footer {
-  font-family: 'Poppins', sans-serif;
-  line-height: 1.6;
-}
-
-/* Footer Heading */
-footer h5 {
-  color: #ffffff;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-/* Footer Links */
-footer a {
-  color: #cccccc;
-  transition: 0.3s;
-  text-decoration: none;
-}
-footer a:hover {
-  color: #0d6efd;
-  text-decoration: underline;
-}
-
-/* Footer Contact Info */
-footer p {
-  color: #cccccc;
-  margin-bottom: 8px;
-  font-size: 14px;
-}
-
-/* Social Media Icons */
-footer .fab {
-  transition: 0.3s;
-}
-footer .fab:hover {
-  color: #0d6efd;
-  transform: scale(1.2);
-}
-
-/* Horizontal Line */
-footer hr {
-  border-top: 1px solid #444;
-}
-
-/* Copyright */
-footer small {
-  display: block;
-  margin-top: 5px;
-  color: #888;
-  font-size: 12px;
-}
-
-/* Responsive Adjustments */
-@media(max-width:768px){
-  footer .row > div {
-    text-align: center;
-  }
-  footer .d-flex {
-    justify-content: center !important;
-  }
-  footer .d-flex a {
-    margin: 0 5px;
-  }
-}
-</style>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>

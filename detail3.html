@@ -2,22 +2,17 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<title>Manajemen Klinik | Portofolio IDS</title>
+<title>SKE e-Note – Sistem Kearsipan Elektronik</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- Bootstrap -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-<!-- Font Awesome -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-
-<!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 
 <style>
 body{
   font-family:'Poppins',sans-serif;
-  background:#f8f9fb;
+  background:#f4f7fe;
 }
 
 .navbar {
@@ -56,83 +51,128 @@ body{
       xmlns='ass' '%3E%3Cpath' stroke='rgba%280,0,0,0.7%29' 
       stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22' '/%3E%3C/svg%3E'");
     }
-/* HERO */
-.project-hero{
-  background:linear-gradient(135deg,#0dcaf0,#0a58ca);
-  color:#fff;
-  padding:100px 0;
+    /* WARNA LINK NAVBAR */
+.navbar .nav-link {
+  color: #333; /* default color */
+  transition: color 0.3s, background-color 0.3s;
+  padding: 8px 12px;
+  border-radius: 6px; /* agar ada efek kotak halus */
 }
 
-.project-hero .badge{
-  background:rgba(255,255,255,.25);
+/* HOVER LINK */
+.navbar .nav-link:hover {
+  color: #0d6efd; /* biru saat hover */
+  background-color: rgba(13,110,253,0.1); /* background ringan */
+  transform: translateY(-2px);
+}
+
+/* LINK AKTIF */
+.navbar .nav-link.active {
+  color: #fff; /* teks putih */
+  background-color: #0d6efd; /* background biru */
+  font-weight: 600;
+}
+
+/* HERO */
+.project-hero{
+  color:#fff;
+  padding:90px 0 140px;
+  text-align:center;
+}
+
+.project-badge{
+  display:inline-block;
+  background:rgba(255,255,255,.2);
+  padding:8px 22px;
+  border-radius:50px;
+  font-size:13px;
+  letter-spacing:1px;
+  margin-bottom:15px;
 }
 
 /* CARD */
 .project-card{
-  border:none;
-  border-radius:18px;
-  box-shadow:0 12px 35px rgba(0,0,0,.08);
+  background:#fff;
+  border-radius:22px;
+  box-shadow:0 25px 60px rgba(0,0,0,.08);
+  padding:35px;
+  margin-top:-100px;
 }
 
-.project-preview{
-  background:none;
-  height:auto;
-  box-shadow:none;
+/* IMAGE */
+.project-image{
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 18px 45px rgba(0,0,0,.15);
+}
+
+.project-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* DETAIL */
+.detail-list li{
+  margin-bottom:14px;
+  font-size:15px;
+}
+
+.detail-list i{
+  color:#201987;
+  margin-right:10px;
+}
+
+/* TITLE */
+.section-title{
+  font-weight:700;
+  margin-bottom:15px;
+}
+
+/* DESKRIPSI */
+.project-desc{
+  background:#fff;
+  border-radius:20px;
+  box-shadow:0 18px 45px rgba(0,0,0,.06);
+  padding:40px;
 }
 
 /* FEATURE */
 .feature-box{
-  background:#fff;
-  border-radius:16px;
+  background:linear-gradient(180deg,#e9f7ef,#ffffff);
+  border-radius:18px;
   padding:25px;
   height:100%;
-  box-shadow:0 10px 30px rgba(0,0,0,.08);
   transition:.3s;
 }
 
 .feature-box:hover{
   transform:translateY(-6px);
+  box-shadow:0 18px 35px rgba(0,0,0,.08);
 }
 
-/* TECH */
-.tech-badge{
-  background:#e9f6ff;
-  color:#0d6efd;
-  padding:8px 18px;
-  border-radius:50px;
-  font-weight:600;
-  font-size:14px;
-  margin:6px;
-  display:inline-block;
-}
-
-/* CTA */
-.project-cta{
-  background:linear-gradient(135deg,#0dcaf0,#0a58ca);
-  color:#fff;
-  padding:70px 40px;
-  border-radius:24px;
-  text-align:center;
+.feature-box i{
+  font-size:30px;
+  color:#241987;
+  margin-bottom:14px;
 }
 </style>
 </head>
 
 <body>
-
     <nav class="navbar navbar-expand-lg fixed-top shadow-sm" style="background-color: rgba(255,255,255,0.95);">
   <div class="container">
 
-    <a class="navbar-brand d-flex align-items-center fw-bold" href="#">
-      <img src="assets/img/pp.png" width="40" height="40" class="me-2 rounded-circle">
-      IDS
-    </a>
+    <a class="navbar-brand d-flex align-items-center" href="#">
+  <img src="assets/img/46.png" class="me-2">
+</a>
 
     <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class="collapse navbar-collapse" id="navMenu">
-  <ul class="navbar-nav ms-auto mb-2 mb-lg-0" style="font-family: 'popins', sans-serif;">
+  <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 
     <li class="nav-item">
       <a href="index.html" class="nav-link fw-medium">Home</a>
@@ -156,20 +196,17 @@ body{
       <ul class="dropdown-menu shadow border-0" aria-labelledby="layananDropdown">
         <li>
         <a class="dropdown-item" href="kt1.html">
-            <i class="fa-solid fa-laptop-code me-2"></i>
-            Web & Mobile Development
+            Pengembangan App Web
           </a>
         </li>
         <li>
           <a class="dropdown-item" href="kt2.html">
-            <i class="fa-solid fa-cloud me-2"></i>
-            Cloud Computing
+            Pengembangan App Mobile
           </a>
         </li>
         <li>
           <a class="dropdown-item" href="kt3.html">
-            <i class="fa-solid fa-shield-halved me-2"></i>
-            Keamanan Siber
+            Tim perangkat lunak khusus
           </a>
         </li>
       </ul>
@@ -188,7 +225,7 @@ body{
     </li>
 
     <li class="nav-item">
-      <a href="#contact" class="nav-link fw-medium">Kontak</a>
+      <a href="kontak.html" class="nav-link fw-medium">Kontak</a>
     </li>
   </ul>
 </div>
@@ -199,135 +236,226 @@ body{
 <!-- HERO -->
 <section class="project-hero">
   <div class="container">
-    <div class="row align-items-center">
-      <div class="col-md-7">
-        <span class="badge mb-3">Healthcare System</span>
-        <h1 class="fw-bold mb-3">Manajemen Klinik</h1>
-        <p class="lead">
-          Sistem informasi klinik untuk pengelolaan rekam medis pasien,
-          jadwal dokter, dan pelayanan kesehatan secara digital dan terintegrasi.
+  </div>
+</section>
+
+<!-- DETAIL -->
+<section class="container">
+  <div class="project-card">
+    <div class="row align-items-center g-4">
+
+      <!-- GAMBAR -->
+      <div class="col-lg-5">
+        <div class="project-image">
+          <img src="assets/img/opas.jpg" alt="SKE e-Note">
+        </div>
+      </div>
+
+      <!-- DETAIL -->
+      <div class="col-lg-7">
+        <h4 class="section-title">Detail Aplikasi</h4>
+
+        <ul class="list-unstyled detail-list">
+          <li>
+            <i class="fa-solid fa-tag"></i>
+            <strong>Nama Aplikasi :</strong> APP OPNICARE ( Optima Clinic Care )
+          </li>
+          <li>
+            <i class="fa-solid fa-globe"></i>
+            <strong>Base Pengembangan :</strong> App Mobile
+          </li>
+          <li>
+            <i class="fa-solid fa-code"></i>
+            <strong>Tools Pengembangan :</strong>
+            Cordova, JavaScript, NodeJS dan Framework7
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- DESKRIPSI -->
+<section class="container my-5">
+  <div class="project-desc">
+    <h4 class="section-title">Deskripsi Aplikasi</h4>
+
+    <p style="text-align:justify">
+      App Laundry merupakan aplikasi berbasis android yang dirancang khusus untuk kebutuhan UMKM jasa laundry.
+  </div>
+</section>
+
+<!-- KEUNGGULAN -->
+<section class="container mb-5">
+  <h4 class="section-title text-center mb-4">Keunggulan Aplikasi</h4>
+
+  <div class="row g-4">
+
+    <div class="col-md-4">
+      <div class="feature-box text-center">
+        <i class="fa-solid fa-code-branch"></i>
+        <h6 class="fw-bold">Open Source</h6>
+        <p class="mb-0">
+          Dikembangkan dengan ekosistem opensource, sehingga menekan biaya pengembangan dan pemeliharaan.
         </p>
       </div>
-      <div class="col-md-5">
-  <div class="project-preview text-center p-3">
-    <img src="assets/img/03.png" class="img-fluid rounded-4 shadow" alt="Audit Keamanan Sistem">
-  </div>
-</div>
     </div>
+
+    <div class="col-md-4">
+      <div class="feature-box text-center">
+        <i class="fa-solid fa-arrows-rotate"></i>
+        <h6 class="fw-bold">Fleksibel</h6>
+        <p class="mb-0">
+          Aplikasi ini bisa digunakan pada pelbagai perangkat android, seperti handphone dan tablet.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="feature-box text-center">
+        <i class="fa-solid fa-lightbulb"></i>
+        <h6 class="fw-bold">Inovatif</h6>
+        <p class="mb-0">
+          Modul-modul dalam aplikasi ini sudah saling terintregrasi, sehingga memudahkan penggunaannya. Selain itu Aplikasi antar muka ini juga dirancang semenarik dan semudah mungkin penggunaannya.
+        </p>
+      </div>
+    </div>
+
   </div>
 </section>
 
-<!-- DESKRIPSI -->
-<section class="py-5">
+<footer class="bg-dark text-light pt-5 pb-3">
   <div class="container">
+
     <div class="row g-4">
 
-      <div class="col-md-8">
-        <div class="project-card p-4 h-100">
-          <h4 class="fw-bold mb-3">Tentang Aplikasi</h4>
-          <p>
-            Sistem Manajemen Klinik dikembangkan oleh
-            <strong>Integrated Digital Solution (IDS)</strong>
-            untuk membantu fasilitas kesehatan dalam mengelola
-            layanan medis secara efektif dan aman.
-          </p>
-          <p>
-            Aplikasi ini mendukung pengelolaan data pasien, rekam medis digital,
-            jadwal praktik dokter, hingga laporan layanan kesehatan
-            yang dapat diakses dengan cepat dan terstruktur.
-          </p>
-        </div>
+      <!-- ABOUT -->
+      <div class="col-md-4">
+        <h5 class="fw-bold mb-3">Tentang OMS</h5>
+        <p>
+          OMS adalah perusahaan teknologi yang menyediakan solusi IT profesional, mulai dari web & mobile development, sistem kustom, cloud computing, hingga keamanan siber. 
+          Kami membantu bisnis Anda berkembang dengan teknologi modern dan tim ahli berpengalaman.
+        </p>
+        <a href="about.html" class="text-decoration-none text-primary">Pelajari Lebih Lanjut &rarr;</a>
       </div>
 
-      <div class="col-md-4">
-        <div class="project-card p-4 h-100">
-          <h5 class="fw-bold mb-3">Informasi Proyek</h5>
-          <ul class="list-unstyled small">
-            <li class="mb-2"><strong>Klien:</strong> Klinik & Puskesmas</li>
-            <li class="mb-2"><strong>Kategori:</strong> Healthcare System</li>
-            <li class="mb-2"><strong>Platform:</strong> Web Application</li>
-            <li class="mb-2"><strong>Status:</strong> Digunakan Aktif</li>
-            <li class="mb-2"><strong>Tahun:</strong> 2025</li>
-          </ul>
-        </div>
+      <!-- LAYANAN -->
+      <div class="col-md-2">
+        <h5 class="fw-bold mb-3">Layanan</h5>
+        <ul class="list-unstyled">
+          <li><a href="kt1.html" class="text-light text-decoration-none">Web & Mobile Development</a></li>
+          <li><a href="kt2.html" class="text-light text-decoration-none">Cloud Computing</a></li>
+          <li><a href="kt3.html" class="text-light text-decoration-none">Keamanan Siber</a></li>
+          <li><a href="kt4.html" class="text-light text-decoration-none">Sistem Kustom</a></li>
+        </ul>
       </div>
+
+      <!-- LINK CEPAT -->
+      <div class="col-md-2">
+        <h5 class="fw-bold mb-3">Link Cepat</h5>
+        <ul class="list-unstyled">
+          <li><a href="index.html" class="text-light text-decoration-none">Home</a></li>
+          <li><a href="portofolio.html" class="text-light text-decoration-none">Portofolio</a></li>
+          <li><a href="karir.html" class="text-light text-decoration-none">Karir</a></li>
+          <li><a href="index.html#contact" class="text-light text-decoration-none">Kontak</a></li>
+        </ul>
+      </div>
+
+      <!-- CONTACT -->
+      <div class="col-md-4">
+        <h5 class="fw-bold mb-3">Kontak Kami</h5>
+        <p><i class="fas fa-map-marker-alt me-2"></i> Ruko Mega Peterongan, Jl. Kanal No. 5a, Lamper Lor, Semarang Selatan Kota Semarang, Jawa Tengah 50242</p>
+        <p><i class="fas fa-phone me-2"></i> 0813-8313-9864</p>
+        <p><i class="fas fa-envelope me-2"></i> marketing@optimasolution.co.id</p>
+
+        <div class="d-flex gap-3 mt-3">
+          <a href="#" class="text-light fs-5"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://wa.me/62813-8313-9864" class="text-light fs-5"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://marketing@optimasolution.co.id" class="text-light fs-5"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://instagram.com/optimamultisinergi" class="text-light fs-5"><i class="fab fa-instagram"></i></a>
+        </div>
 
     </div>
-  </div>
-</section>
 
-<!-- FITUR -->
-<section class="py-5 bg-light">
-  <div class="container">
-    <div class="text-center mb-5">
-      <h3 class="fw-bold">Fitur Utama</h3>
-      <p class="text-muted">Mendukung operasional klinik secara menyeluruh</p>
+    <hr class="bg-secondary my-4">
+
+    <!-- COPYRIGHT -->
+    <div class="text-center">
+      <p class="mb-0">&copy; 2025 OMS — All Rights Reserved</p>
+      <small class="text-secondary">Dibangun dengan teknologi modern & tim profesional.</small>
     </div>
 
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="feature-box">
-          <i class="fa-solid fa-file-medical fa-2x text-info mb-3"></i>
-          <h6 class="fw-bold">Rekam Medis Digital</h6>
-          <p class="small text-muted">
-            Penyimpanan dan pengelolaan riwayat kesehatan pasien.
-          </p>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="feature-box">
-          <i class="fa-solid fa-user-doctor fa-2x text-info mb-3"></i>
-          <h6 class="fw-bold">Jadwal Dokter</h6>
-          <p class="small text-muted">
-            Pengaturan jadwal praktik dokter dan reservasi pasien.
-          </p>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="feature-box">
-          <i class="fa-solid fa-hospital-user fa-2x text-info mb-3"></i>
-          <h6 class="fw-bold">Manajemen Pasien</h6>
-          <p class="small text-muted">
-            Pendaftaran pasien dan histori kunjungan.
-          </p>
-        </div>
-      </div>
-    </div>
   </div>
-</section>
-
-<!-- TEKNOLOGI -->
-<section class="py-5">
-  <div class="container text-center">
-    <h3 class="fw-bold mb-4">Teknologi yang Digunakan</h3>
-    <span class="tech-badge"><i class="fa-brands fa-laravel"></i> Laravel</span>
-    <span class="tech-badge"><i class="fa-solid fa-database"></i> MySQL</span>
-    <span class="tech-badge"><i class="fa-brands fa-html5"></i> HTML5</span>
-    <span class="tech-badge"><i class="fa-brands fa-css3-alt"></i> CSS3</span>
-    <span class="tech-badge"><i class="fa-brands fa-js"></i> JavaScript</span>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="py-5">
-  <div class="container">
-    <div class="project-cta">
-      <h3 class="fw-bold mb-3">Solusi Digital untuk Layanan Kesehatan</h3>
-      <p class="mb-4">
-        IDS membantu klinik meningkatkan kualitas pelayanan medis.
-      </p>
-      <a href="contact.html" class="btn btn-light btn-lg px-5 fw-bold">
-        Hubungi IDS
-      </a>
-    </div>
-  </div>
-</section>
-
-<footer class="bg-dark text-light text-center py-4">
-© 2025 Integrated Digital Solution (IDS)
 </footer>
+
+<style>
+  /* FOOTER */
+footer {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+}
+
+/* Footer Heading */
+footer h5 {
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* Footer Links */
+footer a {
+  color: #cccccc;
+  transition: 0.3s;
+  text-decoration: none;
+}
+footer a:hover {
+  color: #0d6efd;
+  text-decoration: underline;
+}
+
+/* Footer Contact Info */
+footer p {
+  color: #cccccc;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+/* Social Media Icons */
+footer .fab {
+  transition: 0.3s;
+}
+footer .fab:hover {
+  color: #0d6efd;
+  transform: scale(1.2);
+}
+
+/* Horizontal Line */
+footer hr {
+  border-top: 1px solid #444;
+}
+
+/* Copyright */
+footer small {
+  display: block;
+  margin-top: 5px;
+  color: #888;
+  font-size: 12px;
+}
+
+/* Responsive Adjustments */
+@media(max-width:768px){
+  footer .row > div {
+    text-align: center;
+  }
+  footer .d-flex {
+    justify-content: center !important;
+  }
+  footer .d-flex a {
+    margin: 0 5px;
+  }
+}
+</style>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>

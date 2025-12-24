@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>SIM-ASET | Sistem Informasi Manajemen Aset</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+
+<style>
+body{
+  font-family:'Poppins',sans-serif;
+  background:#f4f7ff;
+}
+
+.navbar {
+      background: white;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+    }
+
+    .navbar .nav-link {
+      color: #333;
+      transition: color 0.3s, transform 0.3s;
+    }
+    .navbar .nav-link:hover {
+      color: #0d6efd;
+      transform: translateY(-2px);
+    }
+    .navbar .nav-link.active {
+      color: #0d6efd;
+      font-weight: 600;
+    }
+
+    .navbar-brand {
+      font-size: 1.25rem;
+      color: #0d6efd;
+      text-decoration: none;
+    }
+    .navbar-brand:hover {
+      color: #084298;
+      text-decoration: none;
+    }
+
+    .navbar-toggler {
+      outline: none;
+    }
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30'")
+      xmlns='ass' '%3E%3Cpath' stroke='rgba%280,0,0,0.7%29' 
+      stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22' '/%3E%3C/svg%3E'");
+    }
+
+    /* WARNA LINK NAVBAR */
+.navbar .nav-link {
+  color: #333; /* default color */
+  transition: color 0.3s, background-color 0.3s;
+  padding: 8px 12px;
+  border-radius: 6px; /* agar ada efek kotak halus */
+}
+
+/* HOVER LINK */
+.navbar .nav-link:hover {
+  color: #0d6efd; /* biru saat hover */
+  background-color: rgba(13,110,253,0.1); /* background ringan */
+  transform: translateY(-2px);
+}
+
+/* LINK AKTIF */
+.navbar .nav-link.active {
+  color: #fff; /* teks putih */
+  background-color: #0d6efd; /* background biru */
+  font-weight: 600;
+}
+
+/* HERO */
+.project-hero{
+  padding:90px 0 140px;
+  color:#fff;
+}
+
+/* CARD */
+.project-card{
+  background:#fff;
+  border-radius:22px;
+  box-shadow:0 25px 60px rgba(0,0,0,.1);
+  padding:35px;
+  margin-top:-120px;
+}
+
+/* IMAGE */
+.project-image{
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 18px 40px rgba(0,0,0,.18);
+}
+
+.project-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* LIST */
+.detail-list li{
+  margin-bottom:14px;
+  font-size:15px;
+}
+
+.detail-list i{
+  color:#0d6efd;
+  margin-right:10px;
+}
+
+/* SECTION */
+.section-title{
+  font-weight:700;
+  margin-bottom:15px;
+}
+
+/* DESC */
+.project-desc{
+  background:#fff;
+  border-radius:20px;
+  box-shadow:0 20px 50px rgba(0,0,0,.08);
+  padding:40px;
+}
+
+/* FEATURE */
+.feature-box{
+  background:#f1f5ff;
+  border-radius:18px;
+  padding:22px;
+  height:100%;
+  transition:.3s;
+}
+
+.feature-box:hover{
+  transform:translateY(-6px);
+  box-shadow:0 12px 30px rgba(0,0,0,.12);
+}
+
+.feature-box i{
+  font-size:28px;
+  color:#0d6efd;
+  margin-bottom:12px;
+}
+
+.site-footer{
+  background: linear-gradient(135deg,#0f1b2c,#084298);
+  color:#eaf1ff;
+  padding:60px 0 30px;
+  margin-top:80px;
+}
+
+.site-footer h5{
+  font-weight:600;
+  margin-bottom:18px;
+}
+
+.site-footer p{
+  font-size:14px;
+  line-height:1.8;
+  color:#eaf1ff;
+}
+
+.footer-link{
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+
+.footer-link li{
+  margin-bottom:10px;
+}
+
+.footer-link a{
+  color:#eaf1ff;
+  text-decoration:none;
+  font-size:14px;
+  transition:.3s;
+}
+
+.footer-link a:hover{
+  color:#ffffff;
+  padding-left:6px;
+}
+
+.footer-social a{
+  width:38px;
+  height:38px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  background:rgba(255,255,255,.15);
+  color:#fff;
+  margin-right:8px;
+  transition:.3s;
+}
+
+.footer-social a:hover{
+  background:#ffffff;
+  color:#0d6efd;
+}
+
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.25);
+  margin-top:40px;
+  padding-top:20px;
+  font-size:13px;
+  text-align:center;
+}
+</style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top shadow-sm" style="background-color: rgba(255,255,255,0.95);">
+  <div class="container">
+
+    <a class="navbar-brand d-flex align-items-center" href="#">
+  <img src="img/46.png" class="me-2">
+</a>
+
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navMenu">
+  <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+    <li class="nav-item">
+      <a href="../index.html" class="nav-link fw-medium">Home</a>
+    </li>
+
+    <li class="nav-item">
+      <a href="../about.html" class="nav-link fw-medium">Tentang</a>
+    </li>
+
+        <!-- DROPDOWN LAYANAN -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle fw-medium"
+        href="#"
+        id="layananDropdown"
+        role="button"
+        data-bs-toggle="dropdown"
+        aria-expanded="false">
+        Layanan
+      </a>
+
+      <ul class="dropdown-menu shadow border-0" aria-labelledby="layananDropdown">
+        <li>
+        <a class="dropdown-item" href="kt1.html">
+            Pengembangan App Web
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-item" href="kt2.html">
+            Pengembangan App Mobile
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-item" href="kt3.html">
+            Tim perangkat lunak khusus
+          </a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="nav-item">
+      <a href="../teknologi.html" class="nav-link fw-medium">Teknologi</a>
+    </li>
+
+    <li class="nav-item">
+      <a href="../portofolio.html" class="nav-link fw-medium">Portofolio</a>
+    </li>
+
+    <li class="nav-item">
+      <a href="../karir.html" class="nav-link fw-medium">Karir</a>
+    </li>
+
+    <li class="nav-item">
+      <a href="../kontak.html" class="nav-link fw-medium">Kontak</a>
+    </li>
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="project-hero text-center">
+  <div class="container">
+  </div>
+</section>
+
+<!-- DETAIL UTAMA -->
+<section class="container">
+  <div class="project-card">
+    <div class="row align-items-center g-4">
+
+      <!-- IMAGE -->
+      <div class="col-lg-5">
+        <div class="project-image">
+          <img src="img/sima.jpg" alt="SIM ASET">
+        </div>
+      </div>
+
+      <!-- DETAIL -->
+      <div class="col-lg-7">
+        <h4 class="section-title">Detail Aplikasi</h4>
+
+        <ul class="list-unstyled detail-list">
+          <li>
+            <i class="fa-solid fa-boxes-stacked"></i>
+            <strong>Nama :</strong> SIM-ASET (Sistem Informasi Manajemen Aset)
+          </li>
+          <li>
+            <i class="fa-solid fa-globe"></i>
+            <strong>Base Pengembangan :</strong> Web Aplikasi
+          </li>
+          <li>
+            <i class="fa-solid fa-code"></i>
+            <strong>Tools Pengembangan :</strong>
+            Laravel, PHP, JavaScript, dan Bootstrap
+          </li>
+        </ul>
+
+        <a href="#" class="btn btn-primary rounded-pill px-4 mt-3">
+          <i class="fa-solid fa-eye me-1"></i> Demo Aplikasi
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- DESKRIPSI -->
+<section class="container my-5">
+  <div class="project-desc">
+    <h4 class="section-title">Deskripsi Aplikasi</h4>
+
+    <p style="text-align:justify">
+      Praktik Akuntansi Berbasis akrual sesuai amanat PP No. 71 Tahun 2010 dan
+      PMDN No. 59 Tahun 2014 membawa dampak besar terhadap pengelolaan aset di
+      Pemerintah Daerah. Salah satu tantangan utama adalah pengamanan dan
+      pencatatan Barang Milik Daerah (BMD) yang akurat, terpusat, dan real-time.
+    </p>
+
+    <p style="text-align:justify">
+      Pengelolaan aset daerah juga diatur dalam PP No. 27 Tahun 2014 dan
+      PMDN No. 19 Tahun 2016 tentang Pengelolaan Barang Milik Daerah.
+      Pencatatan aset yang kurang detail, tidak ter-update, dan hanya terpusat
+      pada bidang aset sering menjadi temuan dalam audit pengelolaan BMD.
+    </p>
+
+    <p style="text-align:justify">
+      SIM-ASET dikembangkan sebagai solusi teknis untuk mendukung tata kelola
+      Barang Milik Daerah yang transparan, akuntabel, dan terintegrasi.
+      Aplikasi ini dapat digunakan oleh Pengelola Barang, Pengguna Barang,
+      serta Pengurus Barang sesuai regulasi yang berlaku.
+    </p>
+  </div>
+</section>
+
+<!-- KEUNGGULAN -->
+<section class="container mb-5">
+  <h4 class="section-title text-center mb-4">Keunggulan Aplikasi</h4>
+
+  <div class="row g-4">
+
+    <div class="col-md-4">
+      <div class="feature-box text-center">
+        <i class="fa-solid fa-code"></i>
+        <h6 class="fw-bold">Open Source</h6>
+        <p class="mb-0">
+          Dibangun di atas sistem operasi dan basis data open source,
+          sehingga menekan biaya lisensi dan pemeliharaan.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="feature-box text-center">
+        <i class="fa-solid fa-scale-balanced"></i>
+        <h6 class="fw-bold">Sesuai Regulasi</h6>
+        <p class="mb-0">
+          Disesuaikan dengan PP 27/2014, PMDN 19/2016, serta
+          Permendagri 108/2016 terkait kodefikasi BMD.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="feature-box text-center">
+        <i class="fa-solid fa-lightbulb"></i>
+        <h6 class="fw-bold">Inovatif & Terintegrasi</h6>
+        <p class="mb-0">
+          Antarmuka ramah pengguna, modular, dapat digunakan online maupun
+          offline, serta terintegrasi antar modul.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="row g-4">
+
+      <!-- BRAND -->
+      <div class="col-md-4">
+        <img src="img/46.png" width="80" class="mb-3">
+        <p>
+          SIM Aset (Sistem Informasi Manajemen Aset) merupakan
+          solusi digital untuk pengelolaan data aset secara
+          terintegrasi, mulai dari pencatatan, pemeliharaan,
+          hingga pelaporan aset secara akurat dan transparan.
+        </p>
+      </div>
+
+      <!-- MENU -->
+      <div class="col-md-4">
+        <h5>Menu</h5>
+        <ul class="footer-link">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">Tentang</a></li>
+          <li><a href="../teknologi.html">Teknologi</a></li>
+          <li><a href="../portofolio.html">Portofolio</a></li>
+          <li><a href="../kontak.html">Kontak</a></li>
+        </ul>
+      </div>
+
+      <!-- KONTAK -->
+      <div class="col-md-4">
+        <h5>Kontak</h5>
+        <p class="mb-2">
+          <i class="fa-solid fa-envelope me-2"></i>
+          info@sim-aset.id
+        </p>
+        <p class="mb-3">
+          <i class="fa-solid fa-phone me-2"></i>
+          +62 812 3456 7890
+        </p>
+
+        <div class="footer-social">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- COPYRIGHT -->
+    <div class="footer-bottom">
+      © 2025 SIM Aset – Sistem Informasi Manajemen Aset.
+      All Rights Reserved.
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

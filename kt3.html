@@ -1,77 +1,126 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Keamanan Siber - IDS</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pengembangan Aplikasi Mobile</title>
 
-  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- AOS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <!-- FontAwesome -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
-    body { font-family: 'Poppins', sans-serif; color:#222; background:#fff; }
-    .navbar {
-      background: white;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
-    }
+    body { font-family: 'Poppins', sans-serif; overflow-x: hidden; }
+
+    /* NAVBAR */
+    .navbar { background: white; box-shadow: 0 2px 12px rgba(0,0,0,0.1); }
+    .navbar .nav-link { color: #333; transition: color 0.3s, transform 0.3s; }
+    .navbar .nav-link:hover { color: #0d6efd; transform: translateY(-2px); }
+    .navbar .nav-link.active { color: #0d6efd; font-weight: 600; }
 
     .navbar .nav-link {
-      color: #333;
-      transition: color 0.3s, transform 0.3s;
-    }
-    .navbar .nav-link:hover {
-      color: #0d6efd;
-      transform: translateY(-2px);
-    }
-    .navbar .nav-link.active {
-      color: #0d6efd;
-      font-weight: 600;
-    }
+  color: #333; /* default color */
+  transition: color 0.3s, background-color 0.3s;
+  padding: 8px 12px;
+  border-radius: 6px; /* agar ada efek kotak halus */
+}
 
-    .navbar-brand {
-      font-size: 1.25rem;
-      color: #0d6efd;
-      text-decoration: none;
-    }
-    .navbar-brand:hover {
-      color: #084298;
-      text-decoration: none;
-    }
+/* HOVER LINK */
+.navbar .nav-link:hover {
+  color: #0d6efd; /* biru saat hover */
+  background-color: rgba(13,110,253,0.1); /* background ringan */
+  transform: translateY(-2px);
+}
 
-    .navbar-toggler {
-      outline: none;
-    }
-    .navbar-toggler-icon {
-      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30'")
-      xmlns='ass' '%3E%3Cpath' stroke='rgba%280,0,0,0.7%29' 
-      stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22' '/%3E%3C/svg%3E'");
-    }
+/* LINK AKTIF */
+.navbar .nav-link.active {
+  color: #fff; /* teks putih */
+  background-color: #0d6efd; /* background biru */
+  font-weight: 600;
+}
+
+    /* HERO */
     .hero {
-      background: url('https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
-      height: 72vh; position:relative; display:flex; align-items:center; color:#fff;
+  height: 40vh; /* Tinggi dikurangi karena tanpa gambar agar lebih proporsional */
+  position: relative;
+  background-color: #ffffff; /* Latar belakang putih bersih */
+  color: rgb(17, 16, 16);
+  display: flex;
+  align-items: center;
+  padding-top: 80px; /* Ruang untuk navbar */
+}
+
+.hero p.lead {
+  color: #131111;
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+    .hero::after { content: ""; position: absolute; inset: 0; background: rgba(0,0,0,0.6); }
+    .hero-content { position: relative; z-index: 2; }
+
+    /* CUSTOM STYLES */
+    .section-title {
+      font-weight: 700;
+      margin-bottom: 30px;
+      position: relative;
+      padding-bottom: 15px;
     }
-    .hero::after { content:""; position:absolute; inset:0; background:rgba(0,0,0,0.55); }
-    .hero-content { position:relative; z-index:2; }
-    .feature-icon { font-size:36px; color:#d63384; }
-    .card-feature { border-radius:12px; transition:transform .25s ease, box-shadow .25s ease; }
-    .card-feature:hover { transform:translateY(-8px); box-shadow:0 18px 40px rgba(214,51,132,0.12); }
-    footer { background:#0b1220; color:#dfe7ff; padding:26px 0; }
-    .tool-badge { display:inline-block; margin:6px 8px; padding:6px 10px; background:#fff0f6; color:#b02a4b; border-radius:999px; font-weight:600; }
+    .section-title::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 60px;
+      height: 4px;
+      background: #0d6efd;
+    }
+    .center-title::after { left: 50%; transform: translateX(-50%); }
+
+    .img-custom { width: 100%; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+    
+    .tech-item strong { color: #0d6efd; display: block; font-size: 1.1rem; }
+    .tech-item p { color: #666; margin-bottom: 15px; }
+
+    .benefit-card { padding: 20px; transition: 0.3s; border: none; }
+    .benefit-icon { font-size: 2rem; color: #0d6efd; margin-bottom: 15px; }
+
+    /* BUTTON MENARIK (GRADIENT & HOVER) */
+    .btn-custom-blue {
+      background: linear-gradient(45deg, #0d6efd, #004fb0);
+      border: none;
+      color: white;
+      font-weight: 600;
+      padding: 12px 30px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-radius: 5px;
+      transition: all 0.4s ease;
+      box-shadow: 0 4px 15px rgba(13, 110, 253, 0.3);
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    .btn-custom-blue:hover {
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(13, 110, 253, 0.5);
+      background: linear-gradient(45deg, #004fb0, #0d6efd);
+    }
+
+    /* FOOTER */
+    footer { background: #000; color: white; padding: 20px 0; }
   </style>
 </head>
+
 <body>
 
 <nav class="navbar navbar-expand-lg fixed-top shadow-sm" style="background-color: rgba(255,255,255,0.95);">
   <div class="container">
 
-    <a class="navbar-brand d-flex align-items-center fw-bold" href="#">
-      <img src="assets/img/pp.png" width="40" height="40" class="me-2 rounded-circle">
-      IDS
-    </a>
+    <a class="navbar-brand d-flex align-items-center" href="#">
+  <img src="assets/img/46.png" class="me-2">
+</a>
 
     <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
       <span class="navbar-toggler-icon"></span>
@@ -88,7 +137,6 @@
       <a href="about.html" class="nav-link fw-medium">Tentang</a>
     </li>
 
-        <!-- DROPDOWN LAYANAN -->
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle fw-medium"
         href="#"
@@ -102,20 +150,17 @@
       <ul class="dropdown-menu shadow border-0" aria-labelledby="layananDropdown">
         <li>
         <a class="dropdown-item" href="kt1.html">
-            <i class="fa-solid fa-laptop-code me-2"></i>
-            Web & Mobile Development
+            Pengembangan App Web
           </a>
         </li>
         <li>
           <a class="dropdown-item" href="kt2.html">
-            <i class="fa-solid fa-cloud me-2"></i>
-            Cloud Computing
+            Pengembangan App Mobile
           </a>
         </li>
         <li>
           <a class="dropdown-item" href="kt3.html">
-            <i class="fa-solid fa-shield-halved me-2"></i>
-            Keamanan Siber
+            Tim perangkat lunak khusus
           </a>
         </li>
       </ul>
@@ -134,7 +179,7 @@
     </li>
 
     <li class="nav-item">
-      <a href="#contact" class="nav-link fw-medium">Kontak</a>
+      <a href="kontak.html" class="nav-link fw-medium">Kontak</a>
     </li>
   </ul>
 </div>
@@ -142,201 +187,149 @@
   </div>
 </nav>
 
-<!-- HERO -->
-<header class="hero">
-  <div class="container hero-content text-center" data-aos="fade-up">
-    <h1 class="display-5 fw-bold">Keamanan Siber</h1>
-    <p class="lead mt-3">Lindungi aset digital Anda dengan layanan keamanan menyeluruh dan monitoring real-time.</p>
-    <a href="index.html#contact" class="btn btn-light btn-lg mt-3">Minta Audit Keamanan</a>
-  </div>
-</header>
-
-<!-- OVERVIEW -->
-<section class="py-5">
-  <div class="container">
-    <div class="row g-4 align-items-center">
-      <div class="col-lg-7" data-aos="fade-right">
-        <h2 class="fw-bold">Melindungi Data & Sistem Anda</h2>
-        <p class="text-muted">Kami menyediakan audit, pengujian penetrasi, enkripsi data, serta layanan SOC untuk menjaga bisnis Anda dari ancaman modern.</p>
-
-        <ul class="list-unstyled mt-3">
-          <li class="mb-2"><i class="fa-solid fa-check text-danger me-2"></i> Penetration testing & vulnerability assessment</li>
-          <li class="mb-2"><i class="fa-solid fa-check text-danger me-2"></i> Monitoring 24/7 & incident response</li>
-          <li class="mb-2"><i class="fa-solid fa-check text-danger me-2"></i> Compliance & security hardening</li>
-        </ul>
-      </div>
-
-      <div class="col-lg-5" data-aos="fade-left">
-        <div class="card p-4 shadow-sm">
-          <h5 class="fw-bold mb-2">Layanan Keamanan Kami</h5>
-          <p class="small text-muted mb-2">Pendekatan menyeluruh untuk menilai risiko & memberikan mitigasi.</p>
-          <ul class="small text-muted mb-0">
-            <li>Penetration Testing (Web & Mobile)</li>
-            <li>Vulnerability Assessment</li>
-            <li>Security Operation Center (SOC)</li>
-            <li>Incident Response</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section class="py-5 bg-light">
-  <div class="container">
-    <h3 class="text-center fw-bold mb-4" data-aos="fade-up">Fokus Layanan Keamanan</h3>
-    <div class="row g-4">
-      <div class="col-md-4" data-aos="zoom-in">
-        <div class="card card-feature p-4 h-100">
-          <div class="mb-3"><i class="fa-solid fa-user-shield feature-icon"></i></div>
-          <h5>Penetration Testing</h5>
-          <p class="text-muted small">Simulasi serangan untuk menemukan celah sistem sehingga dapat segera ditutup.</p>
-        </div>
-      </div>
-
-      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
-        <div class="card card-feature p-4 h-100">
-          <div class="mb-3"><i class="fa-solid fa-lock feature-icon"></i></div>
-          <h5>Data Encryption & Hardening</h5>
-          <p class="text-muted small">Enkripsi data baik at rest maupun in transit, plus hardening server & aplikasi.</p>
-        </div>
-      </div>
-
-      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
-        <div class="card card-feature p-4 h-100">
-          <div class="mb-3"><i class="fa-solid fa-shield-check feature-icon"></i></div>
-          <h5>SOC & Monitoring</h5>
-          <p class="text-muted small">Pemantauan real-time, alerting, dan response untuk menahan ancaman secepat mungkin.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TOOLS -->
-<section class="py-5">
+<section class="hero">
   <div class="container text-center">
-    <h4 class="fw-bold" data-aos="fade-up">Tools & Metodologi</h4>
-    <p class="text-muted">Peralatan dan framework yang kami gunakan untuk analisa dan proteksi</p>
-    <div class="mt-3" data-aos="fade-up" data-aos-delay="100">
-      <span class="tool-badge">Burp Suite</span>
-      <span class="tool-badge">Nmap</span>
-      <span class="tool-badge">Wireshark</span>
-      <span class="tool-badge">Metasploit</span>
-      <span class="tool-badge">Splunk / ELK</span>
-    </div>
+
+    <h1 data-aos="fade-up" class="fw-bold">Tim Perangkat Lunak Khusus</h1>
+    
+    <p class="lead" data-aos="fade-up" data-aos-delay="400">
+      Tim khusus yang kami susun untuk membantu kesuksesan bisnis mitra kami.
+    </p>
   </div>
 </section>
 
-<!-- CASES -->
-<section class="py-5 bg-light">
+<section class="py-5">
   <div class="container">
-    <h3 class="fw-bold text-center mb-4" data-aos="fade-up">Contoh Kasus Keamanan</h3>
-    <div class="row g-4">
+    <div class="row mb-4" data-aos="fade-down">
+      <div class="col-12">
+        <img src="assets/img/k34.jpg" class="img-custom w-100" style="height: 400px; object-fit: cover;" alt="Web Development">
+      </div>
+    </div>
 
-      <!-- Card 1 -->
+    <div class="row g-4 align-items-start">
       <div class="col-md-6" data-aos="fade-right">
-        <div class="card shadow-sm border-0 h-100">
-          <!-- Ratio untuk gambar agar ukuran sama -->
-          <div class="ratio ratio-16x9">
-            <img src="assets/img/mm.png" 
-                 class="card-img-top object-fit-cover" 
-                 alt="Penetration Test - Financial App">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">Penetration Test - Financial App</h5>
-            <p class="card-text small text-muted">Mengidentifikasi dan mengatasi 10 vulnerability kritikal serta rekomendasi mitigasi.</p>
-            <a href="index.html#contact" class="btn btn-outline-danger btn-sm">Minta Audit</a>
-          </div>
+        <p class="text-muted">
+          Dalam menyelesaikan suatu masalah, terkadang user mengalami keterbatasan dan tidak mampu menyelesaikan kendala tehnis maupun non tehnis terkait sistem informasi yang akan mereka gunakan, lalu apa yang dapat kami lakukan untuk user?
+        </p>
+        <div class="mt-3">
+          <a href="kontak.html" class="btn-custom-blue">HUBUNGI KAMI</a>
         </div>
       </div>
 
-      <!-- Card 2 -->
       <div class="col-md-6" data-aos="fade-left">
-        <div class="card shadow-sm border-0 h-100">
-          <div class="ratio ratio-16x9">
-            <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=1400&q=80" 
-                 class="card-img-top object-fit-cover" 
-                 alt="SOC Implementation">
-          </div>
-          <div class="card-body">
-            <h5 class="card-title">SOC Implementation</h5>
-            <p class="card-text small text-muted">Implementasi monitoring & playbook response untuk penanganan insiden.</p>
-            <a href="index.html#contact" class="btn btn-outline-danger btn-sm">Hubungi Security</a>
-          </div>
+        <div class="p-4 shadow-sm" style="background-color: #0d6efd; color: white; border-radius: 8px;">
+          <p class="mb-0" style="font-size: 0.95rem; line-height: 1.7;">
+            Oleh karena itu kami <strong>Optima Multi Sinergi</strong> mengembangkan team dan metode berupa panduan untuk membantu suatu organisasi maupun individu dalam menyelesaikan suatu masalah tehnis maupun non tehnis terkait pembangunan, pengembangan dan customize sistem informasi sehingga pembangunan, pengembangan dan customize sistem informasi dapat dikerjakan dengan cepat, fleksibel, dinamis, dan aman (secure). Kami menyelesaikan masalah dengan metode Agile.
+          </p>
         </div>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- TESTIMONIAL -->
 <section class="py-5">
   <div class="container">
-    <h3 class="text-center fw-bold mb-4" data-aos="fade-up">Testimonial</h3>
+    <h2 class="text-center section-title center-title mb-5" data-aos="fade-up">
+      Keuntungan menggunakan tim khusus dari kami
+    </h2>
+    
     <div class="row g-4">
-      <div class="col-md-4" data-aos="flip-left">
-        <div class="p-4 bg-white rounded shadow-sm">
-          <p class="mb-2">"Audit keamanan IDS menemukan isu yang signifikan dan rekomendasi mereka sangat membantu."</p>
-          <strong>- CIO FinanceCorp</strong>
+      <div class="col-md-6" data-aos="fade-up">
+        <div class="d-flex benefit-card">
+          <i class="fa-solid fa-circle-check benefit-icon me-4" style="color: #0d6efd;"></i>
+          <div>
+            <h5 class="fw-bold">Menghemat biaya</h5>
+            <p class="text-muted small">
+              Kami memilih tim dengan cermat dan teliti untuk menekan biaya pada mitra semenarik mungkin.
+            </p>
+          </div>
         </div>
       </div>
-      <div class="col-md-4" data-aos="flip-left" data-aos-delay="200">
-        <div class="p-4 bg-white rounded shadow-sm">
-          <p class="mb-2">"SOC mereka meningkatkan time-to-detect hingga signifikan."</p>
-          <strong>- Head IT</strong>
+
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+        <div class="d-flex benefit-card">
+          <i class="fa-solid fa-comment-dots benefit-icon me-4" style="color: #0d6efd;"></i>
+          <div>
+            <h5 class="fw-bold">Komunikasi</h5>
+            <p class="text-muted small">
+              Tim kami berada ditempat mitra kami sehingga komunikasi bisa berjalan dengan baik.
+            </p>
+          </div>
         </div>
       </div>
-      <div class="col-md-4" data-aos="flip-left" data-aos-delay="400">
-        <div class="p-4 bg-white rounded shadow-sm">
-          <p class="mb-2">"Timnya sangat profesional dan komunikasinya jelas."</p>
-          <strong>- CTO Enterprise</strong>
+
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+        <div class="d-flex benefit-card">
+          <i class="fa-solid fa-users benefit-icon me-4" style="color: #0d6efd;"></i>
+          <div>
+            <h5 class="fw-bold">Profesional</h5>
+            <p class="text-muted small">
+              Tim yang kami susun merupakan tim profesional yang telah berpengalaman untuk mitra kami.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+        <div class="d-flex benefit-card">
+          <i class="fa-solid fa-gears benefit-icon me-4" style="color: #0d6efd;"></i>
+          <div>
+            <h5 class="fw-bold">Fleksibilitas</h5>
+            <p class="text-muted small">
+              Mitra mendapatkan tim dengan fleksibilitas yang tinggi, sehingga mitra mendapatkan hasil yang lebih baik.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6" data-aos="fade-up" data-aos-delay="400">
+        <div class="d-flex benefit-card">
+          <i class="fa-solid fa-id-card benefit-icon me-4" style="color: #0d6efd;"></i>
+          <div>
+            <h5 class="fw-bold">Pilihan</h5>
+            <p class="text-muted small">
+              Mitra bisa memilih personil dalam tim yang akan ditempatkan pada mitra tersebut.
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FAQ -->
-<section class="py-5">
+<section class="py-5 bg-light">
   <div class="container">
-    <h3 class="fw-bold text-center mb-4" data-aos="fade-up">FAQ — Keamanan Siber</h3>
-    <div class="accordion" id="faqSec" data-aos="fade-up">
-      <div class="accordion-item">
-        <h2 class="accordion-header"><button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#sf1">Apakah penetration test akan merusak aplikasi?</button></h2>
-        <div id="sf1" class="accordion-collapse collapse show"><div class="accordion-body small text-muted">Pengujian dilakukan dengan scope disepakati & backup; kegiatan yang berisiko tinggi dilakukan di window maintenance atau environment staging.</div></div>
+    <div class="row align-items-center g-5">
+      <div class="col-md-6" data-aos="fade-right">
+        <img src="assets/img/k3.jpg" class="img-custom" alt="Handshake">
       </div>
-      <div class="accordion-item">
-        <h2 class="accordion-header"><button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#sf2">Berapa sering perlu audit keamanan?</button></h2>
-        <div id="sf2" class="accordion-collapse collapse"><div class="accordion-body small text-muted">Sumber daya kritikal: minimal 2x/tahun; aplikasi umum: 1x/tahun; sistem yang sering berubah lebih sering.</div></div>
+      
+      <div class="col-md-6" data-aos="fade-left">
+        <p>
+          Tim kami sangat fleksibel terhadap perubahan suatu masalah dan ide mitra kami.
+        <p>
+          <strong>Tim kami siap membantu mitra kami untuk mengembangkan aplikasi sesuai dengan ide dan masukan mitra. Kami mendedikasikan segala usaha kami untuk aplikasi-aplikasi yang kami bangun.</strong>
+        </p>
+        <p class="mb-4">Kepercayaan anda adalah kehormatan kami.</p>
+        
+        <div data-aos="zoom-in">
+          <a href="kontak.html" class="btn-custom-blue">HUBUNGI KAMI</a>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CTA -->
-<section class="py-5 text-center">
-  <div class="container" data-aos="zoom-in">
-    <h4 class="fw-bold">Butuh audit keamanan atau SOC?</h4>
-    <p class="text-muted">Hubungi tim keamanan kami untuk assessment cepat & rekomendasi mitigasi.</p>
-    <a href="index.html#contact" class="btn btn-danger btn-lg">Minta Audit Sekarang</a>
-  </div>
-</section>
-
-<!-- FOOTER -->
 <footer>
-  <div class="container text-center">
-    <p class="mb-1">© 2025 Inovasi Digital Solusi (IDS)</p>
-    <small class="text-muted">Email: info@ids.example • Jakarta, Indonesia</small>
-  </div>
+  <div class="text-center">
+      <p class="mb-0">&copy; 2025 OMS — All Rights Reserved</p>
+      <small class="text-secondary">Dibangun dengan teknologi modern & tim profesional.</small>
+    </div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-  AOS.init({ duration:800, once:true });
-</script>
+<script>AOS.init({ duration: 1000, once: true });</script>
+
 </body>
 </html>

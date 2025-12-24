@@ -5,32 +5,23 @@
 <title>Portofolio | IDS</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- Bootstrap -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-<!-- Font Awesome -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
-
-<!-- Bootstrap Icons -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-
-<!-- AOS -->
 <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
-
-<!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-:root{
-  --ids-primary:#0d6efd;
-  --ids-dark:#062f6b;
-  --ids-soft:#e9f1ff;
-}
+    :root{
+      --ids-primary:#0d6efd;
+      --ids-dark:#062f6b;
+      --ids-soft:#e9f1ff;
+    }
 
-body{font-family: 'popins', sans-serif;
-    background:#f8f9fa}
+    body{font-family: 'popins', sans-serif;
+        background:#f8f9fa}
 
- .navbar {
+    .navbar {
       background: white;
       box-shadow: 0 2px 12px rgba(0,0,0,0.1);
     }
@@ -67,84 +58,204 @@ body{font-family: 'popins', sans-serif;
       stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22' '/%3E%3C/svg%3E'");
     }
 
-/* ================= HERO ================= */
-.hero-portfolio{
-  height:420px;
-  background:url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80") center/cover;
-  position:relative;
-}
-.hero-portfolio::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:rgba(0,0,0,.65);
-}
-.hero-portfolio .content{
-  position:relative;
-  height:100%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  color:#fff;
+    /* WARNA LINK NAVBAR */
+.navbar .nav-link {
+  color: #333; /* default color */
+  transition: color 0.3s, background-color 0.3s;
+  padding: 8px 12px;
+  border-radius: 6px; /* agar ada efek kotak halus */
 }
 
-/* ================= PORTFOLIO ================= */
-.portfolio-card{
+/* HOVER LINK */
+.navbar .nav-link:hover {
+  color: #0d6efd; /* biru saat hover */
+  background-color: rgba(13,110,253,0.1); /* background ringan */
+  transform: translateY(-2px);
+}
+
+/* LINK AKTIF */
+.navbar .nav-link.active {
+  color: #fff; /* teks putih */
+  background-color: #0d6efd; /* background biru */
+  font-weight: 600;
+}
+
+    .hero-portfolio{
+      height:420px;
+      background:url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80") center/cover;
+      position:relative;
+    }
+    .hero-portfolio::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:rgba(0,0,0,.65);
+    }
+    .hero-portfolio .content{
+      position:relative;
+      height:100%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      color:#fff;
+    }
+
+    .portfolio-card {
+  border: none;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0,0,0,.08);
+  transition: .35s ease;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 55px rgba(0,0,0,.15);
+}
+
+.portfolio-thumb {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+
+.portfolio-tag {
+  display: inline-block;
+  background: #e7f0ff;
+  color: #0d6efd;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: 50px;
+}
+
+.btn-portfolio {
+  background: linear-gradient(135deg, #0d6efd, #0a58ca);
+  color: #fff;
+  border-radius: 50px;
+  padding: 8px 26px;
+  font-size: 14px;
+  transition: .3s;
+}
+
+.btn-portfolio:hover {
+  background: linear-gradient(135deg, #0a58ca, #084298);
+  color: #fff;
+}
+
+
+    .btn-portfolio{
+      background:var(--ids-primary);
+      color:#fff;
+      border-radius:50px;
+      padding:8px 22px;
+      font-size:14px;
+    }
+    .btn-portfolio:hover{
+      background:#0b5ed7;
+      color:#fff;
+    }
+
+    .cta-tech{
+  padding:80px 0;
+  background:#f5f8ff;
+}
+
+.cta-card{
+  background:#acc2ff;
+  border-radius:24px;
+  padding:40px 45px;
+  box-shadow:0 25px 60px rgba(0,0,0,.08);
+}
+
+.cta-text h3{
+  color:#1f2d3d;
+}
+
+.cta-text p{
+  color:#6c757d;
+  font-size:16px;
+}
+
+.btn-tech{
+  background:linear-gradient(135deg,#0d6efd,#0a58ca);
+  color:#fff;
   border:none;
-  border-radius:18px;
-  overflow:hidden;
-  transition:.35s;
-  background:#fff;
-  height:100%;
-}
-.portfolio-card:hover{
-  transform:translateY(-8px);
-  box-shadow:0 18px 45px rgba(0,0,0,.18);
-}
-.portfolio-thumb{
-  height:220px;
-  background-size:contain;
-  background-position:center;
-  background-repeat:no-repeat;
-  background-color:#f4f6fa;
-}
-.portfolio-tag{
-  background:var(--ids-soft);
-  color:var(--ids-primary);
-  font-size:12px;
-  padding:6px 14px;
-  border-radius:50px;
-  font-weight:600;
-  display:inline-block;
-  margin-bottom:10px;
-}
-.btn-portfolio{
-  background:var(--ids-primary);
-  color:#fff;
-  border-radius:50px;
-  padding:8px 22px;
-  font-size:14px;
-}
-.btn-portfolio:hover{
-  background:#0b5ed7;
-  color:#fff;
+  box-shadow:0 10px 25px rgba(13,110,253,.35);
+  transition:.3s;
 }
 
-/* ================= CTA ================= */
-.cta-portfolio{
-  background:linear-gradient(135deg,#0d6efd,#062f6b);
+.btn-tech:hover{
+  background:linear-gradient(135deg,#0a58ca,#084298);
   color:#fff;
-  padding:90px 0;
+  transform:translateY(-2px);
+  box-shadow:0 15px 30px rgba(13,110,253,.45);
 }
 
-/* ================= FOOTER ================= */
-footer{
-  background:#062f6b;
-  color:#fff;
-  padding:25px 0;
-  font-size:14px;
-}
+    footer{
+      background:#062f6b;
+      color:#fff;
+      padding:25px 0;
+      font-size:14px;
+    }
+    footer {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+    }
+
+    footer h5 {
+      color: #ffffff;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    footer a {
+      color: #cccccc;
+      transition: 0.3s;
+      text-decoration: none;
+    }
+    footer a:hover {
+      color: #0d6efd;
+      text-decoration: underline;
+    }
+
+    footer p {
+      color: #cccccc;
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+
+    footer .fab {
+      transition: 0.3s;
+    }
+    footer .fab:hover {
+      color: #0d6efd;
+      transform: scale(1.2);
+    }
+
+    footer hr {
+      border-top: 1px solid #444;
+    }
+
+    footer small {
+      display: block;
+      margin-top: 5px;
+      color: #888;
+      font-size: 12px;
+    }
+
+    @media(max-width:768px){
+      footer .row > div {
+        text-align: center;
+      }
+      footer .d-flex {
+        justify-content: center !important;
+      }
+      footer .d-flex a {
+        margin: 0 5px;
+      }
+    }
 </style>
 </head>
 
@@ -153,10 +264,9 @@ footer{
 <nav class="navbar navbar-expand-lg fixed-top shadow-sm" style="background-color: rgba(255,255,255,0.95);">
   <div class="container">
 
-    <a class="navbar-brand d-flex align-items-center fw-bold" href="#">
-      <img src="assets/img/pp.png" width="40" height="40" class="me-2 rounded-circle">
-      IDS
-    </a>
+    <a class="navbar-brand d-flex align-items-center" href="#">
+  <img src="assets/img/46.png" class="me-2">
+</a>
 
     <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
       <span class="navbar-toggler-icon"></span>
@@ -173,7 +283,6 @@ footer{
       <a href="about.html" class="nav-link fw-medium">Tentang</a>
     </li>
 
-        <!-- DROPDOWN LAYANAN -->
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle fw-medium"
         href="#"
@@ -187,20 +296,17 @@ footer{
       <ul class="dropdown-menu shadow border-0" aria-labelledby="layananDropdown">
         <li>
         <a class="dropdown-item" href="kt1.html">
-            <i class="fa-solid fa-laptop-code me-2"></i>
-            Web & Mobile Development
+            Pengembangan App Web
           </a>
         </li>
         <li>
           <a class="dropdown-item" href="kt2.html">
-            <i class="fa-solid fa-cloud me-2"></i>
-            Cloud Computing
+            Pengembangan App Mobile
           </a>
         </li>
         <li>
           <a class="dropdown-item" href="kt3.html">
-            <i class="fa-solid fa-shield-halved me-2"></i>
-            Keamanan Siber
+            Tim perangkat lunak khusus
           </a>
         </li>
       </ul>
@@ -219,7 +325,7 @@ footer{
     </li>
 
     <li class="nav-item">
-      <a href="#contact" class="nav-link fw-medium">Kontak</a>
+      <a href="kontak.html" class="nav-link fw-medium">Kontak</a>
     </li>
   </ul>
 </div>
@@ -227,11 +333,10 @@ footer{
   </div>
 </nav>
 
-<!-- HERO -->
 <section class="hero-portfolio">
   <div class="content">
     <div>
-      <span class="badge bg-primary mb-3">PORTOFOLIO IDS</span>
+      <span class="badge bg-primary mb-3">PORTOFOLIO OMS</span>
       <h1 class="fw-bold mb-3">Proyek Profesional Kami</h1>
       <p class="lead mx-auto" style="max-width:720px;">
         Solusi digital yang telah kami bangun untuk mendukung
@@ -241,91 +346,52 @@ footer{
   </div>
 </section>
 
-<!-- PORTFOLIO -->
 <section class="py-5 bg-light">
   <div class="container">
-    <div class="row g-4">
+    <div class="row g-4 justify-content-center">
 
-      <!-- 1 -->
+      <!-- CARD 1 -->
       <div class="col-md-4" data-aos="zoom-in">
-        <div class="card portfolio-card">
-          <div class="portfolio-thumb" style="background-image:url('assets/img/01.png');"></div>
-          <div class="card-body">
-            <span class="portfolio-tag">E-Government</span>
-            <h5 class="fw-bold">Sistem Pelayanan Publik</h5>
-            <p class="text-muted small">Platform layanan publik berbasis web.</p>
-            <p class="small"><strong>Tech:</strong> Laravel, MySQL</p>
-            <a href="detail1.html" class="btn btn-portfolio btn-sm">Detail</a>
+        <div class="card portfolio-card text-center h-100">
+          <div class="portfolio-thumb"
+               style="background-image:url('assets/img/opas.jpg');"></div>
+          <div class="card-body d-flex flex-column align-items-center">
+            <span class="portfolio-tag mb-2">Mobile App</span>
+            <h5 class="fw-bold mb-1">App Smart Opbitory</h5>
+            <small class="text-muted mb-3">(Optima Bisnis dan Inventory)</small>
+            <a href="detail1.html" class="btn btn-portfolio mt-auto">
+              <i class="fa-solid fa-circle-info me-1"></i> Detail
+            </a>
           </div>
         </div>
       </div>
 
-      <!-- 2 -->
+      <!-- CARD 2 -->
       <div class="col-md-4" data-aos="zoom-in" data-aos-delay="150">
-        <div class="card portfolio-card">
-          <div class="portfolio-thumb" style="background-image:url('assets/img/02.png');"></div>
-          <div class="card-body">
-            <span class="portfolio-tag">Pendidikan</span>
-            <h5 class="fw-bold">Sistem Akademik Sekolah</h5>
-            <p class="text-muted small">Manajemen akademik terintegrasi.</p>
-            <p class="small"><strong>Tech:</strong> PHP, REST API</p>
-            <a href="detail2.html" class="btn btn-portfolio btn-sm">Detail</a>
+        <div class="card portfolio-card text-center h-100">
+          <div class="portfolio-thumb"
+               style="background-image:url('assets/img/apl.jpg');"></div>
+          <div class="card-body d-flex flex-column align-items-center">
+            <span class="portfolio-tag mb-2">Mobile App</span>
+            <h5 class="fw-bold mb-3">App Laundry</h5>
+            <a href="detail2.html" class="btn btn-portfolio mt-auto">
+              <i class="fa-solid fa-circle-info me-1"></i> Detail
+            </a>
           </div>
         </div>
       </div>
 
-      <!-- 3 -->
+      <!-- CARD 3 -->
       <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
-        <div class="card portfolio-card">
-          <div class="portfolio-thumb" style="background-image:url('assets/img/03.png');"></div>
-          <div class="card-body">
-            <span class="portfolio-tag">Kesehatan</span>
-            <h5 class="fw-bold">Manajemen Klinik</h5>
-            <p class="text-muted small">Rekam medis & jadwal dokter.</p>
-            <p class="small"><strong>Tech:</strong> Laravel, PostgreSQL</p>
-            <a href="detail3.html" class="btn btn-portfolio btn-sm">Detail</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- 4 -->
-      <div class="col-md-4" data-aos="zoom-in">
-        <div class="card portfolio-card">
-          <div class="portfolio-thumb" style="background-image:url('assets/img/04.png');"></div>
-          <div class="card-body">
-            <span class="portfolio-tag">Mobile App</span>
-            <h5 class="fw-bold">Aplikasi Android Layanan</h5>
-            <p class="text-muted small">Aplikasi layanan berbasis mobile.</p>
-            <p class="small"><strong>Tech:</strong> Kotlin, Firebase</p>
-            <a href="detail4.html" class="btn btn-portfolio btn-sm">Detail</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- 5 -->
-      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="150">
-        <div class="card portfolio-card">
-          <div class="portfolio-thumb" style="background-image:url('assets/img/05.png');"></div>
-          <div class="card-body">
-            <span class="portfolio-tag">Cloud</span>
-            <h5 class="fw-bold">Cloud Infrastructure</h5>
-            <p class="text-muted small">Server cloud enterprise.</p>
-            <p class="small"><strong>Tech:</strong> AWS, Docker</p>
-            <a href="detail5.html" class="btn btn-portfolio btn-sm">Detail</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- 6 -->
-      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
-        <div class="card portfolio-card">
-          <div class="portfolio-thumb" style="background-image:url('assets/img/06.png');"></div>
-          <div class="card-body">
-            <span class="portfolio-tag">Keamanan</span>
-            <h5 class="fw-bold">Audit Keamanan Sistem</h5>
-            <p class="text-muted small">Pengujian & keamanan data.</p>
-            <p class="small"><strong>Tech:</strong> Security Testing</p>
-            <a href="detail6.html" class="btn btn-portfolio btn-sm">Detail</a>
+        <div class="card portfolio-card text-center h-100">
+          <div class="portfolio-thumb"
+               style="background-image:url('assets/img/apo.jpg');"></div>
+          <div class="card-body d-flex flex-column align-items-center">
+            <span class="portfolio-tag mb-2">Mobile App</span>
+            <h5 class="fw-bold mb-3">App Opnicare</h5>
+            <a href="detail3.html" class="btn btn-portfolio mt-auto">
+              <i class="fa-solid fa-circle-info me-1"></i> Detail
+            </a>
           </div>
         </div>
       </div>
@@ -334,14 +400,24 @@ footer{
   </div>
 </section>
 
-<!-- CTA -->
-<section class="cta-portfolio text-center">
+<section class="cta-tech">
   <div class="container">
-    <h3 class="fw-bold mb-3">Ingin Proyek Serupa?</h3>
-    <p class="mb-4">IDS siap membantu solusi digital Anda.</p>
-    <a href="index.html#contact" class="btn btn-light btn-lg rounded-pill px-5">
-      <i class="fa-solid fa-paper-plane"></i> Hubungi Kami
-    </a>
+    <div class="cta-card text-center text-md-start d-md-flex align-items-center justify-content-between">
+
+      <div class="cta-text">
+        <h3 class="fw-bold mb-2">Ingin Proyek Serupa?</h3>
+        <p class="mb-0">
+          OMS siap membantu solusi digital Anda.
+        </p>
+      </div>
+
+      <div class="cta-action mt-4 mt-md-0">
+        <a href="index.html#contact" class="btn btn-tech btn-lg rounded-pill px-4">
+          <i class="fa-solid fa-paper-plane me-2"></i> Hubungi Kami
+        </a>
+      </div>
+
+    </div>
   </div>
 </section>
 
@@ -349,18 +425,15 @@ footer{
   <div class="container">
 
     <div class="row g-4">
-
-      <!-- ABOUT -->
       <div class="col-md-4">
-        <h5 class="fw-bold mb-3">Tentang IDS</h5>
+        <h5 class="fw-bold mb-3">Tentang OMS</h5>
         <p>
-          IDS adalah perusahaan teknologi yang menyediakan solusi IT profesional, mulai dari web & mobile development, sistem kustom, cloud computing, hingga keamanan siber. 
+          OMS adalah perusahaan teknologi yang menyediakan solusi IT profesional, mulai dari web & mobile development, sistem kustom, cloud computing, hingga keamanan siber. 
           Kami membantu bisnis Anda berkembang dengan teknologi modern dan tim ahli berpengalaman.
         </p>
         <a href="about.html" class="text-decoration-none text-primary">Pelajari Lebih Lanjut &rarr;</a>
       </div>
 
-      <!-- LAYANAN -->
       <div class="col-md-2">
         <h5 class="fw-bold mb-3">Layanan</h5>
         <ul class="list-unstyled">
@@ -371,112 +444,40 @@ footer{
         </ul>
       </div>
 
-      <!-- LINK CEPAT -->
       <div class="col-md-2">
         <h5 class="fw-bold mb-3">Link Cepat</h5>
         <ul class="list-unstyled">
           <li><a href="index.html" class="text-light text-decoration-none">Home</a></li>
           <li><a href="portofolio.html" class="text-light text-decoration-none">Portofolio</a></li>
           <li><a href="karir.html" class="text-light text-decoration-none">Karir</a></li>
-          <li><a href="index.html#contact" class="text-light text-decoration-none">Kontak</a></li>
+          <li><a href="kontak.html" class="text-light text-decoration-none">Kontak</a></li>
         </ul>
       </div>
 
-      <!-- CONTACT -->
       <div class="col-md-4">
         <h5 class="fw-bold mb-3">Kontak Kami</h5>
-        <p><i class="fas fa-map-marker-alt me-2"></i> Jl. Teknologi No. 12, Jakarta, Indonesia</p>
-        <p><i class="fas fa-phone me-2"></i> +62 812 3456 7890</p>
-        <p><i class="fas fa-envelope me-2"></i> info@ids.co.id</p>
+        <p><i class="fas fa-map-marker-alt me-2"></i> Ruko Mega Peterongan, Jl. Kanal No. 5a, Lamper Lor, Semarang Selatan Kota Semarang, Jawa Tengah 50242</p>
+        <p><i class="fas fa-phone me-2"></i> 0813-8313-9864</p>
+        <p><i class="fas fa-envelope me-2"></i> marketing@optimasolution.co.id</p>
 
         <div class="d-flex gap-3 mt-3">
           <a href="#" class="text-light fs-5"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="text-light fs-5"><i class="fab fa-twitter"></i></a>
-          <a href="#" class="text-light fs-5"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#" class="text-light fs-5"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/62813-8313-9864" class="text-light fs-5"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://marketing@optimasolution.co.id" class="text-light fs-5"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://instagram.com/optimamultisinergi" class="text-light fs-5"><i class="fab fa-instagram"></i></a>
         </div>
       </div>
 
     </div>
 
     <hr class="bg-secondary my-4">
-
-    <!-- COPYRIGHT -->
     <div class="text-center">
-      <p class="mb-0">&copy; 2025 IDS — All Rights Reserved</p>
+      <p class="mb-0">&copy; 2025 OMS — All Rights Reserved</p>
       <small class="text-secondary">Dibangun dengan teknologi modern & tim profesional.</small>
     </div>
 
   </div>
 </footer>
-
-<style>
-  /* FOOTER */
-footer {
-  font-family: 'Poppins', sans-serif;
-  line-height: 1.6;
-}
-
-/* Footer Heading */
-footer h5 {
-  color: #ffffff;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-/* Footer Links */
-footer a {
-  color: #cccccc;
-  transition: 0.3s;
-  text-decoration: none;
-}
-footer a:hover {
-  color: #0d6efd;
-  text-decoration: underline;
-}
-
-/* Footer Contact Info */
-footer p {
-  color: #cccccc;
-  margin-bottom: 8px;
-  font-size: 14px;
-}
-
-/* Social Media Icons */
-footer .fab {
-  transition: 0.3s;
-}
-footer .fab:hover {
-  color: #0d6efd;
-  transform: scale(1.2);
-}
-
-/* Horizontal Line */
-footer hr {
-  border-top: 1px solid #444;
-}
-
-/* Copyright */
-footer small {
-  display: block;
-  margin-top: 5px;
-  color: #888;
-  font-size: 12px;
-}
-
-/* Responsive Adjustments */
-@media(max-width:768px){
-  footer .row > div {
-    text-align: center;
-  }
-  footer .d-flex {
-    justify-content: center !important;
-  }
-  footer .d-flex a {
-    margin: 0 5px;
-  }
-}
-</style>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>

@@ -50,6 +50,27 @@ body{font-family: 'popins', sans-serif;
       xmlns='ass' '%3E%3Cpath' stroke='rgba%280,0,0,0.7%29' 
       stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22' '/%3E%3C/svg%3E'");
     }
+    /* WARNA LINK NAVBAR */
+.navbar .nav-link {
+  color: #333; /* default color */
+  transition: color 0.3s, background-color 0.3s;
+  padding: 8px 12px;
+  border-radius: 6px; /* agar ada efek kotak halus */
+}
+
+/* HOVER LINK */
+.navbar .nav-link:hover {
+  color: #0d6efd; /* biru saat hover */
+  background-color: rgba(13,110,253,0.1); /* background ringan */
+  transform: translateY(-2px);
+}
+
+/* LINK AKTIF */
+.navbar .nav-link.active {
+  color: #fff; /* teks putih */
+  background-color: #0d6efd; /* background biru */
+  font-weight: 600;
+}
 
 /* HERO */
 .hero-about{
@@ -73,15 +94,44 @@ body{font-family: 'popins', sans-serif;
 
 .stat-number{font-size:42px;font-weight:700;color:#0d6efd}
 
-/* CTA */
+/* CTA STYLE */
 .cta-ids{
-  background:linear-gradient(135deg,#0d6efd,#062f6b);
-  color:#fff;padding:80px 0
+  background:#f5f7fb;
 }
+
+.cta-box{
+  background:#97b7f7;
+  border-radius:22px;
+  padding:35px 40px;
+  box-shadow:0 20px 45px rgba(0,0,0,.08);
+}
+
+.cta-text h3{
+  color:#0f172a;
+}
+
+.cta-text p{
+  color:#475569;
+  font-size:15px;
+}
+
+/* BUTTON */
 .btn-cta{
-  background:#fff;color:#0d6efd;
-  padding:14px 36px;border-radius:50px;font-weight:600
+  background:#0d6efd;
+  color:#fff;
+  padding:14px 28px;
+  border-radius:999px;
+  font-weight:600;
+  transition:.3s;
+  box-shadow:0 10px 25px rgba(13,110,253,.35);
 }
+
+.btn-cta:hover{
+  background:#0b5ed7;
+  color:#fff;
+  transform:translateY(-2px);
+}
+
 </style>
 </head>
 <body>
@@ -89,10 +139,9 @@ body{font-family: 'popins', sans-serif;
     <nav class="navbar navbar-expand-lg fixed-top shadow-sm" style="background-color: rgba(255,255,255,0.95);">
   <div class="container">
 
-    <a class="navbar-brand d-flex align-items-center fw-bold" href="#">
-      <img src="assets/img/pp.png" width="40" height="40" class="me-2 rounded-circle">
-      IDS
-    </a>
+    <a class="navbar-brand d-flex align-items-center" href="#">
+  <img src="assets/img/46.png" class="me-2">
+</a>
 
     <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
       <span class="navbar-toggler-icon"></span>
@@ -123,20 +172,17 @@ body{font-family: 'popins', sans-serif;
       <ul class="dropdown-menu shadow border-0" aria-labelledby="layananDropdown">
         <li>
         <a class="dropdown-item" href="kt1.html">
-            <i class="fa-solid fa-laptop-code me-2"></i>
-            Web & Mobile Development
+            Pengembangan App Web
           </a>
         </li>
         <li>
           <a class="dropdown-item" href="kt2.html">
-            <i class="fa-solid fa-cloud me-2"></i>
-            Cloud Computing
+            Pengembangan App Mobile
           </a>
         </li>
         <li>
           <a class="dropdown-item" href="kt3.html">
-            <i class="fa-solid fa-shield-halved me-2"></i>
-            Keamanan Siber
+            Tim perangkat lunak khusus
           </a>
         </li>
       </ul>
@@ -155,7 +201,7 @@ body{font-family: 'popins', sans-serif;
     </li>
 
     <li class="nav-item">
-      <a href="#contact" class="nav-link fw-medium">Kontak</a>
+      <a href="kontak.html" class="nav-link fw-medium">Kontak</a>
     </li>
   </ul>
 </div>
@@ -167,10 +213,10 @@ body{font-family: 'popins', sans-serif;
 <section class="hero-about">
   <div class="content">
     <div>
-      <span class="badge bg-primary mb-3">ABOUT IDS</span>
+      <span class="badge bg-primary mb-3">ABOUT OMS</span>
       <h1 class="fw-bold">Tentang Kami</h1>
       <p class="lead">
-        Integrated Digital Solution (IDS) – Mitra Transformasi Digital Terpercaya
+        Optima Multi Sinergi (OMS) – Mitra Transformasi Digital Terpercaya
       </p>
     </div>
   </div>
@@ -180,22 +226,49 @@ body{font-family: 'popins', sans-serif;
 <section class="py-5">
 <div class="container">
 
-<div class="row align-items-center mb-5">
-  <div class="col-md-6 mb-4">
-    <h3 class="fw-bold mb-3">Profil Perusahaan</h3>
-    <p style="text-align:justify">
-      <strong>Integrated Digital Solution (IDS)</strong> adalah perusahaan
-      teknologi informasi yang menyediakan solusi digital terintegrasi
-      untuk sektor pemerintahan, pendidikan, kesehatan, dan industri strategis.
+  <div class="row align-items-center mb-5">
+
+  <!-- GAMBAR -->
+  <div class="col-md-6 text-center order-1 order-md-1">
+    <img src="assets/img/iuy.jpg"
+         class="img-fluid rounded-4 shadow"
+         alt="Optima Multi Sinergi">
+  </div>
+
+  <!-- TEKS -->
+  <div class="col-md-6 mb-4 order-2 order-md-2">
+    <h2 class="fw-bold mb-2">Optima Multi Sinergi</h2>
+
+    <p class="text-justify">
+      Optima Multi Sinergi berdiri pada tahun <strong>2020</strong>, yang telah bertransformasi
+      dari Komanditer menjadi Perseroan. Kami bergerak di bidang
+      <strong>Teknologi Informasi</strong> dengan fokus pengembangan sistem informasi,
+      implementasi, maintenance aplikasi, serta pengadaan hardware dan software.
     </p>
-    <p style="text-align:justify">
-      Kami berfokus pada pengembangan sistem yang aman, scalable,
-      dan berorientasi pada peningkatan kualitas layanan publik.
+
+    <p class="text-justify">
+      Dengan motto <strong>“Your Smart Solution Technology”</strong>,
+      kami hadir sebagai mitra strategis dalam transformasi digital klien.
     </p>
   </div>
 
+</div>
+
+
+<div class="row align-items-center mb-5">
+  <div class="col-md-6 mb-4">
+    <h2 class="fw-bold mb-3">Berorientasi kepada Klien</h2>
+    <p style="text-align:justify">
+      Dalam membangun aplikasi, kami selalu mendengar masukan-masukan dari client kami, sehingga didalam proses implementasi aplikasi bisa berjalan dengan baik. Kami juga mempunyai Tim Implementasi yang berpengalaman dan help desk yang membantu tim implementasi dari kantor pusat.
+      <strong>Kami menambahkan nilai kepada klien kami dengan:</strong>
+    </p>
+    <li>Aplikasi yang bisa disesuaikan dengan kebutuhan klien.</li>
+    <li>Penempatan tim implementasi yang berpengalaman.</li>
+    <li>Penggunaan software yang berbasis opensource, sehingga menekan biaya operasional.</li>
+  </div>
+
   <div class="col-md-6 text-center">
-    <img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=900&q=80"
+    <img src="assets/img/trade03-1428x1000.jpg"
          class="img-fluid rounded-4 shadow"
          alt="Digital Transformation">
   </div>
@@ -210,9 +283,7 @@ body{font-family: 'popins', sans-serif;
            alt="Visi IDS">
       <h5 class="fw-bold">Visi</h5>
       <p style="text-align:justify">
-        Menjadi perusahaan teknologi nasional yang unggul dalam
-        menghadirkan solusi digital terintegrasi yang inovatif,
-        aman, dan berkelanjutan.
+        Menjadi Perusahaan yang berkompeten, professional, berkualitas dan dipercaya dalam pengembangan, dan pelatihan tehnologi informasi, internet, komunikasi di berbagai wilayah di Indonesia
       </p>
     </div>
   </div>
@@ -224,10 +295,12 @@ body{font-family: 'popins', sans-serif;
            alt="Misi IDS">
       <h5 class="fw-bold">Misi</h5>
       <ul>
-        <li>Mengembangkan sistem digital berkualitas tinggi</li>
-        <li>Mendukung transformasi layanan publik</li>
-        <li>Menjaga keamanan dan integritas data</li>
-        <li>Memberikan layanan profesional & berkelanjutan</li>
+        <li>Mengembangkan Produk IT yang berkualitas dan Kompetitif</li>
+        <li>Memberikan servis yang optimal kepada Klien</li>
+        <li>Menawarkan solusi yang konstruktif kepada Klien</li>
+        <li>Mengembangkan kemitraan yang saling menguntungkan</li>
+        <li>Mengembangkan inovasi terbaik dan terkini dalam setiap produk</li>
+        <li>Meningkatkan benefits dan nilai tambah bagi Klien</li>
       </ul>
     </div>
   </div>
@@ -264,15 +337,24 @@ body{font-family: 'popins', sans-serif;
 </div>
 </section>
 
-<!-- CTA -->
-<section class="cta-ids text-center">
-<div class="container">
-<h3 class="fw-bold mb-3">Hubungi Kami Setiap Anda Membutuhkan</h3>
-<p class="mb-4">
-Tim IDS siap membantu mewujudkan transformasi digital organisasi Anda.
-</p>
-<a href="index.html#contact" class="btn btn-cta btn-lg">HUBUNGI KAMI</a>
-</div>
+<section class="cta-ids py-5">
+  <div class="container">
+    <div class="cta-box d-flex flex-column flex-md-row align-items-center justify-content-between">
+      
+      <div class="cta-text mb-3 mb-md-0">
+        <h3 class="fw-bold mb-2">Hubungi Kami Setiap Anda Membutuhkan</h3>
+        <p class="mb-0">
+          Tim OMS siap membantu mewujudkan transformasi digital organisasi Anda.
+        </p>
+      </div>
+
+      <a href="index.html#contact" class="btn btn-cta d-flex align-items-center">
+        <i class="fa-solid fa-paper-plane me-2"></i>
+        HUBUNGI KAMI
+      </a>
+
+    </div>
+  </div>
 </section>
 
 <footer class="bg-dark text-light pt-5 pb-3">
@@ -282,9 +364,9 @@ Tim IDS siap membantu mewujudkan transformasi digital organisasi Anda.
 
       <!-- ABOUT -->
       <div class="col-md-4">
-        <h5 class="fw-bold mb-3">Tentang IDS</h5>
+        <h5 class="fw-bold mb-3">Tentang OMS</h5>
         <p>
-          IDS adalah perusahaan teknologi yang menyediakan solusi IT profesional, mulai dari web & mobile development, sistem kustom, cloud computing, hingga keamanan siber. 
+          OMS adalah perusahaan teknologi yang menyediakan solusi IT profesional, mulai dari web & mobile development, sistem kustom, cloud computing, hingga keamanan siber. 
           Kami membantu bisnis Anda berkembang dengan teknologi modern dan tim ahli berpengalaman.
         </p>
         <a href="about.html" class="text-decoration-none text-primary">Pelajari Lebih Lanjut &rarr;</a>
@@ -315,17 +397,16 @@ Tim IDS siap membantu mewujudkan transformasi digital organisasi Anda.
       <!-- CONTACT -->
       <div class="col-md-4">
         <h5 class="fw-bold mb-3">Kontak Kami</h5>
-        <p><i class="fas fa-map-marker-alt me-2"></i> Jl. Teknologi No. 12, Jakarta, Indonesia</p>
-        <p><i class="fas fa-phone me-2"></i> +62 812 3456 7890</p>
-        <p><i class="fas fa-envelope me-2"></i> info@ids.co.id</p>
+        <p><i class="fas fa-map-marker-alt me-2"></i> Ruko Mega Peterongan, Jl. Kanal No. 5a, Lamper Lor, Semarang Selatan Kota Semarang, Jawa Tengah 50242</p>
+        <p><i class="fas fa-phone me-2"></i> 0813-8313-9864</p>
+        <p><i class="fas fa-envelope me-2"></i> marketing@optimasolution.co.id</p>
 
         <div class="d-flex gap-3 mt-3">
           <a href="#" class="text-light fs-5"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="text-light fs-5"><i class="fab fa-twitter"></i></a>
-          <a href="#" class="text-light fs-5"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#" class="text-light fs-5"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/62813-8313-9864" class="text-light fs-5"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://marketing@optimasolution.co.id" class="text-light fs-5"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://instagram.com/optimamultisinergi" class="text-light fs-5"><i class="fab fa-instagram"></i></a>
         </div>
-      </div>
 
     </div>
 
@@ -333,7 +414,7 @@ Tim IDS siap membantu mewujudkan transformasi digital organisasi Anda.
 
     <!-- COPYRIGHT -->
     <div class="text-center">
-      <p class="mb-0">&copy; 2025 IDS — All Rights Reserved</p>
+      <p class="mb-0">&copy; 2025 OMS — All Rights Reserved</p>
       <small class="text-secondary">Dibangun dengan teknologi modern & tim profesional.</small>
     </div>
 

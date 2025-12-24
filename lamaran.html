@@ -15,18 +15,18 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-:root{
-  --ids-primary:#0d6efd;
-  --ids-dark:#0a2f5a;
-  --ids-soft:#eef4ff;
-}
+    :root{
+      --ids-primary:#0d6efd;
+      --ids-dark:#0a2f5a;
+      --ids-soft:#eef4ff;
+    }
 
-body{
-  font-family:'Poppins',sans-serif;
-  background:#f8f9fb;
-}
+    body{
+      font-family:'Poppins',sans-serif;
+      background:#f8f9fb;
+    }
 
-.navbar {
+    .navbar {
       background: white;
       box-shadow: 0 2px 12px rgba(0,0,0,0.1);
     }
@@ -63,58 +63,135 @@ body{
       stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22' '/%3E%3C/svg%3E'");
     }
 
-/* HERO */
-.apply-hero{
-  background:linear-gradient(135deg,#0a2f5a,#0d6efd);
-  color:#fff;
-  padding:100px 0;
+    /* WARNA LINK NAVBAR */
+.navbar .nav-link {
+  color: #333; /* default color */
+  transition: color 0.3s, background-color 0.3s;
+  padding: 8px 12px;
+  border-radius: 6px; /* agar ada efek kotak halus */
 }
 
-/* FORM */
-.apply-card{
-  background:#fff;
-  border-radius:24px;
-  box-shadow:0 18px 45px rgba(0,0,0,.1);
-  padding:40px;
+/* HOVER LINK */
+.navbar .nav-link:hover {
+  color: #0d6efd; /* biru saat hover */
+  background-color: rgba(13,110,253,0.1); /* background ringan */
+  transform: translateY(-2px);
 }
 
-.form-control,
-.form-select{
-  border-radius:12px;
-  padding:12px 14px;
+/* LINK AKTIF */
+.navbar .nav-link.active {
+  color: #fff; /* teks putih */
+  background-color: #0d6efd; /* background biru */
+  font-weight: 600;
 }
 
-.form-control:focus,
-.form-select:focus{
-  border-color:var(--ids-primary);
-  box-shadow:0 0 0 .2rem rgba(13,110,253,.15);
-}
+    .apply-hero{
+      background:linear-gradient(135deg,#0a2f5a,#0d6efd);
+      color:#fff;
+      padding:100px 0;
+    }
 
-.btn-apply{
-  background:var(--ids-primary);
-  color:#fff;
-  padding:14px 36px;
-  border-radius:50px;
-  font-weight:600;
-}
+    .apply-card{
+      background:#fff;
+      border-radius:24px;
+      box-shadow:0 18px 45px rgba(0,0,0,.1);
+      padding:40px;
+    }
 
-.btn-apply:hover{
-  background:#0b5ed7;
-  color:#fff;
-}
+    .form-control,
+    .form-select{
+      border-radius:12px;
+      padding:12px 14px;
+    }
 
-/* INFO */
-.apply-info{
-  background:var(--ids-soft);
-  border-radius:24px;
-  padding:40px;
-  height:100%;
-}
+    .form-control:focus,
+    .form-select:focus{
+      border-color:var(--ids-primary);
+      box-shadow:0 0 0 .2rem rgba(13,110,253,.15);
+    }
 
-.apply-info i{
-  font-size:26px;
-  color:var(--ids-primary);
-}
+    .btn-apply{
+      background:var(--ids-primary);
+      color:#fff;
+      padding:14px 36px;
+      border-radius:50px;
+      font-weight:600;
+    }
+
+    .btn-apply:hover{
+      background:#0b5ed7;
+      color:#fff;
+    }
+
+    .apply-info{
+      background:var(--ids-soft);
+      border-radius:24px;
+      padding:40px;
+      height:100%;
+    }
+
+    .apply-info i{
+      font-size:26px;
+      color:var(--ids-primary);
+    }
+
+    footer {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+    }
+
+    footer h5 {
+      color: #ffffff;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    footer a {
+      color: #cccccc;
+      transition: 0.3s;
+      text-decoration: none;
+    }
+    footer a:hover {
+      color: #0d6efd;
+      text-decoration: underline;
+    }
+
+    footer p {
+      color: #cccccc;
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+
+    footer .fab {
+      transition: 0.3s;
+    }
+    footer .fab:hover {
+      color: #0d6efd;
+      transform: scale(1.2);
+    }
+
+    footer hr {
+      border-top: 1px solid #444;
+    }
+
+    footer small {
+      display: block;
+      margin-top: 5px;
+      color: #888;
+      font-size: 12px;
+    }
+
+    @media(max-width:768px){
+      footer .row > div {
+        text-align: center;
+      }
+      footer .d-flex {
+        justify-content: center !important;
+      }
+      footer .d-flex a {
+        margin: 0 5px;
+      }
+    }
 </style>
 </head>
 
@@ -123,10 +200,9 @@ body{
     <nav class="navbar navbar-expand-lg fixed-top shadow-sm" style="background-color: rgba(255,255,255,0.95);">
   <div class="container">
 
-    <a class="navbar-brand d-flex align-items-center fw-bold" href="#">
-      <img src="assets/img/pp.png" width="40" height="40" class="me-2 rounded-circle">
-      IDS
-    </a>
+    <a class="navbar-brand d-flex align-items-center" href="#">
+  <img src="assets/img/46.png" class="me-2">
+</a>
 
     <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
       <span class="navbar-toggler-icon"></span>
@@ -143,7 +219,6 @@ body{
       <a href="about.html" class="nav-link fw-medium">Tentang</a>
     </li>
 
-        <!-- DROPDOWN LAYANAN -->
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle fw-medium"
         href="#"
@@ -157,20 +232,17 @@ body{
       <ul class="dropdown-menu shadow border-0" aria-labelledby="layananDropdown">
         <li>
         <a class="dropdown-item" href="kt1.html">
-            <i class="fa-solid fa-laptop-code me-2"></i>
-            Web & Mobile Development
+            Pengembangan App Web
           </a>
         </li>
         <li>
           <a class="dropdown-item" href="kt2.html">
-            <i class="fa-solid fa-cloud me-2"></i>
-            Cloud Computing
+            Pengembangan App Mobile
           </a>
         </li>
         <li>
           <a class="dropdown-item" href="kt3.html">
-            <i class="fa-solid fa-shield-halved me-2"></i>
-            Keamanan Siber
+            Tim perangkat lunak khusus
           </a>
         </li>
       </ul>
@@ -189,7 +261,7 @@ body{
     </li>
 
     <li class="nav-item">
-      <a href="index.html#contact" class="nav-link fw-medium">Kontak</a>
+      <a href="kontak.html" class="nav-link fw-medium">Kontak</a>
     </li>
   </ul>
 </div>
@@ -197,7 +269,6 @@ body{
   </div>
 </nav>
 
-<!-- HERO -->
 <section class="apply-hero text-center">
   <div class="container">
     <h1 class="fw-bold mb-3">Form Lamaran Kerja</h1>
@@ -207,18 +278,13 @@ body{
   </div>
 </section>
 
-<!-- FORM -->
 <section class="py-5">
   <div class="container">
     <div class="row g-4">
-
-      <!-- FORM INPUT -->
       <div class="col-lg-7">
         <div class="apply-card">
 
           <h4 class="fw-bold mb-4">Data Pelamar</h4>
-
-          <!-- FORM -->
           <form action="success.html" method="post" enctype="multipart/form-data">
 
             <div class="row g-3">
@@ -289,7 +355,6 @@ body{
         </div>
       </div>
 
-      <!-- INFO -->
       <div class="col-lg-5">
         <div class="apply-info">
 
@@ -342,7 +407,6 @@ body{
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer class="bg-dark text-light text-center py-4">
 © 2025 Integrated Digital Solution (IDS)
 </footer>

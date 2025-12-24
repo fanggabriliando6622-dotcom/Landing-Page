@@ -40,23 +40,68 @@
 }
 
         .hero {
-  height: 40vh; /* Tinggi dikurangi karena tanpa gambar agar lebih proporsional */
+  height: 45vh;
   position: relative;
-  background-color: #ffffff; /* Latar belakang putih bersih */
-  color: rgb(17, 16, 16);
+  background: linear-gradient(
+    135deg,
+    #dbeafe 0%,
+    #c7d2fe 50%,
+    #bfdbfe 100%
+  );
+  color: #0f172a;
   display: flex;
   align-items: center;
-  padding-top: 80px; /* Ruang untuk navbar */
+  padding-top: 80px;
+  overflow: hidden;
 }
 
-.hero p.lead {
-  color: #131111;
-  font-size: 1.25rem;
-  max-width: 700px;
-  margin: 0 auto;
+/* Judul */
+.hero h1 {
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.6px;
 }
-    .hero::after { content: ""; position: absolute; inset: 0; background: rgba(0,0,0,0.6); }
-    .hero-content { position: relative; z-index: 2; }
+
+/* Deskripsi */
+.hero p.lead {
+  color: #1e293b;
+  font-size: 1.25rem;
+  max-width: 720px;
+  margin: 15px auto 0;
+}
+
+/* Glow kanan atas */
+.hero::after {
+  content: "";
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(circle,
+    rgba(59,130,246,0.55),
+    rgba(59,130,246,0.35),
+    transparent 75%
+  );
+  border-radius: 50%;
+}
+
+/* Glow kiri bawah */
+.hero::before {
+  content: "";
+  position: absolute;
+  bottom: -130px;
+  left: -130px;
+  width: 540px;
+  height: 540px;
+  background: radial-gradient(circle,
+    rgba(99,102,241,0.50),
+    rgba(99,102,241,0.30),
+    transparent 75%
+  );
+  border-radius: 50%;
+}
+
 
     /* CUSTOM STYLES */
     .section-title {

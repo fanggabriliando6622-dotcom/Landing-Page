@@ -54,6 +54,27 @@
       stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22' '/%3E%3C/svg%3E'");
     }
 
+    /* WARNA LINK NAVBAR */
+.navbar .nav-link {
+  color: #333; /* default color */
+  transition: color 0.3s, background-color 0.3s;
+  padding: 8px 12px;
+  border-radius: 6px; /* agar ada efek kotak halus */
+}
+
+/* HOVER LINK */
+.navbar .nav-link:hover {
+  color: #0d6efd; /* biru saat hover */
+  background-color: rgba(13,110,253,0.1); /* background ringan */
+  transform: translateY(-2px);
+}
+
+/* LINK AKTIF */
+.navbar .nav-link.active {
+  color: #fff; /* teks putih */
+  background-color: #0d6efd; /* background biru */
+  font-weight: 600;
+}
 
     .hero-section {
       padding: 140px 0;
@@ -63,223 +84,374 @@
       font-weight: bold;
     }
 
-    .ids-line{
-  width:70px;
-  height:4px;
-  background:#0d6efd;
-  border-radius:10px;
-}
+  .tagline-text {
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    color: #6c757d;
+    letter-spacing: 2px;
+    text-transform: lowercase;
+  }
 
-.ids-solution-card{
-  background:#ffffff;
-  border-radius:18px;
-  padding:40px 30px;
-  height:100%;
-  transition:.35s ease;
-  box-shadow:0 8px 25px rgba(0,0,0,.08);
-}
-
-.ids-solution-card:hover{
-  transform:translateY(-8px);
-  box-shadow:0 18px 45px rgba(0,0,0,.15);
-}
-
-.ids-icon{
-  width:80px;
-  height:80px;
-  margin:0 auto 25px;
-  border-radius:50%;
-  background:#eef4ff;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:#0d6efd;
-  font-size:34px;
-}
-
-.ids-solution-card h5{
-  font-weight:700;
-  margin-bottom:15px;
-}
-
-.ids-solution-card p{
-  color:#6c757d;
-  font-size:15px;
-}
-
-.ids-services{
-  background:#ffffff;
-}
-
-.ids-divider{
-  width:70px;
-  height:4px;
-  background:linear-gradient(90deg,#0d6efd,#6f42c1);
-  border-radius:10px;
-}
-
-.ids-value-box{
-  display:flex;
-  align-items:center;
-  gap:18px;
-  padding:18px 22px;
-  border-radius:14px;
-  transition:all .35s ease;
-}
-
-.ids-value-box h6{
-  margin:0;
-  font-weight:600;
-  font-size:16px;
-  color:#212529;
-}
-
-.ids-icon{
-  width:52px;
-  height:52px;
-  border-radius:14px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:rgba(13,110,253,.08);
-}
-
-.ids-icon i{
-  font-size:22px;
-  color:#0d6efd;
-}
-
-.ids-value-box:hover{
-  background:#f8f9fa;
-  transform:translateY(-6px);
-}
-
-@media(max-width:576px){
-  .ids-value-box{
-    justify-content:center;
-    text-align:center;
-    flex-direction:column;
+  /* Animasi floating logo */
+@keyframes floatLogo {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 
-.hero-it {
-  position: relative;
-  height: 100vh;
-  background: url('https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=1600&q=80')
-      center/cover no-repeat;
-  animation: zoomBg 22s ease-in-out infinite;
-}
-
-.hero-it .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.45);
-  backdrop-filter: blur(1px);
-  z-index: 1;
-}
-
 .hero-logo {
-  width: 140px;
-  height: auto;
-  border-radius: 50%;
-  object-fit: cover;
-  box-shadow: 0 0 18px rgba(0, 190, 255, 0.5);
-  animation: fadeInLogo 1.3s ease forwards;
+  animation: floatLogo 4s ease-in-out infinite;
 }
 
-@keyframes fadeInLogo {
-  0% { opacity: 0; transform: scale(0.8); }
-  100% { opacity: 1; transform: scale(1); }
+    .ids-line{
+    width:70px;
+    height:4px;
+    background:#0d6efd;
+    border-radius:10px;
+    }
+
+    .ids-solution-card{
+      background:#ffffff;
+      border-radius:18px;
+      padding:40px 30px;
+      height:100%;
+      transition:.35s ease;
+      box-shadow:0 8px 25px rgba(0,0,0,.08);
+    }
+
+    .ids-solution-card:hover{
+      transform:translateY(-8px);
+      box-shadow:0 18px 45px rgba(0,0,0,.15);
+    }
+
+    .ids-icon{
+      width:80px;
+      height:80px;
+      margin:0 auto 25px;
+      border-radius:50%;
+      background:#eef4ff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:#0d6efd;
+      font-size:34px;
+    }
+
+    .ids-solution-card h5{
+      font-weight:700;
+      margin-bottom:15px;
+    }
+
+    .ids-solution-card p{
+      color:#6c757d;
+      font-size:15px;
+    }
+
+    .ids-services{
+      background:#ffffff;
+    }
+
+    .ids-divider{
+      width:70px;
+      height:4px;
+      background:linear-gradient(90deg,#0d6efd,#6f42c1);
+      border-radius:10px;
+    }
+
+    .ids-value-box{
+      display:flex;
+      align-items:center;
+      gap:18px;
+      padding:18px 22px;
+      border-radius:14px;
+      transition:all .35s ease;
+    }
+
+    .ids-value-box h6{
+      margin:0;
+      font-weight:600;
+      font-size:16px;
+      color:#212529;
+    }
+
+    .ids-icon{
+      width:52px;
+      height:52px;
+      border-radius:14px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:rgba(13,110,253,.08);
+    }
+
+    .ids-icon i{
+      font-size:22px;
+      color:#0d6efd;
+    }
+
+    .ids-value-box:hover{
+      background:#f8f9fa;
+      transform:translateY(-6px);
+    }
+
+    @media(max-width:576px){
+      .ids-value-box{
+        justify-content:center;
+        text-align:center;
+        flex-direction:column;
+      }
+    }
+
+    .ids-services {
+  background: #ffffff;
 }
 
-.z-2 {
+/* garis bawah judul */
+.ids-divider {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #0d6efd, #3b82f6);
+  border-radius: 10px;
+}
+
+/* item list */
+.ids-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #1f2937;
+}
+
+/* icon */
+.ids-item i {
+  font-size: 30px;
+  color: #0d6efd; /* biru utama */
+}
+
+/* responsive kecil */
+@media (max-width: 576px) {
+  .ids-item {
+    font-size: 15px;
+  }
+}
+
+.ids-quote {
+  background: linear-gradient(135deg, #0d6efd, #1e40af);
+  padding: 90px 20px;
+  margin-top: 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Icon quote */
+.quote-icon {
+  position: absolute;
+  font-size: 80px;
+  color: rgba(255, 255, 255, 0.25);
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.quote-icon.right {
+  top: auto;
+  bottom: -30px;
+}
+
+/* Text quote */
+.quote-text {
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: 600;
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.4;
+  letter-spacing: 0.6px;
   position: relative;
   z-index: 2;
 }
 
-@keyframes slideIn {
-  0% { opacity: 0; transform: translateY(35px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
-.animate-title {
-  animation: slideIn 1s ease forwards;
-}
-
-.animate-subtitle {
-  animation: slideIn 1.4s ease forwards;
-}
-
-.animate-button {
-  animation: slideIn 1.8s ease forwards;
-}
-
-@keyframes zoomBg {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.06); }
-  100% { transform: scale(1); }
-}
-
+/* Responsive */
 @media (max-width: 768px) {
-  .hero-it {
-    height: 90vh;
+  .quote-text {
+    font-size: 26px;
   }
-  .hero-logo {
-    width: 110px;
-  }
-  h1 {
-    font-size: 1.8rem;
+
+  .quote-icon {
+    font-size: 60px;
   }
 }
 
-.client-card {
-  background: #fff;
-  padding: 20px;
-  border-radius: 16px;
-  text-align: center;
-  height: 100%;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-  transition: 0.35s;
+    .hero-it {
+  min-height: 100vh;
+  background: url('assets/img/iuy.jpg') center/cover no-repeat;
+  position: relative;
 }
 
-.client-card img {
-  max-width: 90px;
-  margin-bottom: 12px;
-  filter: grayscale(100%);
+.hero-it .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 1;
 }
 
-.client-card h6 {
-  font-weight: 700;
-  font-size: 15px;
+.hero-logo {
+  width: 110px;
 }
 
-.client-card p {
-  font-size: 13px;
-  color: #555;
+.hero-title {
+  font-size: 36px;
+  font-weight: 500;
+  color: #ffffff;
+  margin-bottom: 10px;
 }
 
-.client-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+.hero-subtitle {
+  font-size: 42px;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 1px;
 }
 
-.client-card:hover img {
-  filter: grayscale(0%);
+/* Tombol gradasi seperti di gambar */
+.btn-gradient {
+  background: linear-gradient(90deg, #2555be, #0004ff);
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  padding: 12px 40px;
+  border-radius: 0;
+  transition: 0.3s;
 }
-  </style>
+
+.btn-gradient:hover {
+  opacity: 0.85;
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 26px;
+  }
+  .hero-subtitle {
+    font-size: 30px;
+  }
+}
+
+    .client-card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 16px;
+      text-align: center;
+      height: 100%;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+      transition: 0.35s;
+    }
+
+    .client-card img {
+      max-width: 90px;
+      margin-bottom: 12px;
+      filter: grayscale(100%);
+    }
+
+    .client-card h6 {
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    .client-card p {
+      font-size: 13px;
+      color: #555;
+    }
+
+    .client-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 18px 40px rgba(0,0,0,0.15);
+    }
+
+    .client-card:hover img {
+      filter: grayscale(0%);
+    }
+
+    /* CTA SECTION */
+.cta-optima{
+  background: linear-gradient(180deg, #f8fafc, #eef2ff);
+  padding: 70px 0;
+}
+
+/* BOX */
+.cta-optima-box{
+  background: #151418;
+  border-radius: 18px;
+  padding: 40px 45px;
+  box-shadow: 0 25px 60px rgba(15,23,42,.08);
+  position: relative;
+  overflow: hidden;
+}
+
+/* AKSEN GARIS */
+.cta-optima-box::before{
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  width:6px;
+  height:100%;
+  background: linear-gradient(180deg,#2563eb,#1e40af);
+}
+
+/* TEXT */
+.cta-optima-text h3{
+  font-weight:700;
+  color:#f1f1f1;
+  margin-bottom:12px;
+}
+
+.cta-optima-text p{
+  color:#f8fbff;
+  font-size:15px;
+  line-height:1.6;
+  margin-bottom:0;
+}
+
+/* BUTTON */
+.btn-optima{
+  background: linear-gradient(135deg,#2563eb,#1e40af);
+  color:#ffffff;
+  padding:14px 34px;
+  border-radius:999px;
+  font-weight:600;
+  letter-spacing:.3px;
+  transition:.3s ease;
+  box-shadow:0 12px 30px rgba(37,99,235,.35);
+}
+
+.btn-optima:hover{
+  color:#fff;
+  transform:translateY(-3px);
+  box-shadow:0 18px 40px rgba(37,99,235,.45);
+}
+
+      </style>
 </head>
 <body>
 
 <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
   <div class="container">
 
-    <a class="navbar-brand d-flex align-items-center fw-bold" href="#">
-      <img src="assets/img/pp.png" width="40" height="40" class="me-2 rounded-circle">
-      IDS
-    </a>
+  <a class="navbar-brand d-flex align-items-center" href="#">
+  <img src="assets/img/46.png" class="me-2">
+</a>
 
     <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
       <span class="navbar-toggler-icon"></span>
@@ -309,20 +481,17 @@
       <ul class="dropdown-menu shadow border-0" aria-labelledby="layananDropdown">
         <li>
         <a class="dropdown-item" href="kt1.html">
-            <i class="fa-solid fa-laptop-code me-2"></i>
-            Web & Mobile Development
+            Pengembangan App Web
           </a>
         </li>
         <li>
           <a class="dropdown-item" href="kt2.html">
-            <i class="fa-solid fa-cloud me-2"></i>
-            Cloud Computing
+            Pengembangan App Mobile
           </a>
         </li>
         <li>
           <a class="dropdown-item" href="kt3.html">
-            <i class="fa-solid fa-shield-halved me-2"></i>
-            Keamanan Siber
+            Tim perangkat lunak khusus
           </a>
         </li>
       </ul>
@@ -341,7 +510,7 @@
         </li>
 
         <li class="nav-item">
-          <a href="#contact" class="nav-link">Kontak</a>
+          <a href="kontak.html" class="nav-link">Kontak</a>
         </li>
 
       </ul>
@@ -355,20 +524,24 @@
 
   <div class="container position-relative z-2">
 
-    <img src="assets/img/pp.png" 
+    <!-- Logo OMS -->
+    <img src="assets/img/iconoms.png" 
          class="hero-logo mb-4 animate-title" 
-         alt="Logo IDS">
+         alt="OMS Logo">
 
-    <h1 class="display-5 fw-bold text-white animate-title">
-      Inovasi Digital Solusi (IDS)
+    <!-- Judul -->
+    <h1 class="hero-title animate-title">
+      Pengembangan Perangkat Lunak
     </h1>
 
-    <p class="lead mt-3 text-white animate-subtitle">
-      Membangun Masa Depan Digital Anda
-    </p>
+    <!-- Sub Judul -->
+    <h2 class="hero-subtitle animate-subtitle">
+      KAMI AHLINYA
+    </h2>
 
-    <a href="about.html" class="btn btn-primary px-4 mt-4 animate-button">
-      <i class="fa-solid fa-paper-plane"></i> Tentang Kami
+    <!-- Tombol -->
+    <a href="about.html" class="btn btn-gradient px-5 mt-4 animate-button">
+      TENTANG KAMI
     </a>
 
   </div>
@@ -376,23 +549,19 @@
 
 <section class="container my-5 py-5" id="about">
 
-  <!-- HEADING -->
   <div class="text-center mb-5" data-aos="fade-up">
     <h2 class="fw-bold">
-      Solusi Digital Terintegrasi oleh IDS
+      Solusi Digital Terintegrasi oleh Optima Multi Sinergi
     </h2>
     <div class="ids-line mx-auto my-3"></div>
     <p class="text-muted mt-3">
-      IDS (Inovasi Digital Solusi) adalah perusahaan pengembang perangkat lunak
+      Optima Multi Sinergi adalah perusahaan pengembang perangkat lunak
       yang berfokus pada penyediaan solusi teknologi informasi terintegrasi
       untuk mendukung transformasi digital instansi dan organisasi.
     </p>
   </div>
 
-  <!-- VALUE / SOLUTION -->
   <div class="row text-center g-4 mt-4">
-
-    <!-- WEB -->
     <div class="col-md-4" data-aos="fade-up">
       <div class="ids-solution-card">
         <div class="ids-icon">
@@ -406,7 +575,6 @@
       </div>
     </div>
 
-    <!-- MOBILE -->
     <div class="col-md-4" data-aos="fade-up" data-aos-delay="150">
       <div class="ids-solution-card">
         <div class="ids-icon">
@@ -420,7 +588,6 @@
       </div>
     </div>
 
-    <!-- TEAM -->
     <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
       <div class="ids-solution-card">
         <div class="ids-icon">
@@ -428,7 +595,7 @@
         </div>
         <h5>Tim Pengembang Profesional</h5>
         <p>
-          Tim IDS terdiri dari tenaga profesional
+          Tim Optima Multi Sinergi terdiri dari tenaga profesional
           yang berpengalaman dalam perencanaan,
           pengembangan, dan implementasi sistem.
         </p>
@@ -442,75 +609,94 @@
 <section class="py-5 ids-services" id="services">
   <div class="container">
 
-    <!-- Heading -->
+    <!-- JUDUL -->
     <div class="text-center mb-5" data-aos="fade-up">
-      <h2 class="fw-bold mb-3">Bagaimana IDS Membantu Anda</h2>
+      <h2 class="fw-bold mb-3">Bagaimana kami dapat membantu anda?</h2>
       <div class="ids-divider mx-auto mb-4"></div>
       <p class="text-muted col-lg-8 mx-auto">
-        IDS berkomitmen menghadirkan solusi teknologi yang aman, efisien,
-        dan berkelanjutan untuk mendukung transformasi digital organisasi Anda.
+        Pekerjaan Kami adalah untuk mewujudkan Aplikasi impian Anda menjadi kenyataan.
+        Kami mempunyai kreatifitas, skill dan teknologi untuk mengembangkan aplikasi impian Anda.
       </p>
     </div>
 
-    <!-- Value Grid -->
-    <div class="row gy-4 gx-5">
+    <!-- LIST VALUE -->
+    <div class="row gy-4">
 
-      <div class="col-md-4" data-aos="fade-up">
-        <div class="ids-value-box">
-          <span class="ids-icon">
-            <i class="fa-solid fa-people-group"></i>
-          </span>
-          <h6>Tim Profesional & Berpengalaman</h6>
+      <div class="col-md-4">
+        <div class="ids-item">
+          <i class="fa-solid fa-people-group"></i>
+          <span>Tim Profesional & Berpengalaman</span>
         </div>
       </div>
 
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="ids-value-box">
-          <span class="ids-icon">
-            <i class="fa-solid fa-code"></i>
-          </span>
-          <h6>Clean Code & Arsitektur Terstruktur</h6>
+      <div class="col-md-4">
+        <div class="ids-item">
+          <i class="fa-solid fa-code"></i>
+          <span>Clean Code</span>
         </div>
       </div>
 
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="ids-value-box">
-          <span class="ids-icon">
-            <i class="fa-solid fa-shield-halved"></i>
-          </span>
-          <h6>Keamanan Data & Sistem Terjamin</h6>
+      <div class="col-md-4">
+        <div class="ids-item">
+          <i class="fa-solid fa-gem"></i>
+          <span>Terjangkau</span>
         </div>
       </div>
 
-      <div class="col-md-4" data-aos="fade-up">
-        <div class="ids-value-box">
-          <span class="ids-icon">
-            <i class="fa-solid fa-cloud"></i>
-          </span>
-          <h6>Cloud Computing & Skalabilitas</h6>
+      <div class="col-md-4">
+        <div class="ids-item">
+          <i class="fa-solid fa-diagram-project"></i>
+          <span>Scrum</span>
         </div>
       </div>
 
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-        <div class="ids-value-box">
-          <span class="ids-icon">
-            <i class="fa-solid fa-diagram-project"></i>
-          </span>
-          <h6>Metodologi Pengembangan Teruji</h6>
+      <div class="col-md-4">
+        <div class="ids-item">
+          <i class="fa-solid fa-thumbs-up"></i>
+          <span>Perangkat Lunak Berkualitas</span>
         </div>
       </div>
 
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="ids-value-box">
-          <span class="ids-icon">
-            <i class="fa-solid fa-handshake"></i>
-          </span>
-          <h6>Transparan & Berorientasi Solusi</h6>
+      <div class="col-md-4">
+        <div class="ids-item">
+          <i class="fa-solid fa-check"></i>
+          <span>Transparan & Jujur</span>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="ids-item">
+          <i class="fa-solid fa-vial"></i>
+          <span>TDD</span>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="ids-item">
+          <i class="fa-solid fa-rocket"></i>
+          <span>Inovatif</span>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="ids-item">
+          <i class="fa-solid fa-lightbulb"></i>
+          <span>Kreatif</span>
         </div>
       </div>
 
     </div>
 
+  </div>
+</section>
+
+<section class="ids-quote" data-aos="fade-up">
+  <div class="container text-center position-relative">
+    <span class="quote-icon">❝</span>
+    <p class="quote-text">
+      The time is always right to do what is right!
+    </p>
+    <span class="quote-icon right">❞</span>
   </div>
 </section>
 
@@ -518,204 +704,22 @@
 <html lang="id">
 <head>
 <meta charset="UTF-8">
-<title>Galeri Project | IDS</title>
+<title>Galeri Project | OMS</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<!-- GOOGLE FONT -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 
 <style>
-
-/* SECTION */
-#gallery{
-  background: rgb(232, 249, 255);
-}
-
-/* GALLERY BOX */
-.gallery-box{
-  background:#ffffff;
-  border-radius:18px;
-  padding:20px;
-  height:320px;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  box-shadow:0 14px 40px rgba(0,0,0,.08);
-  transition:.3s ease;
-}
-
-.gallery-box:hover{
-  transform:translateY(-6px);
-}
-
-/* IMAGE */
-.gallery-box img{
-  width:100%;
-  height:180px;
-  object-fit:contain;
-}
-
-/* TEXT */
-.gallery-text{
-  text-align:center;
-  margin-top:14px;
-}
-
-.gallery-text h6{
-  font-size:15px;
-  font-weight:600;
-  margin-bottom:4px;
-}
-
-.gallery-text span{
-  font-size:13px;
-  color:#6c757d;
-}
-
-/* CAROUSEL */
-.carousel-control-prev-icon,
-.carousel-control-next-icon{
-  background-color:#0d6efd;
-  border-radius:50%;
-  padding:18px;
-}
-
-</style>
-</head>
-
-<body>
-
-<!-- GALLERY -->
-<section id="gallery" class="ids-gallery py-5">
-  <div class="container">
-
-    <!-- HEADER -->
-    <div class="text-center mb-5">
-      <span class="ids-badge mb-2">PORTFOLIO</span>
-      <h2 class="fw-bold">
-        Galeri Project <span class="text-primary">IDS</span>
-      </h2>
-      <p class="text-muted mt-2">
-        Dokumentasi pengembangan sistem, infrastruktur, dan solusi digital IDS
-      </p>
-    </div>
-
-    <!-- CAROUSEL -->
-    <div id="idsCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4500">
-
-      <div class="carousel-inner">
-
-        <!-- SLIDE 1 -->
-        <div class="carousel-item active">
-          <div class="row g-4">
-            <div class="col-md-6">
-              <div class="ids-gallery-card">
-                <div class="ids-gallery-image">
-                  <img src="assets/img/1.png" alt="Server & Infrastruktur">
-                </div>
-                <div class="ids-gallery-content">
-                  <h6>Server & Infrastruktur</h6>
-                  <p>Manajemen server enterprise & data center</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6">
-              <div class="ids-gallery-card">
-                <div class="ids-gallery-image">
-                  <img src="assets/img/2.png" alt="Pengembangan Software">
-                </div>
-                <div class="ids-gallery-content">
-                  <h6>Pengembangan Software</h6>
-                  <p>Aplikasi bisnis modern & scalable</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- SLIDE 2 -->
-        <div class="carousel-item">
-          <div class="row g-4">
-            <div class="col-md-6">
-              <div class="ids-gallery-card">
-                <div class="ids-gallery-image">
-                  <img src="assets/img/lp.png" alt="Cloud Computing">
-                </div>
-                <div class="ids-gallery-content">
-                  <h6>Cloud Computing</h6>
-                  <p>Solusi cloud terintegrasi & aman</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6">
-              <div class="ids-gallery-card">
-                <div class="ids-gallery-image">
-                  <img src="assets/img/kj.png" alt="Jaringan & Keamanan">
-                </div>
-                <div class="ids-gallery-content">
-                  <h6>Jaringan & Keamanan</h6>
-                  <p>Keamanan sistem & jaringan perusahaan</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- SLIDE 3 -->
-        <div class="carousel-item">
-          <div class="row g-4">
-            <div class="col-md-6">
-              <div class="ids-gallery-card">
-                <div class="ids-gallery-image">
-                  <img src="assets/img/av.png" alt="Database Management">
-                </div>
-                <div class="ids-gallery-content">
-                  <h6>Database Management</h6>
-                  <p>Pengelolaan database skala enterprise</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-6">
-              <div class="ids-gallery-card">
-                <div class="ids-gallery-image">
-                  <img src="assets/img/bu.png" alt="Artificial Intelligence">
-                </div>
-                <div class="ids-gallery-content">
-                  <h6>Artificial Intelligence</h6>
-                  <p>AI untuk analisis data & automasi</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- CONTROL -->
-      <button class="carousel-control-prev ids-control" type="button" data-bs-target="#idsCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon"></span>
-      </button>
-      <button class="carousel-control-next ids-control" type="button" data-bs-target="#idsCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon"></span>
-      </button>
-
-    </div>
-
-  </div>
-</section>
-
-<style>
-/* SECTION */
-.ids-gallery{
-  background:linear-gradient(180deg,#f8f9fb,#ffffff);
+body{
   font-family:'Poppins',sans-serif;
 }
 
-/* BADGE */
+#gallery{
+  background:linear-gradient(180deg,#f5f9ff,#ffffff);
+}
+
 .ids-badge{
   display:inline-block;
   font-size:12px;
@@ -728,88 +732,610 @@
 }
 
 /* CARD */
-.ids-gallery-card{
+.project-card{
   background:#fff;
   border-radius:20px;
-  box-shadow:0 18px 45px rgba(0,0,0,.08);
   overflow:hidden;
-  height:100%;
+  position:relative;
+  box-shadow:0 20px 45px rgba(0,0,0,.08);
   transition:.4s ease;
 }
 
-.ids-gallery-card:hover{
+.project-card:hover{
   transform:translateY(-8px);
-  box-shadow:0 24px 60px rgba(13,110,253,.15);
+  box-shadow:0 28px 70px rgba(13,110,253,.18);
 }
 
 /* IMAGE */
-.ids-gallery-image{
-  object-fit: cover;
-object-position: top;
+.project-img{
+  position:relative;
+  height:200px;
+  overflow:hidden;
 }
 
-.ids-gallery-image img{
-  max-width:90%;
-  max-height:90%;
-  object-fit:contain;
+.project-img img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.6s ease;
+}
+
+.project-card:hover img{
+  transform:scale(1.1);
+}
+
+/* OVERLAY */
+.project-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg,rgba(0,0,0,.0),rgba(0,0,0,.7));
+  opacity:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:.4s ease;
+}
+
+.project-card:hover .project-overlay{
+  opacity:1;
+}
+
+.btn-detail{
+  background:#0d6efd;
+  color:#fff;
+  padding:10px 24px;
+  border-radius:50px;
+  font-size:14px;
+  text-decoration:none;
+  transition:.3s;
+}
+
+.btn-detail:hover{
+  background:#084298;
+  color:#fff;
 }
 
 /* CONTENT */
-.ids-gallery-content{
+.project-content{
   padding:20px;
 }
 
-.ids-gallery-content h6{
+.project-content h6{
   font-weight:600;
   margin-bottom:6px;
 }
 
-.ids-gallery-content p{
+.project-content p{
   font-size:14px;
   color:#6c757d;
-  margin:0;
+  margin-bottom:12px;
 }
 
-/* CONTROL */
-.ids-control .carousel-control-prev-icon,
-.ids-control .carousel-control-next-icon{
+.project-tag{
+  display:inline-block;
+  font-size:11px;
+  padding:5px 14px;
+  border-radius:50px;
+  background:#e7f1ff;
+  color:#0d6efd;
+  font-weight:600;
+}
+
+/* CAROUSEL BUTTON */
+.carousel-control-prev-icon,
+.carousel-control-next-icon{
   background-color:#0d6efd;
   border-radius:50%;
   padding:18px;
 }
 </style>
+</head>
 
-<!-- BOOTSTRAP JS -->
+<body>
+
+<section id="gallery" class="py-5">
+  <div class="container">
+
+    <div class="text-center mb-5">
+      <span class="ids-badge">PORTFOLIO</span>
+      <h2 class="fw-bold mt-2">
+        Galeri Project <span class="text-primary">OMS</span>
+      </h2>
+      <p class="text-muted">
+        Dokumentasi sistem, aplikasi & infrastruktur digital
+      </p>
+    </div>
+
+    <div id="projectCarousel" class="carousel slide" data-bs-interval="false">
+      <div class="carousel-inner">
+
+        <!-- ITEM 1 -->
+        <div class="carousel-item active">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="project-card">
+                <div class="project-img">
+                  <img src="assets/img/dms.jpg">
+                  <div class="project-overlay">
+                    <a href="detail_halaman/detail1.html" class="btn-detail">
+                      <i class="fa-solid fa-eye me-1"></i> Detail Project
+                    </a>
+                  </div>
+                </div>
+                <div class="project-content">
+                  <span class="project-tag">Web development</span>
+                  <h6 class="mt-2">DMS (Dinamic Medical System)</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ITEM 2 -->
+        <div class="carousel-item">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="project-card">
+                <div class="project-img">
+                  <img src="assets/img/dpi.jpg">
+                  <div class="project-overlay">
+                    <a href="detail_halaman/detail2.html" class="btn-detail">
+                      <i class="fa-solid fa-eye me-1"></i> Detail Project
+                    </a>
+                  </div>
+                </div>
+                <div class="project-content">
+                  <span class="project-tag">Web development</span>
+                  <h6 class="mt-2"> DPI (Dinamic Pharmacy Inventory)</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ITEM 3 -->
+        <div class="carousel-item">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="project-card">
+                <div class="project-img">
+                  <img src="assets/img/opbitory.jpg">
+                  <div class="project-overlay">
+                    <a href="detail_halaman/detail3.html" class="btn-detail">
+                      <i class="fa-solid fa-eye me-1"></i> Detail Project
+                    </a>
+                  </div>
+                </div>
+                <div class="project-content">
+                  <span class="project-tag">App development</span>
+                  <h6 class="mt-2">Opbitory</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="project-card">
+                <div class="project-img">
+                  <img src="assets/img/apersi.jpg">
+                  <div class="project-overlay">
+                    <a href="detail_halaman/detail4.html" class="btn-detail">
+                      <i class="fa-solid fa-eye me-1"></i> Detail Project
+                    </a>
+                  </div>
+                </div>
+                <div class="project-content">
+                  <span class="project-tag">Web development</span>
+                  <h6 class="mt-2">APERSI</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ITEM 3 -->
+        <div class="carousel-item">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="project-card">
+                <div class="project-img">
+                  <img src="assets/img/opbitory1.jpg">
+                  <div class="project-overlay">
+                    <a href="detail_halaman/detail5.html" class="btn-detail">
+                      <i class="fa-solid fa-eye me-1"></i> Detail Project
+                    </a>
+                  </div>
+                </div>
+                <div class="project-content">
+                  <span class="project-tag">Web development</span>
+                  <h6 class="mt-2">Opbitory</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="project-card">
+                <div class="project-img">
+                  <img src="assets/img/siml.jpg">
+                  <div class="project-overlay">
+                    <a href="detail_halaman/detail6.html" class="btn-detail">
+                      <i class="fa-solid fa-eye me-1"></i> Detail Project
+                    </a>
+                  </div>
+                </div>
+                <div class="project-content">
+                  <span class="project-tag">Web development</span>
+                  <h6 class="mt-2">SIM-Logistik</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ITEM 3 -->
+        <div class="carousel-item">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="project-card">
+                <div class="project-img">
+                  <img src="assets/img/sima.jpg">
+                  <div class="project-overlay">
+                    <a href="detail_halaman/detail7.html" class="btn-detail">
+                      <i class="fa-solid fa-eye me-1"></i> Detail Project
+                    </a>
+                  </div>
+                </div>
+                <div class="project-content">
+                  <span class="project-tag">Web development</span>
+                  <h6 class="mt-2">SIM Aset </h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="project-card">
+                <div class="project-img">
+                  <img src="assets/img/simblud.jpg">
+                  <div class="project-overlay">
+                    <a href="detail_halaman/detail8.html" class="btn-detail">
+                      <i class="fa-solid fa-eye me-1"></i> Detail Project
+                    </a>
+                  </div>
+                </div>
+                <div class="project-content">
+                  <span class="project-tag">Web development</span>
+                  <h6 class="mt-2">Simblud</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ITEM 3 -->
+        <div class="carousel-item">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="project-card">
+                <div class="project-img">
+                  <img src="assets/img/simbansos.jpg">
+                  <div class="project-overlay">
+                    <a href="detail_halaman/detail9.html" class="btn-detail">
+                      <i class="fa-solid fa-eye me-1"></i> Detail Project
+                    </a>
+                  </div>
+                </div>
+                <div class="project-content">
+                  <span class="project-tag">Web development</span>
+                  <h6 class="mt-2">SIMBANSOS</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="project-card">
+                <div class="project-img">
+                  <img src="assets/img/sipanda.jpg">
+                  <div class="project-overlay">
+                    <a href="detail_halaman/detail10.html" class="btn-detail">
+                      <i class="fa-solid fa-eye me-1"></i> Detail Project
+                    </a>
+                  </div>
+                </div>
+                <div class="project-content">
+                  <span class="project-tag">Web development</span>
+                  <h6 class="mt-2">SIPANDA </h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ITEM 3 -->
+        <div class="carousel-item">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="project-card">
+                <div class="project-img">
+                  <img src="assets/img/simperdin.jpg">
+                  <div class="project-overlay">
+                    <a href="detail_halaman/detail11.html" class="btn-detail">
+                      <i class="fa-solid fa-eye me-1"></i> Detail Project
+                    </a>
+                  </div>
+                </div>
+                <div class="project-content">
+                  <span class="project-tag">Web development</span>
+                  <h6 class="mt-2">SIMPERDIN </h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="project-card">
+                <div class="project-img">
+                  <img src="assets/img/spakad.jpg">
+                  <div class="project-overlay">
+                    <a href="detail_halaman/detail12.html" class="btn-detail">
+                      <i class="fa-solid fa-eye me-1"></i> Detail Project
+                    </a>
+                  </div>
+                </div>
+                <div class="project-content">
+                  <span class="project-tag">Web development</span>
+                  <h6 class="mt-2">SPAKAD </h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ITEM 3 -->
+        <div class="carousel-item">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="project-card">
+                <div class="project-img">
+                  <img src="assets/img/siml.jpg">
+                  <div class="project-overlay">
+                    <a href="detail_halaman/detail13.html" class="btn-detail">
+                      <i class="fa-solid fa-eye me-1"></i> Detail Project
+                    </a>
+                  </div>
+                </div>
+                <div class="project-content">
+                  <span class="project-tag">Web development</span>
+                  <h6 class="mt-2">SIM LHP </h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="project-card">
+                <div class="project-img">
+                  <img src="assets/img/note.jpg">
+                  <div class="project-overlay">
+                    <a href="detail_halaman/detail14.html" class="btn-detail">
+                      <i class="fa-solid fa-eye me-1"></i> Detail Project
+                    </a>
+                  </div>
+                </div>
+                <div class="project-content">
+                  <span class="project-tag">Web development</span>
+                  <h6 class="mt-2">Aplikasi e-Note Produk Hukum</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ITEM 3 -->
+        <div class="carousel-item">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="project-card">
+                <div class="project-img">
+                  <img src="assets/img/simr.jpg">
+                  <div class="project-overlay">
+                    <a href="detail_halaman/detail15.html" class="btn-detail">
+                      <i class="fa-solid fa-eye me-1"></i> Detail Project
+                    </a>
+                  </div>
+                </div>
+                <div class="project-content">
+                  <span class="project-tag">Web development</span>
+                  <h6 class="mt-2">SIM Remunerasi RSUD</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="project-card">
+                <div class="project-img">
+                  <img src="assets/img/apotek.jpg">
+                  <div class="project-overlay">
+                    <a href="detail_halaman/detail16.html" class="btn-detail">
+                      <i class="fa-solid fa-eye me-1"></i> Detail Project
+                    </a>
+                  </div>
+                </div>
+                <div class="project-content">
+                  <span class="project-tag"></span>
+                  <h6 class="mt-2">e-Apotek</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ITEM 3 -->
+        <div class="carousel-item">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="project-card">
+                <div class="project-img">
+                  <img src="assets/img/e silk.jpg">
+                  <div class="project-overlay">
+                    <a href="detail_halaman/detail17.html" class="btn-detail">
+                      <i class="fa-solid fa-eye me-1"></i> Detail Project
+                    </a>
+                  </div>
+                </div>
+                <div class="project-content">
+                  <span class="project-tag">App development</span>
+                  <h6 class="mt-2">e-Silk</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="project-card">
+                <div class="project-img">
+                  <img src="assets/img/appcs.jpg">
+                  <div class="project-overlay">
+                    <a href="detail_halaman/detail18.html" class="btn-detail">
+                      <i class="fa-solid fa-eye me-1"></i> Detail Project
+                    </a>
+                  </div>
+                </div>
+                <div class="project-content">
+                  <span class="project-tag">App development</span>
+                  <h6 class="mt-2">App Coffe Shop</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ITEM 3 -->
+        <div class="carousel-item">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="project-card">
+                <div class="project-img">
+                  <img src="assets/img/appl.jpg">
+                  <div class="project-overlay">
+                    <a href="detail_halaman/detail19.html" class="btn-detail">
+                      <i class="fa-solid fa-eye me-1"></i> Detail Project
+                    </a>
+                  </div>
+                </div>
+                <div class="project-content">
+                  <span class="project-tag">App development</span>
+                  <h6 class="mt-2">App Laundry</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="project-card">
+                <div class="project-img">
+                  <img src="assets/img/wok.jpg">
+                  <div class="project-overlay">
+                    <a href="detail_halaman/detail20.html" class="btn-detail">
+                      <i class="fa-solid fa-eye me-1"></i> Detail Project
+                    </a>
+                  </div>
+                </div>
+                <div class="project-content">
+                  <span class="project-tag">App development</span>
+                  <h6 class="mt-2">App Workshop</h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- LANJUTKAN SAMPAI ITEM 20 -->
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#projectCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+
+      <button class="carousel-control-next" type="button" data-bs-target="#projectCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+
+  </div>
+</section>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+/* 3 TAMPIL - GESER 1 */
+const items = document.querySelectorAll('.carousel .carousel-item')
+items.forEach((el) => {
+  const minPerSlide = 3
+  let next = el.nextElementSibling
+  for (let i=1; i<minPerSlide; i++) {
+    if (!next) next = items[0]
+    let clone = next.querySelector('.col-md-4').cloneNode(true)
+    el.querySelector('.row').appendChild(clone)
+    next = next.nextElementSibling
+  }
+})
+</script>
 
 </body>
 </html>
 
-
-<!-- ================= CLIENTS SECTION ================= -->
 <section id="clients" class="py-5 bg-light">
   <div class="container">
 
-    <!-- Heading -->
     <div class="text-center mb-5">
       <h2 class="fw-bold">
         <i class="fa-solid fa-users"></i> Klien Kami
       </h2>
       <p class="text-muted">
-        IDS dipercaya berbagai sektor dalam menghadirkan solusi teknologi yang tepat guna
+        OMS dipercaya berbagai sektor dalam menghadirkan solusi teknologi yang tepat guna
       </p>
     </div>
 
-    <!-- Filter Kategori -->
     <div class="text-center mb-4">
-      <button class="btn btn-outline-primary mx-1 active" onclick="filterClients('all', this)">Semua</button>
-      <button class="btn btn-outline-primary mx-1" onclick="filterClients('pemerintahan', this)">Pemerintahan</button>
-      <button class="btn btn-outline-danger mx-1" onclick="filterClients('kesehatan', this)">Kesehatan</button>
-      <button class="btn btn-outline-success mx-1" onclick="filterClients('pendidikan', this)">Pendidikan</button>
-      <button class="btn btn-outline-warning mx-1" onclick="filterClients('swasta', this)">Swasta</button>
-    </div>
+  <button class="btn btn-outline-primary text-primary fw-semibold mx-1 active" onclick="filterClients('all', this)">Semua</button>
+  <button class="btn btn-outline-primary text-primary fw-semibold mx-1" onclick="filterClients('pemerintahan', this)">Pemerintahan</button>
+  <button class="btn btn-outline-danger text-danger fw-semibold mx-1" onclick="filterClients('kesehatan', this)">Kesehatan</button>
+  <button class="btn btn-outline-success text-success fw-semibold mx-1" onclick="filterClients('pendidikan', this)">Pendidikan</button>
+  <button class="btn btn-outline-warning text-warning fw-semibold mx-1" onclick="filterClients('swasta', this)">Swasta</button>
+</div>
 
-    <!-- ================= PEMERINTAHAN ================= -->
+
     <div class="client-group pemerintahan mb-5">
       <h4 class="fw-bold mb-4">
         <i class="fa-solid fa-landmark text-primary"></i> Pemerintahan
@@ -818,40 +1344,113 @@ object-position: top;
 
         <div class="col-md-3">
           <div class="client-card">
-            <img src="assets/img/d.png" alt="Kominfo">
-            <h6>Kementerian Komunikasi dan Informatika</h6>
-            <p>Sistem layanan publik & integrasi data.</p>
+            <img src="assets/img/demak.png" alt="Dinas PU Kab. Demak">
+            <h6>Dinas PU Kab. Demak</h6>
           </div>
         </div>
 
         <div class="col-md-3">
           <div class="client-card">
-            <img src="assets/img/e.png" alt="Kemdikbud">
-            <h6>Kementerian Pendidikan & Kebudayaan</h6>
-            <p>Digitalisasi data pendidikan nasional.</p>
+            <img src="assets/img/nunukan.png" alt="Dinas Pendidikan Kab. Nunukan">
+            <h6>Dinas Pendidikan Kab. Nunukan</h6>
           </div>
         </div>
 
         <div class="col-md-3">
           <div class="client-card">
-            <img src="assets/img/f.png" alt="Pemprov">
-            <h6>Pemerintah Provinsi Jateng</h6>
-            <p>Integrasi data pemerintahan daerah.</p>
+            <img src="assets/img/kbdemak.png" alt="BPKAD Kab Demak">
+            <h6>BPKAD Kab Demak</h6>
           </div>
         </div>
 
         <div class="col-md-3">
           <div class="client-card">
-            <img src="assets/img/g.png" alt="BUMD Tanjung Tiram">
-            <h6>Badan Usaha Milik Daerah</h6>
-            <p>Sistem manajemen & laporan operasional.</p>
+            <img src="assets/img/bulungan.png" alt="Dinas PU Kab. Bulungan">
+            <h6>Dinas PU Kab. Bulungan</h6>
+          </div>
+        </div>
+
+    <div class="col-md-3">
+          <div class="client-card">
+            <img src="assets/img/din.png" alt="DINPERKIM Kab Demak">
+            <h6>DINPERKIM Kab Demak</h6>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="client-card">
+            <img src="assets/img/probo.png" alt="BPKAD Kota Probolinggo">
+            <h6>BPKAD Kota Probolinggo</h6>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="client-card">
+            <img src="assets/img/kee.png" alt="BPKAD Kab. Keerom">
+            <h6>BPKAD Kab. Keerom</h6>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="client-card">
+            <img src="assets/img/kotp.png" alt="Dinas BPKAD Kab. Probolinggo">
+            <h6>Dinas BPKAD Kab. Probolinggo</h6>
+          </div>
+        </div>
+
+
+        <div class="col-md-3">
+          <div class="client-card">
+            <img src="assets/img/biak.png" alt="BPKAD Kab. Biak Numfor">
+            <h6>BPKAD Kab. Biak Numfor</h6>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="client-card">
+            <img src="assets/img/bulungan (1).png" alt="BPKAD Kab. Bulungan">
+            <h6>BPKAD Kab. Bulungan</h6>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="client-card">
+            <img src="assets/img/papua.png" alt="BPKAD Kab. Puncak Jaya">
+            <h6>BPKAD Kab. Puncak Jaya</h6>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="client-card">
+            <img src="assets/img/situ.png" alt="Dinas Kesehatan Kab. Situbondo">
+            <h6>Dinas Kesehatan Kab. Situbondo</h6>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="client-card">
+            <img src="assets/img/skleri.png" alt="BPKAD Kota Kupang">
+            <h6>BPKAD Kota Kupang</h6>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="client-card">
+            <img src="assets/img/arsip.png" alt="Dinas Arsip Kota Semarang">
+            <h6>Dinas Arsip Kota Semarang</h6>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="client-card">
+            <img src="assets/img/Tanatidung.png" alt="Inspektorat Kab. Tana Tidung">
+            <h6>Inspektorat Kab. Tana Tidung</h6>
           </div>
         </div>
 
       </div>
     </div>
 
-    <!-- ================= KESEHATAN ================= -->
     <div class="client-group kesehatan mb-5">
       <h4 class="fw-bold mb-4">
         <i class="fa-solid fa-hospital text-danger"></i> Fasilitas Kesehatan
@@ -860,40 +1459,115 @@ object-position: top;
 
         <div class="col-md-3">
           <div class="client-card">
-            <img src="assets/img/h.png" alt="RSUD">
-            <h6>Rumah Sakit Umum Daerah (RSUD)</h6>
-            <p>Sistem Informasi Manajemen Rumah Sakit.</p>
+            <img src="assets/img/rsp.png" alt="RSI Nashrul Ummah Lamongan">
+            <h6>RSI Nashrul Ummah Lamongan</h6>
           </div>
         </div>
 
         <div class="col-md-3">
           <div class="client-card">
-            <img src="assets/img/i.png" alt="BPJS Kesehatan">
-            <h6>BPJS Kesehatan</h6>
-            <p>Integrasi layanan & data kepesertaan.</p>
+            <img src="assets/img/rsudkwaingga.png" alt="RSUD Kwaingga">
+            <h6>RSUD Kwaingga</h6>
           </div>
         </div>
 
         <div class="col-md-3">
           <div class="client-card">
-            <img src="assets/img/j.png" alt="Puskesmas">
-            <h6>Puskesmas</h6>
-            <p>Manajemen pelayanan kesehatan.</p>
+            <img src="assets/img/bop.png" alt="RS Permata Hati Lamongan">
+            <h6>RS Permata Hati Lamongan</h6>
           </div>
         </div>
 
         <div class="col-md-3">
           <div class="client-card">
-            <img src="assets/img/k.jpg" alt="Laboratorium">
-            <h6>Laboratorium Klinik</h6>
-            <p>Sistem hasil pemeriksaan medis.</p>
+            <img src="assets/img/tarakan.png" alt="RSUD Tarakan">
+            <h6>RSUD Tarakan</h6>
+          </div>
+        </div>
+
+
+        <div class="col-md-3">
+          <div class="client-card">
+            <img src="assets/img/skleri (1).png" alt="RSI Nashrul Ummah Lamongan">
+            <h6>RSI Nashrul Ummah Lamongan</h6>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="client-card">
+            <img src="assets/img/subulus.png" alt="RSUD Kwaingga">
+            <h6>RSUD Subulussalam Aceh
+</h6>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="client-card">
+            <img src="assets/img/ben.png" alt="RS Permata Hati Lamongan">
+            <h6>RSUD Bendan Pekalongan</h6>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="client-card">
+            <img src="assets/img/waluyo.png" alt="RSUD Tarakan">
+            <h6>RSUD Setjonegoro Wonosobo</h6>
+          </div>
+        </div>
+        
+        <div class="col-md-3">
+          <div class="client-card">
+            <img src="assets/img/saleh.png" alt="RSI Nashrul Ummah Lamongan">
+            <h6>RSUD Dr. Moh Saleh Probolinggo</h6>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="client-card">
+            <img src="assets/img/jati.png" alt="RSUD Kwaingga">
+            <h6>RSUD Waluyo Probolinggo</h6>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="client-card">
+            <img src="assets/img/rsud-nunukan.png" alt="RS Permata Hati Lamongan">
+            <h6>RSUD Kabupaten Nunukan</h6>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="client-card">
+            <img src="assets/img/mitra.png" alt="RSUD Tarakan">
+            <h6>Klinik Mitra Bahagia Pekalongan</h6>
+          </div>
+        </div>
+
+
+        <div class="col-md-3">
+          <div class="client-card">
+            <img src="assets/img/klinik_adikarsa.png" alt="RSUD Kwaingga">
+            <h6>Klinik Adikarsa</h6>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="client-card">
+            <img src="assets/img/logo_sakasasmitra.png" alt="RS Permata Hati Lamongan">
+            <h6>Klinik Saka Sasmitra</h6>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="client-card">
+            <img src="assets/img/klinikbunmed.png" alt="RSUD Tarakan">
+            <h6>Klinik Bunda Medika</h6>
           </div>
         </div>
 
       </div>
     </div>
 
-    <!-- ================= PENDIDIKAN ================= -->
     <div class="client-group pendidikan mb-5">
       <h4 class="fw-bold mb-4">
         <i class="fa-solid fa-graduation-cap text-success"></i> Pendidikan
@@ -902,40 +1576,21 @@ object-position: top;
 
         <div class="col-md-3">
           <div class="client-card">
-            <img src="assets/img/l.png" alt="SMK">
-            <h6>Sekolah Menengah Kejuruan (SMK)</h6>
-            <p>Sistem akademik & administrasi sekolah.</p>
+            <img src="assets/img/papuak.png" alt="SMK">
+            <h6>Sekolah Papua Kasih</h6>
           </div>
         </div>
 
         <div class="col-md-3">
           <div class="client-card">
-            <img src="assets/img/m.png" alt="SMA">
-            <h6>Sekolah Menengah Atas (SMA)</h6>
-            <p>Manajemen data siswa & guru.</p>
-          </div>
-        </div>
-
-        <div class="col-md-3">
-          <div class="client-card">
-            <img src="assets/img/n.jpg" alt="UNDIP">
-            <h6>Universitas Negeri</h6>
-            <p>Learning Management System (LMS).</p>
-          </div>
-        </div>
-
-        <div class="col-md-3">
-          <div class="client-card">
-            <img src="assets/img/o.png" alt="UNNES">
-            <h6>Universitas Negeri</h6>
-            <p>Learning Management System (LMS).</p>
+            <img src="assets/img/man1sumbawa.png" alt="SMA">
+            <h6>MAN 1 Sumbawa</h6>
           </div>
         </div>
 
       </div>
     </div>
 
-    <!-- ================= SWASTA ================= -->
     <div class="client-group swasta">
       <h4 class="fw-bold mb-4">
         <i class="fa-solid fa-briefcase text-warning"></i> Swasta
@@ -944,33 +1599,15 @@ object-position: top;
 
         <div class="col-md-3">
           <div class="client-card">
-            <img src="assets/img/p.jpg" alt="Telkom Indonesia">
-            <h6>PT Telkom Indonesia</h6>
-            <p>Sistem integrasi & layanan digital.</p>
+            <img src="assets/img/colomadu.png" alt="Telkom Indonesia">
+            <h6>PT. Sinergi Colomadu</h6>
           </div>
         </div>
 
         <div class="col-md-3">
           <div class="client-card">
-            <img src="assets/img/q.png" alt="PLN">
-            <h6>PT PLN (Persero)</h6>
-            <p>Manajemen data operasional.</p>
-          </div>
-        </div>
-
-        <div class="col-md-3">
-          <div class="client-card">
-            <img src="assets/img/r.jpg" alt="Pertamina">
-            <h6>PT Pertamina (Persero)</h6>
-            <p>Sistem monitoring & laporan.</p>
-          </div>
-        </div>
-
-        <div class="col-md-3">
-          <div class="client-card">
-            <img src="assets/img/s.jpg" alt="Startup">
-            <h6>Startup Teknologi</h6>
-            <p>Pengembangan aplikasi web & mobile.</p>
+            <img src="assets/img/koperasi.png" alt="PLN">
+            <h6>KSP Mitra Lestari</h6>
           </div>
         </div>
 
@@ -980,7 +1617,6 @@ object-position: top;
   </div>
 </section>
 
-<!-- ================= STYLE ================= -->
 <style>
 .client-card {
   background: #fff;
@@ -1010,11 +1646,10 @@ object-position: top;
 }
 
 .btn.active {
-  color: #fff !important;
+  color: black !important;
 }
 </style>
 
-<!-- ================= SCRIPT ================= -->
 <script>
 function filterClients(category, el) {
   const groups = document.querySelectorAll('.client-group');
@@ -1036,117 +1671,45 @@ function filterClients(category, el) {
 </script>
 
 
-<section class="py-5" id="contact" style="background: linear-gradient(to bottom right, #eef2ff, #dbeafe);">
+<section class="cta-optima">
   <div class="container">
+    <div class="cta-optima-box">
+      <div class="row align-items-center g-4">
 
-    <h2 class="text-center mb-4" data-aos="fade-up">
-      <i class="fa-solid fa-envelope-circle-check text-primary"></i>
-      <strong>Hubungi Kami</strong>
-    </h2>
-    <p class="text-center text-muted mb-5" data-aos="fade-up" data-aos-delay="150">
-      Tim IDS siap membantu Anda menemukan solusi digital terbaik.  
-      <br> Yuk mulai diskusi dengan kami! 🚀
-    </p>
-
-    <div class="row g-4">
-
-      <div class="col-md-6" data-aos="fade-right">
-        <div class="card border-0 shadow-lg p-4 contact-box" style="border-radius: 20px;">
-          <h4 class="text-center mb-3"><i class="fa-solid fa-paper-plane text-primary"></i> Kirim Pesan</h4>
-
-          <form>
-            <div class="mb-3">
-              <label class="form-label fw-semibold">Nama</label>
-              <input type="text" class="form-control form-control-lg" placeholder="Masukkan nama Anda">
-            </div>
-
-            <div class="mb-3">
-              <label class="form-label fw-semibold">Email</label>
-              <input type="email" class="form-control form-control-lg" placeholder="Masukkan email Anda">
-            </div>
-
-            <div class="mb-3">
-              <label class="form-label fw-semibold">Pesan</label>
-              <textarea class="form-control form-control-lg" rows="5" placeholder="Apa yang ingin Anda tanyakan?"></textarea>
-            </div>
-
-            <button class="btn btn-primary btn-lg w-100 shadow-sm">
-              <i class="fa-solid fa-paper-plane"></i> Kirim Pesan
-            </button>
-          </form>
-        </div>
-      </div>
-
-      <div class="col-md-6" data-aos="fade-left">
-        <div class="p-4">
-          <h4 class="mb-3 fw-bold"><i class="fa-solid fa-headset text-primary"></i> Informasi Kontak</h4>
-
-          <p class="mb-3">
-            <i class="fa-solid fa-phone-volume text-primary fa-lg me-2"></i>
-            <strong>Telepon:</strong> 0856-4305-0274
-          </p>
-
-          <p class="mb-3">
-            <i class="fa-solid fa-envelope-open-text text-primary fa-lg me-2"></i>
-            <strong>Email:</strong> idscompany@gmail.com
-          </p>
-
-          <p class="mb-3">
-            <i class="fa-solid fa-location-dot text-primary fa-lg me-2"></i>
-            <strong>Lokasi:</strong> Jakarta, Indonesia
-          </p>
-
-          <p class="mb-4">
-            <i class="fa-solid fa-clock text-primary fa-lg me-2"></i>
-            <strong>Jam Operasional:</strong> 09:00 - 17:00
-          </p>
-
-          <div class="alert alert-primary shadow-sm" data-aos="zoom-in" style="border-radius: 15px;">
-            <i class="fa-solid fa-comments fa-lg me-2"></i>
-            <strong>Mau konsultasi proyek?</strong><br>
-            Kami siap berdiskusi kapan saja!
-          </div>
-
-          <div class="mt-4" data-aos="fade-up">
-          <div class="ratio ratio-16x9 shadow-lg" style="border-radius: 15px; overflow: hidden;">
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.7329876335206!2d106.82715267499342!3d-6.170216793810849!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3e0e8c74327%3A0xedcbbdf2e4ed072b!2sJakarta!5e0!3m2!1sid!2sid!4v1700000000000"
-              width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
-            </iframe>
+        <div class="col-md-8">
+          <div class="cta-optima-text">
+            <h3>Siap Mendukung Transformasi Digital Anda</h3>
+            <p>
+              Optima Multi Sinergi menghadirkan solusi teknologi yang andal,
+              terintegrasi, dan sesuai kebutuhan organisasi Anda.
+            </p>
           </div>
         </div>
-        </div>
-      </div>
 
+        <div class="col-md-4 text-md-end text-center">
+          <a href="index.html#contact" class="btn btn-optima">
+            <i class="fa-solid fa-paper-plane me-2"></i> Hubungi Kami
+          </a>
+        </div>
+
+      </div>
     </div>
   </div>
 </section>
-
-<style>
-  .contact-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-    transition: 0.3s ease;
-  }
-</style>
-
 
 <footer class="bg-dark text-light pt-5 pb-3">
   <div class="container">
 
     <div class="row g-4">
-
-      <!-- ABOUT -->
       <div class="col-md-4">
-        <h5 class="fw-bold mb-3">Tentang IDS</h5>
+        <h5 class="fw-bold mb-3">Tentang OMS</h5>
         <p>
-          IDS adalah perusahaan teknologi yang menyediakan solusi IT profesional, mulai dari web & mobile development, sistem kustom, cloud computing, hingga keamanan siber. 
+          OMS adalah perusahaan teknologi yang menyediakan solusi IT profesional, mulai dari web & mobile development, sistem kustom, cloud computing, hingga keamanan siber. 
           Kami membantu bisnis Anda berkembang dengan teknologi modern dan tim ahli berpengalaman.
         </p>
         <a href="about.html" class="text-decoration-none text-primary">Pelajari Lebih Lanjut &rarr;</a>
       </div>
 
-      <!-- LAYANAN -->
       <div class="col-md-2">
         <h5 class="fw-bold mb-3">Layanan</h5>
         <ul class="list-unstyled">
@@ -1157,7 +1720,6 @@ function filterClients(category, el) {
         </ul>
       </div>
 
-      <!-- LINK CEPAT -->
       <div class="col-md-2">
         <h5 class="fw-bold mb-3">Link Cepat</h5>
         <ul class="list-unstyled">
@@ -1168,18 +1730,17 @@ function filterClients(category, el) {
         </ul>
       </div>
 
-      <!-- CONTACT -->
       <div class="col-md-4">
         <h5 class="fw-bold mb-3">Kontak Kami</h5>
-        <p><i class="fas fa-map-marker-alt me-2"></i> Jl. Teknologi No. 12, Jakarta, Indonesia</p>
-        <p><i class="fas fa-phone me-2"></i> +62 812 3456 7890</p>
-        <p><i class="fas fa-envelope me-2"></i> info@ids.co.id</p>
+        <p><i class="fas fa-map-marker-alt me-2"></i> Ruko Mega Peterongan, Jl. Kanal No. 5a, Lamper Lor, Semarang Selatan Kota Semarang, Jawa Tengah 50242</p>
+        <p><i class="fas fa-phone me-2"></i> 0813-8313-9864</p>
+        <p><i class="fas fa-envelope me-2"></i> marketing@optimasolution.co.id</p>
 
         <div class="d-flex gap-3 mt-3">
           <a href="#" class="text-light fs-5"><i class="fab fa-facebook-f"></i></a>
-          <a href="#" class="text-light fs-5"><i class="fab fa-twitter"></i></a>
-          <a href="#" class="text-light fs-5"><i class="fab fa-linkedin-in"></i></a>
-          <a href="#" class="text-light fs-5"><i class="fab fa-instagram"></i></a>
+          <a href="https://wa.me/62813-8313-9864" class="text-light fs-5"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://marketing@optimasolution.co.id" class="text-light fs-5"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://instagram.com/optimamultisinergi" class="text-light fs-5"><i class="fab fa-instagram"></i></a>
         </div>
       </div>
 
@@ -1187,9 +1748,8 @@ function filterClients(category, el) {
 
     <hr class="bg-secondary my-4">
 
-    <!-- COPYRIGHT -->
     <div class="text-center">
-      <p class="mb-0">&copy; 2025 IDS — All Rights Reserved</p>
+      <p class="mb-0">&copy; 2025 OMS — All Rights Reserved</p>
       <small class="text-secondary">Dibangun dengan teknologi modern & tim profesional.</small>
     </div>
 
@@ -1197,20 +1757,17 @@ function filterClients(category, el) {
 </footer>
 
 <style>
-  /* FOOTER */
 footer {
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
 }
 
-/* Footer Heading */
 footer h5 {
   color: #ffffff;
   font-weight: 700;
   margin-bottom: 20px;
 }
 
-/* Footer Links */
 footer a {
   color: #cccccc;
   transition: 0.3s;
@@ -1221,14 +1778,12 @@ footer a:hover {
   text-decoration: underline;
 }
 
-/* Footer Contact Info */
 footer p {
   color: #cccccc;
   margin-bottom: 8px;
   font-size: 14px;
 }
 
-/* Social Media Icons */
 footer .fab {
   transition: 0.3s;
 }
@@ -1237,12 +1792,10 @@ footer .fab:hover {
   transform: scale(1.2);
 }
 
-/* Horizontal Line */
 footer hr {
   border-top: 1px solid #444;
 }
 
-/* Copyright */
 footer small {
   display: block;
   margin-top: 5px;
@@ -1250,7 +1803,6 @@ footer small {
   font-size: 12px;
 }
 
-/* Responsive Adjustments */
 @media(max-width:768px){
   footer .row > div {
     text-align: center;

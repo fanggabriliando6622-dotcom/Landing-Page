@@ -5,491 +5,415 @@
 <title>Portofolio | OMS</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
+<!-- LIBRARY -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-    :root{
-      --ids-primary:#0d6efd;
-      --ids-dark:#062f6b;
-      --ids-soft:#e9f1ff;
-    }
-
-    body{font-family: 'popins', sans-serif;
-        background:#f8f9fa}
-
-    .navbar {
-      background: white;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
-    }
-
-    .navbar .nav-link {
-      color: #333;
-      transition: color 0.3s, transform 0.3s;
-    }
-    .navbar .nav-link:hover {
-      color: #0d6efd;
-      transform: translateY(-2px);
-    }
-    .navbar .nav-link.active {
-      color: #0d6efd;
-      font-weight: 600;
-    }
-
-    .navbar-brand {
-      font-size: 1.25rem;
-      color: #0d6efd;
-      text-decoration: none;
-    }
-    .navbar-brand:hover {
-      color: #084298;
-      text-decoration: none;
-    }
-
-    .navbar-toggler {
-      outline: none;
-    }
-    .navbar-toggler-icon {
-      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30'")
-      xmlns='ass' '%3E%3Cpath' stroke='rgba%280,0,0,0.7%29' 
-      stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22' '/%3E%3C/svg%3E'");
-    }
-
-    /* WARNA LINK NAVBAR */
-.navbar .nav-link {
-  color: #333; /* default color */
-  transition: color 0.3s, background-color 0.3s;
-  padding: 8px 12px;
-  border-radius: 6px; /* agar ada efek kotak halus */
+body{
+  font-family:'Poppins',sans-serif;
+  background:#f8f9fa;
 }
 
-/* HOVER LINK */
-.navbar .nav-link:hover {
-  color: #0d6efd; /* biru saat hover */
-  background-color: rgba(13,110,253,0.1); /* background ringan */
-  transform: translateY(-2px);
+/* TITLE */
+.section-title{
+  text-align:center;
+  margin-bottom:30px;
+}
+.section-title h2{
+  font-weight:700;
 }
 
-/* LINK AKTIF */
-.navbar .nav-link.active {
-  color: #fff; /* teks putih */
-  background-color: #0d6efd; /* background biru */
-  font-weight: 600;
+/* ===== PORTFOLIO TABS ===== */
+.portfolio-tabs{
+  display:flex;
+  flex-wrap:nowrap;
+  justify-content:center;
+  gap:40px;
+  border-bottom:1px solid #e5e7eb;
+  padding-bottom:12px;
+  overflow-x:auto;
+  position:relative;
 }
-
-    .hero-portfolio{
-      height:420px;
-      background:url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80") center/cover;
-      position:relative;
-    }
-    .hero-portfolio::before{
-      content:"";
-      position:absolute;
-      inset:0;
-      background:rgba(0,0,0,.65);
-    }
-    .hero-portfolio .content{
-      position:relative;
-      height:100%;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      color:#fff;
-    }
-
-    .portfolio-card {
-  border: none;
-  border-radius: 18px;
-  overflow: hidden;
-  box-shadow: 0 15px 40px rgba(0,0,0,.08);
-  transition: .35s ease;
+.portfolio-tabs::-webkit-scrollbar{
+  display:none;
 }
-
-.portfolio-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 25px 55px rgba(0,0,0,.15);
-}
-
-.portfolio-thumb {
-  height: 200px;
-  background-size: cover;
-  background-position: center;
-}
-
-.portfolio-tag {
-  display: inline-block;
-  background: #e7f0ff;
-  color: #0d6efd;
-  font-size: 12px;
-  font-weight: 600;
-  padding: 6px 16px;
-  border-radius: 50px;
-}
-
-.btn-portfolio {
-  background: linear-gradient(135deg, #0d6efd, #0a58ca);
-  color: #fff;
-  border-radius: 50px;
-  padding: 8px 26px;
-  font-size: 14px;
-  transition: .3s;
-}
-
-.btn-portfolio:hover {
-  background: linear-gradient(135deg, #0a58ca, #084298);
-  color: #fff;
-}
-
-
-    .btn-portfolio{
-      background:var(--ids-primary);
-      color:#fff;
-      border-radius:50px;
-      padding:8px 22px;
-      font-size:14px;
-    }
-    .btn-portfolio:hover{
-      background:#0b5ed7;
-      color:#fff;
-    }
-
-    .cta-tech{
-  padding:80px 0;
-  background:#f5f8ff;
-}
-
-.cta-card{
-  background:#acc2ff;
-  border-radius:24px;
-  padding:40px 45px;
-  box-shadow:0 25px 60px rgba(0,0,0,.08);
-}
-
-.cta-text h3{
-  color:#1f2d3d;
-}
-
-.cta-text p{
-  color:#6c757d;
-  font-size:16px;
-}
-
-.btn-tech{
-  background:linear-gradient(135deg,#0d6efd,#0a58ca);
-  color:#fff;
+.portfolio-tabs .nav-link{
   border:none;
-  box-shadow:0 10px 25px rgba(13,110,253,.35);
+  background:none;
+  font-weight:500;
+  color:#333;
+  padding:10px 0;
+  white-space:nowrap;
+  position:relative;
   transition:.3s;
 }
+.portfolio-tabs .nav-link:hover{
+  color:#0d6efd;
+}
+.portfolio-tabs .nav-link.active{
+  color:#0d6efd;
+  font-weight:600;
+}
 
-.btn-tech:hover{
-  background:linear-gradient(135deg,#0a58ca,#084298);
+/* underline animasi */
+.tab-indicator{
+  position:absolute;
+  bottom:-1px;
+  height:3px;
+  background:#0d6efd;
+  border-radius:10px;
+  transition:.35s ease;
+}
+
+/* ===== CARD ===== */
+.product-card{
+  border:none;
+  border-radius:14px;
+  overflow:hidden;
+  box-shadow:0 15px 35px rgba(0,0,0,.08);
+  transition:.3s;
+}
+.product-card:hover{
+  transform:translateY(-8px);
+}
+.product-card img{
+  height:220px;
+  object-fit:cover;
+}
+
+/* overlay */
+.img-overlay{
+  position:relative;
+}
+.overlay-icon{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(135deg,rgba(123,47,247,.7),rgba(241,7,163,.7));
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  opacity:0;
+  transition:.3s;
   color:#fff;
-  transform:translateY(-2px);
-  box-shadow:0 15px 30px rgba(13,110,253,.45);
+  font-size:32px;
+}
+.img-overlay:hover .overlay-icon{
+  opacity:1;
+}
+
+/* button */
+.btn-detail{
+  background:linear-gradient(135deg,#7b2ff7,#f107a3);
+  color:#fff;
+  padding:6px 22px;
+  border-radius:20px;
+  font-size:14px;
+}
+.btn-detail:hover{
+  opacity:.9;
+  color:#fff;
 }
 </style>
 </head>
 
 <body>
 
-<nav class="navbar navbar-expand-lg fixed-top shadow-sm" style="background-color: rgba(255,255,255,0.95);">
+<section class="py-5 bg-white">
   <div class="container">
 
-    <a class="navbar-brand d-flex align-items-center" href="#">
-  <img src="assets/img/46.png" class="me-2">
-</a>
-
-    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navMenu">
-  <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-
-    <li class="nav-item">
-      <a href="index.html" class="nav-link fw-medium">Home</a>
-    </li>
-
-    <li class="nav-item">
-      <a href="about.html" class="nav-link fw-medium">Tentang</a>
-    </li>
-
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle fw-medium"
-        href="#"
-        id="layananDropdown"
-        role="button"
-        data-bs-toggle="dropdown"
-        aria-expanded="false">
-        Layanan
-      </a>
-
-      <ul class="dropdown-menu shadow border-0" aria-labelledby="layananDropdown">
-        <li>
-        <a class="dropdown-item" href="kt1.html">
-            Pengembangan App Web
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="kt2.html">
-            Pengembangan App Mobile
-          </a>
-        </li>
-        <li>
-          <a class="dropdown-item" href="kt3.html">
-            Tim perangkat lunak khusus
-          </a>
-        </li>
-      </ul>
-    </li>
-
-    <li class="nav-item">
-      <a href="teknologi.html" class="nav-link fw-medium">Teknologi</a>
-    </li>
-
-    <li class="nav-item">
-      <a href="portofolio.html" class="nav-link fw-medium">Portofolio</a>
-    </li>
-
-    <li class="nav-item">
-      <a href="karir.html" class="nav-link fw-medium">Karir</a>
-    </li>
-
-    <li class="nav-item">
-      <a href="kontak.html" class="nav-link fw-medium">Kontak</a>
-    </li>
-  </ul>
-</div>
-
-  </div>
-</nav>
-
-<section class="hero-portfolio">
-  <div class="content">
-    <div>
-      <span class="badge bg-primary mb-3">PORTOFOLIO OMS</span>
-      <h1 class="fw-bold mb-3">Proyek Profesional Kami</h1>
-      <p class="lead mx-auto" style="max-width:720px;">
-        Solusi digital yang telah kami bangun untuk mendukung
-        transformasi teknologi di berbagai sektor.
-      </p>
+    <div class="section-title">
+      <h2>Produk Kami</h2>
     </div>
-  </div>
-</section>
 
-<section class="py-5 bg-light">
-  <div class="container">
-    <div class="row g-4 justify-content-center">
+    <!-- TABS -->
+    <ul class="nav portfolio-tabs mb-5">
+      <li class="nav-item">
+        <button class="nav-link active" data-filter="android">
+          Produk Aplikasi Android (Mobile App)
+        </button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link" data-filter="pemerintahan">
+          Produk Sistem Sektor Pemerintahan
+        </button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link" data-filter="swasta">
+          Produk Sistem Sektor Swasta
+        </button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link" data-filter="simrs">
+          Produk Sistem OIMS - SIMRS
+        </button>
+      </li>
+      <span class="tab-indicator"></span>
+    </ul>
 
-      <!-- CARD 1 -->
-      <div class="col-md-4" data-aos="zoom-in">
-        <div class="card portfolio-card text-center h-100">
-          <div class="portfolio-thumb"
-               style="background-image:url('assets/img/opas.jpg');"></div>
-          <div class="card-body d-flex flex-column align-items-center">
-            <span class="portfolio-tag mb-2">Mobile App</span>
-            <h5 class="fw-bold mb-1">App Smart Opbitory</h5>
-            <small class="text-muted mb-3">(Optima Bisnis dan Inventory)</small>
-            <a href="detail1.html" class="btn btn-portfolio mt-auto">
-              <i class="fa-solid fa-circle-info me-1"></i> Detail
-            </a>
+    <!-- GRID -->
+    <div class="row g-4 portfolio-container">
+
+      <div class="col-md-4 portfolio-item android">
+        <div class="card product-card text-center h-100">
+          <img src="assets/img/opas.jpg" class="card-img-top">
+          <div class="card-body">
+            <h5 class="fw-bold">App Smart Opbitory</h5>
+            <p class="text-muted">Mobile App</p>
+            <a href="detail1.html" class="btn btn-detail">Details</a>
           </div>
         </div>
       </div>
 
-      <!-- CARD 2 -->
-      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="150">
-        <div class="card portfolio-card text-center h-100">
-          <div class="portfolio-thumb"
-               style="background-image:url('assets/img/apl.jpg');"></div>
-          <div class="card-body d-flex flex-column align-items-center">
-            <span class="portfolio-tag mb-2">Mobile App</span>
-            <h5 class="fw-bold mb-3">App Laundry</h5>
-            <a href="detail2.html" class="btn btn-portfolio mt-auto">
-              <i class="fa-solid fa-circle-info me-1"></i> Detail
-            </a>
+      <div class="col-md-4 portfolio-item android">
+        <div class="card product-card text-center h-100">
+          <img src="assets/img/apl.jpg" class="card-img-top">
+          <div class="card-body">
+            <h5 class="fw-bold">App Laundry</h5>
+            <p class="text-muted">Mobile App</p>
+            <a href="detail2.html" class="btn btn-detail">Details</a>
           </div>
         </div>
       </div>
 
-      <!-- CARD 3 -->
-      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="300">
-        <div class="card portfolio-card text-center h-100">
-          <div class="portfolio-thumb"
-               style="background-image:url('assets/img/apo.jpg');"></div>
-          <div class="card-body d-flex flex-column align-items-center">
-            <span class="portfolio-tag mb-2">Mobile App</span>
-            <h5 class="fw-bold mb-3">App Opnicare</h5>
-            <a href="detail3.html" class="btn btn-portfolio mt-auto">
-              <i class="fa-solid fa-circle-info me-1"></i> Detail
-            </a>
+      <div class="col-md-4 portfolio-item android">
+        <div class="card product-card text-center h-100">
+          <div class="img-overlay">
+            <img src="assets/img/apo.jpg" class="card-img-top">
+            <span class="overlay-icon">
+              <i class="bi bi-arrows-fullscreen"></i>
+            </span>
+          </div>
+          <div class="card-body">
+            <h5 class="fw-bold">App Opnicare</h5>
+            <p class="text-muted">Mobile App</p>
+            <a href="detail3.html" class="btn btn-detail">Details</a>
           </div>
         </div>
       </div>
+
+      <div class="col-md-4 portfolio-item pemerintahan d-none">
+        <div class="card product-card text-center h-100">
+          <img src="assets/img/sample.jpg" class="card-img-top">
+          <div class="card-body">
+            <h5 class="fw-bold">Si Keren (Sistem Informasi Keterangan Rencana Kabupaten Demak)</h5>
+            <p class="text-muted">Web development</p>
+            <a href="#" class="btn btn-detail">Details</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 portfolio-item pemerintahan d-none">
+        <div class="card product-card text-center h-100">
+          <img src="assets/img/sample.jpg" class="card-img-top">
+          <div class="card-body">
+            <h5 class="fw-bold">Si Jari (Sistem Informasi Jaringan dan Irigasi Kabupaten Demak)</h5>
+            <p class="text-muted">Web development</p>
+            <a href="#" class="btn btn-detail">Details</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 portfolio-item pemerintahan d-none">
+        <div class="card product-card text-center h-100">
+          <img src="assets/img/sijantan.jpg" class="card-img-top">
+          <div class="card-body">
+            <h5 class="fw-bold">Si Jantan (Sistem Informasi Jalan dan Jembatan Kabupaten Demak)</h5>
+            <p class="text-muted">Web development</p>
+            <a href="detail6.html" class="btn btn-detail">Details</a>
+          </div>
+        </div>
+      </div>
+
+       <div class="col-md-4 portfolio-item pemerintahan d-none">
+        <div class="card product-card text-center h-100">
+          <img src="assets/img/apersi.jpg" class="card-img-top">
+          <div class="card-body">
+            <h5 class="fw-bold">APERSI (Aplikasi Persediaan)</h5>
+            <p class="text-muted">Web development</p>
+            <a href="detail7.html" class="btn btn-detail">Details</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 portfolio-item pemerintahan d-none">
+        <div class="card product-card text-center h-100">
+          <img src="assets/img/sima.jpg" class="card-img-top">
+          <div class="card-body">
+            <h5 class="fw-bold">SIM ASET (Sistem Informasi Manajemen Aset)</h5>
+            <p class="text-muted">Web development</p>
+            <a href="detail8.html" class="btn btn-detail">Details</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 portfolio-item pemerintahan d-none">
+        <div class="card product-card text-center h-100">
+          <img src="assets/img/simblud.jpg" class="card-img-top">
+          <div class="card-body">
+            <h5 class="fw-bold">Simkeu-Blud (Sistem Informasi Manajemen Keuangan Badan Layanan Umum Daerah)</h5>
+            <p class="text-muted">Web development</p>
+            <a href="detail9.html" class="btn btn-detail">Details</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 portfolio-item swasta d-none">
+    <div class="card product-card text-center h-100">
+      <img src="assets/img/enter.png">
+      <div class="card-body">
+        <h5 class="fw-bold">ENTERPRISE RESOURCE PLANNING DE TJOLOMADOE</h5>
+        <p class="text-muted">Web development</p>
+        <a href="detail10.html" class="btn btn-detail">Details</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4 portfolio-item swasta d-none">
+    <div class="card product-card text-center h-100">
+      <img src="assets/img/komisi.jpg">
+      <div class="card-body">
+        <h5 class="fw-bold">KOMISI (Koperasi Mobile Terintegrasi)</h5>
+        <p class="text-muted">Web development</p>
+        <a href="detail10.html" class="btn btn-detail">Details</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4 portfolio-item swasta d-none">
+    <div class="card product-card text-center h-100">
+      <img src="assets/img/sim-sekolah.png">
+      <div class="card-body">
+        <h5 class="fw-bold">SIM-SEKOLAH (Sistem Informasi Sekolah)</h5>
+        <p class="text-muted">Web development</p>
+        <a href="detail11.html" class="btn btn-detail">Details</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4 portfolio-item swasta d-none">
+    <div class="card product-card text-center h-100">
+      <img src="assets/img/opbitory1.jpg">
+      <div class="card-body">
+        <h5 class="fw-bold">OPBITORY (Optima Bisnis dan Inventory)</h5>
+        <p class="text-muted">Web development</p>
+        <a href="detail12.html" class="btn btn-detail">Details</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4 portfolio-item swasta d-none">
+    <div class="card product-card text-center h-100">
+      <img src="assets/img/opnicare.jpg">
+      <div class="card-body">
+        <h5 class="fw-bold">OPNICARE (Optima Clinic Care)</h5>
+        <p class="text-muted">Web development</p>
+        <a href="detail13.html" class="btn btn-detail">Details</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4 portfolio-item swasta d-none">
+    <div class="card product-card text-center h-100">
+      <img src="assets/img/apotek.jpg">
+      <div class="card-body">
+        <h5 class="fw-bold">E-APOTEK (Aplikasi Manajemen Apotik)</h5>
+        <p class="text-muted">Web development</p>
+        <a href="detail14.html" class="btn btn-detail">Details</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== SIMRS / OIMS (DITAMBAHKAN) ===== -->
+  <div class="col-md-4 portfolio-item simrs d-none">
+    <div class="card product-card text-center h-100">
+      <img src="assets/img/dms.jpg">
+      <div class="card-body">
+        <h5 class="fw-bold">DMS (Dinamic Medical System)</h5>
+        <p class="text-muted">Web development</p>
+        <a href="detail15.html" class="btn btn-detail">Details</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4 portfolio-item simrs d-none">
+    <div class="card product-card text-center h-100">
+      <img src="assets/img/dpi.jpg">
+      <div class="card-body">
+        <h5 class="fw-bold">DPI - KESEHATAN</h5>
+        <p class="text-muted">Web development</p>
+        <a href="detail16.html" class="btn btn-detail">Details</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4 portfolio-item simrs d-none">
+    <div class="card product-card text-center h-100">
+      <img src="assets/img/siml.jpg">
+      <div class="card-body">
+        <h5 class="fw-bold">SIM-LOGISTIK (Logistic System)</h5>
+        <p class="text-muted">Web development</p>
+        <a href="detail17.html" class="btn btn-detail">Details</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4 portfolio-item simrs d-none">
+    <div class="card product-card text-center h-100">
+      <img src="assets/img/simk.jpg">
+      <div class="card-body">
+        <h5 class="fw-bold">SIM KEUANGAN RUMAH SAKIT</h5>
+        <p class="text-muted">Web development</p>
+        <a href="detail18.html" class="btn btn-detail">Details</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4 portfolio-item simrs d-none">
+    <div class="card product-card text-center h-100">
+      <img src="assets/img/simr.jpg">
+      <div class="card-body">
+        <h5 class="fw-bold">SIM REMUNERASI (Sistem Informasi Manajemen Remunerasi Gaji dan Tunjangan)</h5>
+        <p class="text-muted">Web development</p>
+        <a href="detail19.html" class="btn btn-detail">Details</a>
+      </div>
+    </div>
+  </div>
 
     </div>
   </div>
 </section>
 
-<section class="cta-tech">
-  <div class="container">
-    <div class="cta-card text-center text-md-start d-md-flex align-items-center justify-content-between">
+<script>
+const tabs = document.querySelectorAll('.portfolio-tabs .nav-link');
+const indicator = document.querySelector('.tab-indicator');
+const items = document.querySelectorAll('.portfolio-item');
 
-      <div class="cta-text">
-        <h3 class="fw-bold mb-2">Ingin Proyek Serupa?</h3>
-        <p class="mb-0">
-          OMS siap membantu solusi digital Anda.
-        </p>
-      </div>
-
-      <div class="cta-action mt-4 mt-md-0">
-        <a href="kontak.html" class="btn btn-tech btn-lg rounded-pill px-4">
-          <i class="fa-solid fa-paper-plane me-2"></i> Hubungi Kami
-        </a>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<footer class="bg-dark text-light pt-5 pb-3">
-  <div class="container">
-
-    <div class="row g-4">
-
-      <!-- ABOUT -->
-      <div class="col-md-4">
-        <h5 class="fw-bold mb-3">Tentang OMS</h5>
-        <p>
-          OMS adalah perusahaan teknologi yang menyediakan solusi IT profesional, mulai dari web & mobile development, sistem kustom, cloud computing, hingga keamanan siber. 
-          Kami membantu bisnis Anda berkembang dengan teknologi modern dan tim ahli berpengalaman.
-        </p>
-        <a href="about.html" class="text-decoration-none text-primary">Pelajari Lebih Lanjut &rarr;</a>
-      </div>
-
-      <!-- LAYANAN -->
-      <div class="col-md-2">
-        <h5 class="fw-bold mb-3">Layanan</h5>
-        <ul class="list-unstyled">
-          <li><a href="kt1.html" class="text-light text-decoration-none">Pengembangan App Web</a></li>
-          <li><a href="kt2.html" class="text-light text-decoration-none">Pengembangan App Mobile</a></li>
-          <li><a href="kt3.html" class="text-light text-decoration-none">Tim Perangkat Lunak khusus</a></li>
-        </ul>
-      </div>
-
-      <!-- LINK CEPAT -->
-      <div class="col-md-2">
-        <h5 class="fw-bold mb-3">Link Cepat</h5>
-        <ul class="list-unstyled">
-          <li><a href="index.html" class="text-light text-decoration-none">Home</a></li>
-          <li><a href="portofolio.html" class="text-light text-decoration-none">Portofolio</a></li>
-          <li><a href="karir.html" class="text-light text-decoration-none">Karir</a></li>
-          <li><a href="kontak.html" class="text-light text-decoration-none">Kontak</a></li>
-        </ul>
-      </div>
-
-      <!-- CONTACT -->
-      <div class="col-md-4">
-        <h5 class="fw-bold mb-3">Kontak Kami</h5>
-        <p><i class="fas fa-map-marker-alt me-2"></i> Ruko Mega Peterongan, Jl. Kanal No. 5a, Lamper Lor, Semarang Selatan Kota Semarang, Jawa Tengah 50242</p>
-        <p><i class="fas fa-phone me-2"></i> 0813-8313-9864</p>
-        <p><i class="fas fa-envelope me-2"></i> marketing@optimasolution.co.id</p>
-
-        <div class="d-flex gap-3 mt-3">
-          <a href="#" class="text-light fs-5"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://wa.me/62813-8313-9864" class="text-light fs-5"><i class="fa-brands fa-whatsapp"></i></a>
-          <a href="https://marketing@optimasolution.co.id" class="text-light fs-5"><i class="fa-solid fa-envelope"></i></a>
-          <a href="https://instagram.com/optimamultisinergi" class="text-light fs-5"><i class="fab fa-instagram"></i></a>
-        </div>
-
-    </div>
-
-    <hr class="bg-secondary my-4">
-
-    <!-- COPYRIGHT -->
-    <div class="text-center">
-      <p class="mb-0">&copy; 2025 OMS — All Rights Reserved</p>
-      <small class="text-secondary">Dibangun dengan teknologi modern & tim profesional.</small>
-    </div>
-
-  </div>
-</footer>
-
-<style>
-  /* FOOTER */
-footer {
-  font-family: 'Poppins', sans-serif;
-  line-height: 1.6;
+function moveIndicator(el){
+  indicator.style.width = el.offsetWidth + 'px';
+  indicator.style.left = el.offsetLeft + 'px';
 }
 
-/* Footer Heading */
-footer h5 {
-  color: #ffffff;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
+moveIndicator(document.querySelector('.portfolio-tabs .active'));
 
-/* Footer Links */
-footer a {
-  color: #cccccc;
-  transition: 0.3s;
-  text-decoration: none;
-}
-footer a:hover {
-  color: #0d6efd;
-  text-decoration: underline;
-}
+tabs.forEach(tab=>{
+  tab.addEventListener('click',()=>{
+    tabs.forEach(t=>t.classList.remove('active'));
+    tab.classList.add('active');
 
-/* Footer Contact Info */
-footer p {
-  color: #cccccc;
-  margin-bottom: 8px;
-  font-size: 14px;
-}
+    moveIndicator(tab);
 
-/* Social Media Icons */
-footer .fab {
-  transition: 0.3s;
-}
-footer .fab:hover {
-  color: #0d6efd;
-  transform: scale(1.2);
-}
+    tab.scrollIntoView({behavior:'smooth',inline:'center'});
 
-/* Horizontal Line */
-footer hr {
-  border-top: 1px solid #444;
-}
-
-/* Copyright */
-footer small {
-  display: block;
-  margin-top: 5px;
-  color: #888;
-  font-size: 12px;
-}
-
-/* Responsive Adjustments */
-@media(max-width:768px){
-  footer .row > div {
-    text-align: center;
-  }
-  footer .d-flex {
-    justify-content: center !important;
-  }
-  footer .d-flex a {
-    margin: 0 5px;
-  }
-}
-</style>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>AOS.init({duration:900,once:true});</script>
+    const filter = tab.dataset.filter;
+    items.forEach(item=>{
+      item.classList.toggle('d-none', !item.classList.contains(filter));
+    });
+  });
+});
+</script>
 
 </body>
 </html>
